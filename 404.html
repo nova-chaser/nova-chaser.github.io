@@ -59,7 +59,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="It&#39;s an IT blog..."/>
   <meta name="keyword" content="v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
-  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+  <!-- 解除第三方图片防盗链限制 -->
+  <meta name="referrer" content="no-referrer"/>
+  <link rel="shortcut icon" href="/img/avatar/y.png"/>
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
@@ -142,7 +144,7 @@
   <link rel="canonical" href="https://nova-chaser.github.io/404.html">
   <title>
     
-      either thin | or die
+      Your Potential Beyond
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -172,10 +174,6 @@
     display: var(--dark-mode);
   }
 </style>
-<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
-  <i class="mdui-icon material-icons light-mode"></i>
-  <i class="mdui-icon material-icons dark-mode"></i>
-</div>
 <script>
   //getCookieValue
   function getCookieValue(a) {
@@ -185,14 +183,18 @@
       : '';
   }
   let themeMode = 'dark';
-  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
-    let dbody = document.body.classList;
-    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  let savedMode = getCookieValue('sb-color-mode');
+  let activeMode = savedMode || themeMode;
+
+  // 页面加载时设置初始主题 class
+  if (activeMode === 'dark') {
+    document.body.classList.add('body--dark');
   }
 
   //setCookieValue
   var toggleBtn = document.querySelector(".toggle");
   toggleBtn.addEventListener("click", function () {
+    document.body.classList.toggle('body--dark');
     var e = document.body.classList.contains("body--dark");
     var cookieString = e
       ? "dark"
@@ -238,6 +240,12 @@
     <div id="huxblog_navbar">
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
+          <li class="nav-toggle-item">
+            <a class="toggle" onclick="document.body.classList.toggle('body--dark'); return false;" title="切换主题">
+              <i class="mdui-icon material-icons light-mode"></i>
+              <i class="mdui-icon material-icons dark-mode"></i>
+            </a>
+          </li>
           <li>
             <a href="/">首页</a>
           </li>
@@ -269,9 +277,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -280,9 +288,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -298,8 +306,6 @@
           
 
           <!-- LangSelect -->
-          
-          
           
         </ul>
       </div>
@@ -526,19 +532,12 @@
 
   
     <!-- Scroll start -->
-    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <script type="text/javascript" src="/js/scroll.js"></script>
     <!-- Scroll end -->
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
-  
-    <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content='The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
   
 
   

@@ -398,3 +398,175 @@ li.archive-list-item:hover a {
 ::-webkit-scrollbar-corner {
   background: white;
 }
+
+/* ========== 流畅滚动 ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========== 首页标题淡入动画 ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.intro-header .site-heading h1 {
+  animation: fadeInUp 0.8s ease-out;
+}
+.intro-header .site-heading .subheading {
+  animation: fadeInUp 0.8s ease-out 0.15s both;
+}
+
+/* ========== 文章卡片悬浮效果 ========== */
+.post-preview {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 0 -20px;
+}
+.post-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* ========== 文章卡片渐显动画 ========== */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.post-preview {
+  animation: fadeInCard 0.5s ease-out both;
+}
+.post-preview:nth-child(1) { animation-delay: 0.05s; }
+.post-preview:nth-child(2) { animation-delay: 0.12s; }
+.post-preview:nth-child(3) { animation-delay: 0.19s; }
+.post-preview:nth-child(4) { animation-delay: 0.26s; }
+.post-preview:nth-child(5) { animation-delay: 0.33s; }
+.post-preview:nth-child(6) { animation-delay: 0.40s; }
+.post-preview:nth-child(7) { animation-delay: 0.47s; }
+.post-preview:nth-child(8) { animation-delay: 0.54s; }
+.post-preview:nth-child(9) { animation-delay: 0.61s; }
+.post-preview:nth-child(10) { animation-delay: 0.68s; }
+
+/* ========== 导航链接下划线动画 ========== */
+.navbar-custom .nav li a {
+  position: relative;
+}
+.navbar-custom .nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.25s ease, left 0.25s ease;
+  border-radius: 1px;
+}
+.navbar-custom .nav li a:hover::after {
+  width: 16px;
+  left: calc(50% - 8px);
+}
+
+/* ========== 全局过渡优化 ========== */
+a {
+  transition: color 0.2s ease;
+}
+.navbar-custom .navbar-brand {
+  transition: color 0.2s ease;
+}
+
+/* ========== 侧边栏优化 ========== */
+.sidebar-container h5 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+.sidebar-container .tags a {
+  transition: all 0.25s ease;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 12px;
+}
+.sidebar-container .tags a:hover {
+  transform: translateY(-1px);
+}
+.sidebar-container a {
+  transition: all 0.2s ease;
+}
+
+/* ========== 标签云动画 ========== */
+#tag_cloud a {
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+#tag_cloud a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,133,161,0.3);
+}
+
+/* ========== 按钮涟漪效果 ========== */
+.btn-default {
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+.btn-default:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0,133,161,0.3);
+}
+
+/* ========== 图片悬浮缩放 ========== */
+.post-container img:not(.no-zoom) {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px;
+}
+.post-container img:not(.no-zoom):hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* ========== 分割线动画 ========== */
+.post-preview hr {
+  transition: width 0.4s ease;
+  width: 60%;
+  margin: 20px auto;
+}
+.post-preview:hover hr {
+  width: 80%;
+}
+
+/* ========== 代码块阴影 ========== */
+pre, .highlight {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+pre:hover, .highlight:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* ========== 引语优化 ========== */
+blockquote {
+  border-left: 3px solid #0085a1;
+  padding: 10px 20px;
+  border-radius: 0 4px 4px 0;
+  background: rgba(0,133,161,0.03);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+blockquote:hover {
+  border-color: #006b82;
+  background: rgba(0,133,161,0.06);
+}

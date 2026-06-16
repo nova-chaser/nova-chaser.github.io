@@ -59,7 +59,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="It&#39;s an IT blog..."/>
   <meta name="keyword" content="v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
-  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+  <!-- 解除第三方图片防盗链限制 -->
+  <meta name="referrer" content="no-referrer"/>
+  <link rel="shortcut icon" href="/img/avatar/y.png"/>
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
@@ -139,10 +141,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://nova-chaser.github.io/en/">
+  <link rel="canonical" href="https://nova-chaser.github.io/tags/机器学习/">
   <title>
     
-      either thin | or die
+      Your Potential Beyond
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -172,10 +174,6 @@
     display: var(--dark-mode);
   }
 </style>
-<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
-  <i class="mdui-icon material-icons light-mode"></i>
-  <i class="mdui-icon material-icons dark-mode"></i>
-</div>
 <script>
   //getCookieValue
   function getCookieValue(a) {
@@ -185,14 +183,18 @@
       : '';
   }
   let themeMode = 'dark';
-  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
-    let dbody = document.body.classList;
-    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  let savedMode = getCookieValue('sb-color-mode');
+  let activeMode = savedMode || themeMode;
+
+  // 页面加载时设置初始主题 class
+  if (activeMode === 'dark') {
+    document.body.classList.add('body--dark');
   }
 
   //setCookieValue
   var toggleBtn = document.querySelector(".toggle");
   toggleBtn.addEventListener("click", function () {
+    document.body.classList.toggle('body--dark');
     var e = document.body.classList.contains("body--dark");
     var cookieString = e
       ? "dark"
@@ -238,8 +240,14 @@
     <div id="huxblog_navbar">
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
+          <li class="nav-toggle-item">
+            <a class="toggle" onclick="document.body.classList.toggle('body--dark'); return false;" title="切换主题">
+              <i class="mdui-icon material-icons light-mode"></i>
+              <i class="mdui-icon material-icons dark-mode"></i>
+            </a>
+          </li>
           <li>
-            <a href="/">HOME</a>
+            <a href="/">首页</a>
           </li>
 
           
@@ -249,7 +257,7 @@
           <li>
             <a href="/about/">
               
-              ABOUT
+              关于
               
               
             </a>
@@ -260,18 +268,7 @@
           <li>
             <a href="/tags/">
               
-              TAGS
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              CATEGORIES
+              标签
               
               
             </a>
@@ -282,7 +279,18 @@
           <li>
             <a href="/archive/">
               
-              ARCHIVES
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
               
               
             </a>
@@ -293,37 +301,11 @@
           
           <li>
             <a class="popup-trigger">
-              <span class="search-icon"></span>SEARCH</a>
+              <span class="search-icon"></span>搜索</a>
           </li>
           
 
           <!-- LangSelect -->
-          
-          
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      English
-    </span>
-    <select id="lang-select" data-canonical="en/index.html">
-      
-      
-      <option value="en"  selected >
-        English
-      </option>
-      
-      <option value="cn" >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
-          
           
         </ul>
       </div>
@@ -384,9 +366,9 @@
     }
 
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('/img/header_img/newhome_bg.jpg'); */
+       /*page*/
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
       
     }
 
@@ -409,7 +391,7 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
           <div class="site-heading">
-            <h1>Your Potential Beyond</h1>
+            <h1>YPB 的博客</h1>
             <!--<hr class="small">-->
             <span class="subheading">It&#39;s not about where you start, but how far you&#39;re willing to go beyond what you already know.</span>
           </div>
@@ -468,54 +450,40 @@
             ">
 
       <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
 
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Hexo-Theme-LiveMyLife/">
-    <h2 class="post-title">
-      Hexo-Theme-LiveMyLife
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
       
-Ported Theme of Hux Blog, Thank Huxpro for designing such a flawless theme.
-This LiveMyLife theme created by Vincent modified from the original Porter YenYuHsuan , refer to the Themes of dusign、Ut......
+
+      <!-- 归档列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2026">
+          <span class="tag-text">2026</span>
+        </span>
+        <ul>
+          
+          <li>
+            06-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/监督机器学习：回归与分类/" style="color: #0085a1">
+              <span>
+                监督机器学习：回归与分类
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
     </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 杨鹏博 on
-    2020-04-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife">Hexo-Theme-LiveMyLife</a>
-    
   </div>
-  
-
 </div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    
-  </ul>
 
 
       <!-- 如果开启评论功能 -->
@@ -532,7 +500,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
 ">
     
         <!-- Visitors -->
-<h5><a href="/">VISITORS</a></h5>
+<h5><a href="/">来访者</a></h5>
 
 <div class="widget">
   <span>
@@ -550,11 +518,19 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
         <!-- Featured Tags -->
 
 <section>
-  <h5><a href="/tags/">FEATURED TAGS</a></h5>
+  <h5><a href="/tags/">特色标签</a></h5>
   <div class="tags">
     
     
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="2">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#机器学习" title="机器学习" rel="1">机器学习</a>
+    
+    
+    
+    <a href="/tags/#回归" title="回归" rel="1">回归</a>
+    
+    
+    
+    <a href="/tags/#分类" title="分类" rel="1">分类</a>
     
     
   </div>
@@ -565,7 +541,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     
         <!-- Short About -->
 <section class="visible-md visible-lg">
-  <h5><a href="/about/">ABOUT ME</a></h5>
+  <h5><a href="/about/">关于自己</a></h5>
   <div class="short-about">
 
     
@@ -640,16 +616,12 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     
         <!-- RECENT POSTS -->
 
-<h5><a href="/">RECENT POSTS</a></h5>
+<h5><a href="/">最近博文</a></h5>
 <div class="widget">
   <ul>
     
-    <a href="Hexo-Theme-LiveMyLife/">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
-    <a href="../cn/Hexo-Theme-LiveMyLife/">
-      <li>Hexo-Theme-LiveMyLife</li>
+    <a href="../../%E7%9B%91%E7%9D%A3%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%9B%9E%E5%BD%92%E4%B8%8E%E5%88%86%E7%B1%BB/">
+      <li>监督机器学习：回归与分类</li>
     </a>
     
   </ul>
@@ -660,7 +632,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     
         <!-- Friends Blog -->
 
-<h5><a href="/">FRIENDS</a></h5>
+<h5><a href="/">链友</a></h5>
 <ul class="list-inline">
   
   <li><a href="https://v-vincen.life/" target="_blank">V_Vincen</a></li>
@@ -680,7 +652,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2026/06/">June 2026</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -692,8 +664,8 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
 <div class="widget">
   <ul>
     
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
+    <a href="/categories/#机器学习">
+      <li>机器学习</li>
     </a>
     
   </ul>
@@ -811,19 +783,12 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
 
   
     <!-- Scroll start -->
-    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <script type="text/javascript" src="/js/scroll.js"></script>
     <!-- Scroll end -->
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
-  
-    <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content='The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
   
 
   
@@ -899,7 +864,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>

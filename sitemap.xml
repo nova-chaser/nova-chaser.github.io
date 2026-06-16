@@ -2,18 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://nova-chaser.github.io/tags/index.html</loc>
+    <loc>https://nova-chaser.github.io/%E7%9B%91%E7%9D%A3%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%9B%9E%E5%BD%92%E4%B8%8E%E5%88%86%E7%B1%BB/</loc>
     
-    <lastmod>2026-06-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nova-chaser.github.io/categories/index.html</loc>
-    
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -29,18 +20,18 @@
   </url>
   
   <url>
-    <loc>https://nova-chaser.github.io/en/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://nova-chaser.github.io/tags/index.html</loc>
     
-    <lastmod>2020-04-16</lastmod>
+    <lastmod>2026-06-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nova-chaser.github.io/cn/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://nova-chaser.github.io/categories/index.html</loc>
     
-    <lastmod>2020-04-16</lastmod>
+    <lastmod>2026-06-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -74,7 +65,21 @@
 
   
   <url>
-    <loc>https://nova-chaser.github.io/tags/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://nova-chaser.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nova-chaser.github.io/tags/%E5%9B%9E%E5%BD%92/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://nova-chaser.github.io/tags/%E5%88%86%E7%B1%BB/</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -83,7 +88,7 @@
 
   
   <url>
-    <loc>https://nova-chaser.github.io/categories/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://nova-chaser.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

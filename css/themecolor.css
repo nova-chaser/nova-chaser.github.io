@@ -135,6 +135,7 @@
 /* ================================================ Common Menu Start ======================================================= */
 body {
   background-color: var(--background-color);
+  color: var(--color-default);
 }
 
 /* header  */
@@ -537,16 +538,21 @@ blockquote {
   color: var(--blockquote-color);
 }
 
-.post-container>h1,
-.post-container>h2,
-.post-container>h3,
-.post-container>h4,
-.post-container>h5,
-.post-container>h6 {
+/* 文章内容区全局文字颜色 */
+.post-container {
   color: var(--color-default);
 }
 
-.post-container>p {
+.post-container h1,
+.post-container h2,
+.post-container h3,
+.post-container h4,
+.post-container h5,
+.post-container h6 {
+  color: var(--color-default);
+}
+
+.post-container p {
   color: var(--color-default);
 }
 
@@ -562,8 +568,39 @@ blockquote {
   color: var(--color-default);
 }
 
+/* 暗色模式下 li 也继承颜色 */
+.post-container li {
+  color: var(--color-default);
+}
+
+/* 暗色模式下 strong/em 等内联元素 */
+.post-container strong,
+.post-container em,
+.post-container del,
+.post-container code {
+  color: var(--color-default);
+}
+
 .toc-title {
   color: var(--color-default);
+}
+
+/* 隐藏目录自动编号 */
+.toc-nav-number {
+  display: none;
+}
+
+/* 目录链接颜色 */
+.toc-nav-link {
+  color: var(--color-default);
+}
+
+.toc-nav li a {
+  color: var(--color-default);
+}
+
+.toc-nav .active > a {
+  color: var(--common-color);
 }
 
 a {
@@ -937,48 +974,46 @@ textarea.gt-header-textarea::placeholder {
 
 /* ==================================================== Search End =================================================== */
 /* ================================================ Switch color mode button Start ======================================================= */
-/* .toggle {
-  position: fixed;
-  bottom: 1.875rem;
-  left: 2.5rem;
-  background-color: var(--background-color);
-  color: var(--toggle-color);
-  border: 1px dotted var(--toggle-border-color);
-  border-radius: 3px;
-  font-size: .75019rem;
-  font-weight: 700;
-  margin-left: auto;
-  padding: .25rem .5rem;
-  z-index: 20;
-  cursor: pointer;
-  text-transform: uppercase;
-} */
-.toggle {
-  position: fixed;
-  bottom: 1rem;
-  left: 2.5rem;
-  /* background-color: var(--background-color); */
-  color: var(--toggle-color);
-  /* border: 1px dotted var(--toggle-border-color); */
-  padding: 1.5rem 1.5rem;
-  z-index: 20;
-  cursor: pointer;
-  text-transform: uppercase;
-  line-height: normal;
+.nav-toggle-item {
+  display: flex;
+  align-items: center;
+}
+.nav-toggle-item .toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  width: 60px;
-  min-width: 60px;
-  height: 60px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  padding: 0 !important;
+  color: inherit;
+  line-height: 1;
+}
+.navbar-custom .nav li.nav-toggle-item a.toggle {
+  padding: 0 !important;
+  margin: 0 4px;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-custom .nav li.nav-toggle-item a.toggle {
+    padding: 0 !important;
+    margin-top: 16px;
+  }
 }
 
 .material-icons {
-  font-size: 30px !important;
+  font-size: 20px !important;
 }
 
-.toggle:hover {
-  /* text-decoration: none; */
-  background-color: var(--toggle-hover);
-  cursor: pointer;
+.navbar-custom .nav li.nav-toggle-item a.toggle:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+.navbar-custom.is-fixed .nav li.nav-toggle-item a.toggle {
+  color: var(--toggle-color);
+}
+.navbar-custom.is-fixed .nav li.nav-toggle-item a.toggle:hover {
+  background-color: var(--toggle-hover) !important;
 }
 
 /* ================================================ Switch color mode button End ======================================================= */
