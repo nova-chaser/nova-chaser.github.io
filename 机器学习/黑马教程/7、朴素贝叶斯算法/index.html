@@ -262,9 +262,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -273,9 +273,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -473,8 +473,8 @@
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725967660734-eda5dd63-a1cc-4c55-8add-90d3ebf67cb9.png" width="372.8" title="" crop="0,0,1,1" id="u6248ef3a" class="ne-image">
 <p>例：文章分类计算</p>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725968052033-f88df769-f05d-4029-9ac7-9d0df386c2ae.png" width="931.2" title="" crop="0,0,1,1" id="ubaffc000" class="ne-image">
-<p>:::tips<br>
-计算过程</p>
+<blockquote>
+<p><strong>计算过程：</strong></p>
 <p>$ P(C|Chinese,Chinese,Chinese,Tokyo,Japan)= $</p>
 <p>$ \frac{P(Chinese,Chinese,Chinese,Tokyo,Japan|C)*P©}{P(Chinese,Chinese,Chinese,Tokyo,Japan)}= $</p>
 <p>$ \frac{P(Chinese|C)^3*P(Tokyo|C)*P(Japan|C)<em>P©}{P(Chinese)^3</em>P(Tokyo)*P(Japan)} $</p>
@@ -486,13 +486,14 @@
 <p>$ P(Chinese|C)=\frac{1}{3} $</p>
 <p>$ P(Tokyo|C)=\frac{1}{3} $</p>
 <p>$ P(Japan|C)=\frac{1}{3} $</p>
-<p>:::</p>
+</blockquote>
 <p>上述过程中，得到了几个0结果。这是不合理的，如果词频列表中有很多出现次数都为0，很可能计算结果都为0</p>
 <p>解决方法：<strong>拉普拉斯平滑系数</strong></p>
 <p>$ p(F1|c)=\frac{Ni+α}{N+αm} $（α为指定的系数一般为1，m为训练文档中统计出的特征词个数）</p>
 <p>则有：</p>
-<p>:::tips<br>
-计算China类的概率：</p>
+<blockquote>
+<p><strong>拉普拉斯平滑后：</strong></p>
+<p>计算China类的概率：</p>
 <p>$ P(Chinese|C)=\frac{5}{8}–&gt;\frac{6}{14} $（分母为8+所有训练样本中Chinese的个数,6）</p>
 <p>$ P(Tokyo|C)=\frac{0}{8}–&gt;\frac{1}{14} $</p>
 <p>$ P(Japan|C)=\frac{0}{8}–&gt;\frac{1}{14} $</p>
@@ -503,7 +504,7 @@
 <p>$ P(Chinese|C)=\frac{1}{3}–&gt;\frac{2}{9} $</p>
 <p>$ P(Tokyo|C)=\frac{1}{3}–&gt;\frac{2}{9} $</p>
 <p>$ P(Japan|C)=\frac{1}{3}–&gt;\frac{2}{9} $</p>
-<p>:::</p>
+</blockquote>
 <h2 id="3、案例：商品评论情感分析">3、案例：商品评论情感分析</h2>
 <p>API：</p>
 <ul>
@@ -1266,6 +1267,6 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
