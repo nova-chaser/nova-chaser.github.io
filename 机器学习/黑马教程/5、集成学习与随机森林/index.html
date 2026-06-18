@@ -251,17 +251,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -276,6 +265,17 @@
             <a href="/archive/">
               
               归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -745,7 +745,11 @@ $</li>
 <p>从年龄特征的5开始，到体重特征70结束，分别计算分裂后两组数据的平方损失（Square Error）</p>
 <p>$ SE_l $左节点平方损失，$ SE_r $右节点平方损失，找到使平方损失和$ SE_{sum}=SE_l+SE_r $最小的那个划分点</p>
 <p>例如：以年龄21为划分节点，将小于21的样本划到左节点，大于21划到右节点。节点包括$ x_0,x_1 $，右节点包括$ x_2,x_3 $</p>
-<p>$ SE_l=0.02，SE_r=0.005,SE_{sum}=0.025\其中:\SE_l = [-0.375-(-0.275)]^2+[-0.175-(-0.275)]^2=0.02\SE_r=[0.225-0.275]^2+[0.325-0.275]^2=0.005 $注：-0.275是两个标签值的均值。0.275同理</p>
+<p>$$ SE_l=0.02，SE_r=0.005,SE_{sum}=0.025 $$<br>
+其中：<br>
+$$ SE_l = [-0.375-(-0.275)]^2+[-0.175-(-0.275)]^2=0.02 $$<br>
+$$ SE_r=[0.225-0.275]^2+[0.325-0.275]^2=0.005 $$<br>
+注：-0.275是两个标签值的均值。0.275同理</p>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724001764489-7f72625a-51df-41b8-9349-886e9da442dc.png" width="749" title="" crop="0,0,1,1" id="ucf1f003b" class="ne-image">
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724001783187-704be504-ed9f-4f1f-8e60-c32e1de45f89.png" width="1074" title="" crop="0,0,1,1" id="u4e79ef34" class="ne-image">
 <p>由以上计算可得最小损失为0.025，有两个划分点，我们随机选择一个，这里选择年龄21。现在我们的第一颗树长这样：</p>
@@ -1498,5 +1502,23 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ["$","$"], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: false
+        },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

@@ -251,17 +251,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -276,6 +265,17 @@
             <a href="/archive/">
               
               归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -380,9 +380,9 @@
               
               <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
               
-              <a class="tag" href="/tags/#聚类" title="聚类">聚类</a>
-              
               <a class="tag" href="/tags/#无监督学习" title="无监督学习">无监督学习</a>
+              
+              <a class="tag" href="/tags/#聚类" title="聚类">聚类</a>
               
               <a class="tag" href="/tags/#异常检测" title="异常检测">异常检测</a>
               
@@ -837,9 +837,9 @@
             
             <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
             
-            <a class="tag" href="/tags/#聚类" title="聚类">聚类</a>
-            
             <a class="tag" href="/tags/#无监督学习" title="无监督学习">无监督学习</a>
+            
+            <a class="tag" href="/tags/#聚类" title="聚类">聚类</a>
             
             <a class="tag" href="/tags/#异常检测" title="异常检测">异常检测</a>
             
@@ -1380,5 +1380,23 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ["$","$"], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: false
+        },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

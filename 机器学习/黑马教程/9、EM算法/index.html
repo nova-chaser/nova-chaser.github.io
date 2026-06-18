@@ -251,17 +251,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -276,6 +265,17 @@
             <a href="/archive/">
               
               归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -522,8 +522,8 @@
 <p>假设有两枚硬币1,2，随机抛，正面朝上的概率分别为P1，P2。每次取一枚硬币，连抛5次，有如下结果：</p>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727355188851-74914aea-65d5-4f3a-bac0-4e1528aacf4e.png" width="1040" title="" crop="0,0,1,1" id="u2326186d" class="ne-image">
 <p>可以很容易的计算出概率P1，P2。</p>
-<p>$ P1=(3+1+2)/15=0.4\<br>
-P2=(2+3)/10=0.5 $</p>
+<p>$$ P1=(3+1+2)/15=0.4 $$<br>
+$$ P2=(2+3)/10=0.5 $$</p>
 <p>接下来我们加大难度</p>
 <p><strong>加入隐变量Z后求解</strong></p>
 <p>现在每轮投的什么硬币我们不知道了</p>
@@ -1273,5 +1273,23 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ["$","$"], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: false
+        },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

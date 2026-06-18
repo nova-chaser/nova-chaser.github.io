@@ -251,17 +251,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               分类
@@ -276,6 +265,17 @@
             <a href="/archive/">
               
               归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -463,24 +463,25 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h2><p>例子引入：</p>
+        <h2 id="1、定义">1、定义</h2>
+<p>例子引入：</p>
 <p>用一条线将下图分开，并尽量在放更多球后，仍然适用</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920118070-b5296378-8649-4933-8fc8-0df656fa5927.png" width="332" title="" crop="0,0,1,1" id="u600913b1" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920118070-b5296378-8649-4933-8fc8-0df656fa5927.png" width="332" title="" crop="0,0,1,1" id="u600913b1" class="ne-image">
 <p>我们这样放：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920464756-087ab58a-5ed3-4ea0-8ba2-5212a19e676b.png" width="300.8000183105469" title="" crop="0,0,1,1" id="u0188e1fa" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920464756-087ab58a-5ed3-4ea0-8ba2-5212a19e676b.png" width="300.8000183105469" title="" crop="0,0,1,1" id="u0188e1fa" class="ne-image">
 <p>但是加更多球的时候，会出现以下的情况：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920536010-43067684-cf22-416a-a319-f4ff798004b6.png" width="360" title="" crop="0,0,1,1" id="uf2f92a5d" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920536010-43067684-cf22-416a-a319-f4ff798004b6.png" width="360" title="" crop="0,0,1,1" id="uf2f92a5d" class="ne-image">
 <p>怎么办，把分解的小棍变粗</p>
 <blockquote>
 <p>SVM就是试图把棍放在最佳位置，好让在棍两边有尽可能大的间隙</p>
 </blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920631933-e3705cad-4692-4026-9504-c0abb7ec9627.png" width="301.6000061035156" title="" crop="0,0,1,1" id="uf3a6b62b" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920631933-e3705cad-4692-4026-9504-c0abb7ec9627.png" width="301.6000061035156" title="" crop="0,0,1,1" id="uf3a6b62b" class="ne-image">
 <p>即时再放更多的球，这个棍仍然是一个好的分界线</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920736862-e7ae1976-1e8a-4847-a0fc-f4863f113df5.png" width="277.6000061035156" title="" crop="0,0,1,1" id="uaa81f7b0" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920736862-e7ae1976-1e8a-4847-a0fc-f4863f113df5.png" width="277.6000061035156" title="" crop="0,0,1,1" id="uaa81f7b0" class="ne-image">
 <p>那么，如果是这样呢？</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920767575-9a364445-a7c2-4572-9fe8-556a668f059a.png" width="300" title="" crop="0,0,1,1" id="u2bfa0b19" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920767575-9a364445-a7c2-4572-9fe8-556a668f059a.png" width="300" title="" crop="0,0,1,1" id="u2bfa0b19" class="ne-image">
 <p>我们可以想象这些球在桌子上，我一拍，球飞到空中，这时用一张纸可以将其分开</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920826177-4211c082-86b0-4990-907c-c3f57fed8f26.png" width="339.2" title="" crop="0,0,1,1" id="u65ff6d6a" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726920826177-4211c082-86b0-4990-907c-c3f57fed8f26.png" width="339.2" title="" crop="0,0,1,1" id="u65ff6d6a" class="ne-image">
 <p>这时我们可以将上述的例子映射到SVM中：</p>
 <ul>
 <li>球：data 数据</li>
@@ -489,16 +490,19 @@
 <li>拍桌子：kernelling 核方法</li>
 <li>纸：hyperplane 超平面</li>
 </ul>
-<h3 id="1-1-SVM算法定义"><a href="#1-1-SVM算法定义" class="headerlink" title="1.1 SVM算法定义"></a>1.1 SVM算法定义</h3><blockquote>
+<h3 id="1-1-SVM算法定义">1.1 SVM算法定义</h3>
+<blockquote>
 <p>SVM（Supported Vector Machine）支持向量机，即寻找一个超平面使样本分成两类，并且间隔最大</p>
 </blockquote>
 <p>SVM能够执行线性或非线性分类，回归，甚至是异常值检测任务。适合中小型复杂数据集的分类</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726921273286-7df81aef-0e44-4f07-99e0-092ea85e86e1.png" width="450" title="" crop="0,0,1,1" id="u4ce601ee" class="ne-image"></p>
-<h3 id="1-2-超平面最大间隔介绍"><a href="#1-2-超平面最大间隔介绍" class="headerlink" title="1.2 超平面最大间隔介绍"></a>1.2 超平面最大间隔介绍</h3><p>下图显示了三种可能得线性分类器的决策边界：虚线表示模型非常糟糕，无法正常分类。其余两个模型在这个训练集上表现较好，但它们的决策边界与实例过于接近，导致在面对新的实例时，效果不太好。</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726921687503-02a61c17-a500-4017-8430-d31a0d00a9d6.png" width="543.2" title="" crop="0,0,1,1" id="u4b6b3628" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726921273286-7df81aef-0e44-4f07-99e0-092ea85e86e1.png" width="450" title="" crop="0,0,1,1" id="u4ce601ee" class="ne-image">
+<h3 id="1-2-超平面最大间隔介绍">1.2 超平面最大间隔介绍</h3>
+<p>下图显示了三种可能得线性分类器的决策边界：虚线表示模型非常糟糕，无法正常分类。其余两个模型在这个训练集上表现较好，但它们的决策边界与实例过于接近，导致在面对新的实例时，效果不太好。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726921687503-02a61c17-a500-4017-8430-d31a0d00a9d6.png" width="543.2" title="" crop="0,0,1,1" id="u4b6b3628" class="ne-image">
 <p>下图的实线代表SVM分类器的决策边界，不仅分离了两个类别，而且尽可能的远离最近的训练实例。</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726921700710-01dbb7d6-2ff5-4348-9ea2-48c9b341c64f.png" width="518.4" title="" crop="0,0,1,1" id="u3969440f" class="ne-image"></p>
-<h3 id="1-3-硬间隔与软间隔"><a href="#1-3-硬间隔与软间隔" class="headerlink" title="1.3 硬间隔与软间隔"></a>1.3 硬间隔与软间隔</h3><p><strong>1、硬间隔分类</strong></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726921700710-01dbb7d6-2ff5-4348-9ea2-48c9b341c64f.png" width="518.4" title="" crop="0,0,1,1" id="u3969440f" class="ne-image">
+<h3 id="1-3-硬间隔与软间隔">1.3 硬间隔与软间隔</h3>
+<p><strong>1、硬间隔分类</strong></p>
 <blockquote>
 <p>在上述使用超平面进行分割数据的过程中，严格使所有实例都不在最大间隔之间，并且位于正确的一边，这就是硬间隔分类</p>
 </blockquote>
@@ -506,301 +510,267 @@
 <ul>
 <li>当出现一个异常值时，无法找出间隔</li>
 </ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726922135929-b4587ed9-80fd-42cb-b81b-8e6832702417.png" width="432" title="" crop="0,0,1,1" id="uee3fee50" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726922135929-b4587ed9-80fd-42cb-b81b-8e6832702417.png" width="432" title="" crop="0,0,1,1" id="uee3fee50" class="ne-image">
 <ul>
 <li>如果出现了一些比较异常的数据，最终生成的决策边界可能不能很好的泛化</li>
 </ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726922154726-a6b592fb-b99c-4e1b-ba8a-d7879e952d4a.png" width="563.2" title="" crop="0,0,1,1" id="uca0c0b1a" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726922154726-a6b592fb-b99c-4e1b-ba8a-d7879e952d4a.png" width="563.2" title="" crop="0,0,1,1" id="uca0c0b1a" class="ne-image">
 <p><strong>2、软间隔分类</strong></p>
 <p>尽可能在保持最大间隔宽阔和限制间隔违例（即位于最大间隔之上，甚至在错误的一边的实例）之间找到良好的平衡，这就是软间隔分类</p>
 <p>在Scikit-Learn的SVM中，可以通过超参数C来控制这个平衡：C越小，间隔越宽，但间隔违例也会越多。</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726923133849-ee4d9a1b-d9a0-4b26-af25-d91658af87d1.png" width="634.4" title="" crop="0,0,1,1" id="u6ade1f77" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726923133849-ee4d9a1b-d9a0-4b26-af25-d91658af87d1.png" width="634.4" title="" crop="0,0,1,1" id="u6ade1f77" class="ne-image">
 <p>上图用了高C值，分类器的错误样本较少，但是间隔也较小</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726923187018-17d7742d-6653-43bd-8787-a620f8b4d2e5.png" width="432.8" title="" crop="0,0,1,1" id="JJPET" class="ne-image"></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726923187018-17d7742d-6653-43bd-8787-a620f8b4d2e5.png" width="432.8" title="" crop="0,0,1,1" id="JJPET" class="ne-image">
 <p>这里用了低C值，间隔大了许多，但是位于间隔上的实例也更多。看起来是上图的泛化效果较好，因为大多数的间隔违例实际上对位于正确的一边，所以即时是在该训练集上，它做出的错误预测也会很少</p>
-<h2 id="2、SVM算法API"><a href="#2、SVM算法API" class="headerlink" title="2、SVM算法API"></a>2、SVM算法API</h2><p>详细介绍在第7部分</p>
+<h2 id="2、SVM算法API">2、SVM算法API</h2>
+<p>详细介绍在第7部分</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm</span><br><span class="line"></span><br><span class="line">x = [</span><br><span class="line">    [<span class="number">0</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">]</span><br><span class="line">y = [<span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">clf = svm.SVC()</span><br><span class="line">clf.fit(x, y)</span><br><span class="line"><span class="built_in">print</span>(clf.predict([[<span class="number">2.</span>, <span class="number">2.</span>]])) <span class="comment"># 输出：[1]</span></span><br></pre></td></tr></table></figure>
-<h2 id="3、SVM算法原理"><a href="#3、SVM算法原理" class="headerlink" title="3、SVM算法原理"></a>3、SVM算法原理</h2><h3 id="3-1-定义输入数据"><a href="#3-1-定义输入数据" class="headerlink" title="3.1 定义输入数据"></a>3.1 定义输入数据</h3><p>假设给定一个特征空间上的训练集为：</p>
-<p>$ T={ (x_1,y_1),(x_2,y_2),…,(x_N,y_N) }\<br>x_i∈R^n,y_i∈{ +1,-1 },i=1,2,…,N $</p>
+<h2 id="3、SVM算法原理">3、SVM算法原理</h2>
+<h3 id="3-1-定义输入数据">3.1 定义输入数据</h3>
+<p>假设给定一个特征空间上的训练集为：</p>
+<p>$$ T={ (x_1,y_1),(x_2,y_2),…,(x_N,y_N) } $$<br>
+$$ x_i∈R^n,y_i∈{ +1,-1 },i=1,2,…,N $$</p>
 <p>其中$ (x_i,y_i) $<font style="color:rgb(0,0,0);">称为样本点，</font>$ y_i为的标记x_i $<font style="color:rgb(0,0,0);">，x分为正负例</font></p>
-<h3 id="3-2-线性可分支持向量机"><a href="#3-2-线性可分支持向量机" class="headerlink" title="3.2 线性可分支持向量机"></a>3.2 线性可分支持向量机</h3><p>给定上述线性可分训练数据集，通过间隔最大化得到分离平面为$ y(x)=w^TΦ(x)+b $</p>
+<h3 id="3-2-线性可分支持向量机">3.2 线性可分支持向量机</h3>
+<p>给定上述线性可分训练数据集，通过间隔最大化得到分离平面为$ y(x)=w^TΦ(x)+b $</p>
 <p>相应的分类决策函数为：$ f(x)=sign(w^TΦ(x)+b) $</p>
 <blockquote>
 <p>（sign为取整函数，当参数大于0时，sign函数返回1；等于0时返回0；小于0时返回-1）</p>
 </blockquote>
-<font style="color:rgb(0,0,0);">以上决策函数就称为</font>**<font style="color:rgb(0,0,0);">线性可分支持向量机</font>**
-
-> 这里Φ(x)是某个确定的特征空间转换函数，它的作用是将x映射到更高的维度，它有一个以后我们经常见到的专有称号“**核函数**”
->
-
+<p><font style="color:rgb(0,0,0);">以上决策函数就称为</font><strong><font style="color:rgb(0,0,0);">线性可分支持向量机</font></strong></p>
+<blockquote>
+<p>这里Φ(x)是某个确定的特征空间转换函数，它的作用是将x映射到更高的维度，它有一个以后我们经常见到的专有称号“<strong>核函数</strong>”</p>
+</blockquote>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726990739554-1ce34d88-7a3f-43b7-9cba-98733aec1858.png" width="516.8" title="" crop="0,0,1,1" id="u0d6daa33" class="ne-image">
-
-就是要求一组参数（w，b），使其构建的超平面函数能够最优的分离两个集合，比如下图：
-
+<p>就是要求一组参数（w，b），使其构建的超平面函数能够最优的分离两个集合，比如下图：</p>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726991133868-7ae9bf77-3748-485b-8d86-ccb2a6415da5.png" width="551.2" title="" crop="0,0,1,1" id="u1b937239" class="ne-image">  
 或是这样：
-
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1726991192520-d8010995-9e74-467b-aacd-35e805cc821c.png" width="575.2" title="" crop="0,0,1,1" id="u4afa20e5" class="ne-image">
-
-阴影部分是一个“过渡带”，“过渡带”的边界是集合中离超平面最近的样本点落在的地方
-
-### 3.3 SVM的计算过程与算法步骤
-**1、推导目标函数**
-
-首先超平面表达式为：$ y(x)=w^TΦ(x)+b $
-
-为了方便这里将$ Φ(x)=x $
-
-故可描述为$ w^Tx + b = 0 $
-
-> 其中：
->
-> + w=[w1,w2,…,wn] 是超平面的法向量（法向量是垂直于超平面的向量）。
-> + x=[x1,x2,…,xn] 是空间中的任意一点。
-
-其中样本空间中的点x到超平面（w,b）的距离可写成：$ r=\frac{|w^Tx+b|}{||w||} $
-
-> 其中：
->
-> + $ |w^Tx+b| $是点 x 到超平面的代数距离（可能为负数，故取绝对值）
->     - $ 若y_i=+1，则有w^Tx_i+b>0 $
->     - $ 若y_i=-1，则有w^Tx_i+b<0 $
-> + $ ||w|| $是法向量的欧几里得范数。
-
-令$$ \left\{
-    \begin{aligned}
-    & w^Tx_i+b \geq +1 & & y_i=+1; \cr
-    & w^Tx_i+b \leq -1 & & y_i=-1. \cr
-    \end{aligned}
-\right. $$
-
-如图所示，距离超平面最近的几个训练样本点使上式等号成立，他们被称为“支持向量”
-
+<p>阴影部分是一个“过渡带”，“过渡带”的边界是集合中离超平面最近的样本点落在的地方</p>
+<h3 id="3-3-SVM的计算过程与算法步骤">3.3 SVM的计算过程与算法步骤</h3>
+<p><strong>1、推导目标函数</strong></p>
+<p>首先超平面表达式为：$ y(x)=w^TΦ(x)+b $</p>
+<p>为了方便这里将$ Φ(x)=x $</p>
+<p>故可描述为$ w^Tx + b = 0 $</p>
+<blockquote>
+<p>其中：</p>
+<ul>
+<li>w=[w1,w2,…,wn] 是超平面的法向量（法向量是垂直于超平面的向量）。</li>
+<li>x=[x1,x2,…,xn] 是空间中的任意一点。</li>
+</ul>
+</blockquote>
+<p>其中样本空间中的点x到超平面（w,b）的距离可写成：$ r=\frac{|w^Tx+b|}{||w||} $</p>
+<blockquote>
+<p>其中：</p>
+<ul>
+<li>$ |w^Tx+b| $是点 x 到超平面的代数距离（可能为负数，故取绝对值）
+<ul>
+<li>$ 若y_i=+1，则有w^Tx_i+b&gt;0 $</li>
+<li>$ 若y_i=-1，则有w^Tx_i+b&lt;0 $</li>
+</ul>
+</li>
+<li>$ ||w|| $是法向量的欧几里得范数。</li>
+</ul>
+</blockquote>
+<p>令$$ \begin{cases}<br>
+w^Tx_i+b \geq +1, \quad y_i=+1; \cr<br>
+w^Tx_i+b \leq -1, \quad y_i=-1.<br>
+\end{cases} $$</p>
+<p>如图所示，距离超平面最近的几个训练样本点使上式等号成立，他们被称为“支持向量”</p>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727085211686-90992e3a-21e5-4fdf-b65e-92a2be1e00d9.png" width="502.8000183105469" title="" crop="0,0,1,1" id="u050d08a4" class="ne-image">
-
-两个异类支持向量到超平面的距离之和为：$ \gamma=\frac{2}{||w||} $，被称之为“间隔”
-
-> **推导过程：**
->
-> <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727318214529-9a96f593-e74e-4453-b1e1-d3a501ae295f.png" width="1661.6" title="" crop="0,0,1,1" id="u69941ddb" class="ne-image">
-
-因此，最大化间隔等价于最小化$ ||w|| $，并且满足分类条件，这个问题可以转化为一个凸优化问题：
-
-$ min_{w,b} \  \frac{1}{2}||w||^2 \\
-s.t. \ y_i(w^Tx_i+b) \geq 1, ∀i $
-
-> 注：$ y_i是对应的类别标签，保证式子左边一定大于0 $
->
-
-这就是支持向量机的基本型
-
-
-
-**2、目标函数的求解**
-
-下一步求目标函数的最优值，有一个约束条件，故可以用拉格朗日乘子法求解
-
-把目标函数转换为：①$ L(w,b,\lambda)=\frac{1}{2}||w||^2-\sum^n_{i=1}\lambda_i[y_i(w^T·\Phi(x_i)+b)-1] $
-
-对w求偏导：②$ \frac{\partial L}{\partial w}=0 \Longrightarrow
-w=\sum^n_{i=1}\lambda_i y_i \Phi(x_i) $
-
-对b求偏导：③$ \frac{\partial L}{\partial b}=0 \Longrightarrow
-\sum^n_{i=1}\lambda_i y_i=0 $
-
-代回拉格朗日函数中，得到的就是原函数的对偶函数：
-
-④$ \underset{\lambda}{\max} \sum^n_{i=1}\lambda_i-
-\frac{1}{2}\sum^n_{i=1}\sum^n_{j=1}
-\lambda_i y_i \Phi^T(x_i)
-\lambda_j y_j \Phi(j_i) $
-
-$ s.t. \sum^n_{i=1}\lambda_i y_i=0,\lambda_i\geq0,∀i $
-
-对目标函数求出极大值 λ，将 λ 代入②式，从而求出w
-
-将w代入超平面的表达式，计算b
-
-得到的w，b就是我们要寻找的最优超平面参数
-
-
-
-**例子**：
-
-三个数据点：正例$ x_1=(3,3),x_2=(4,3) $，负例点$ x_3=(1,1) $，求线性可分支持向量机。
-
+<p>两个异类支持向量到超平面的距离之和为：$ \gamma=\frac{2}{||w||} $，被称之为“间隔”</p>
+<blockquote>
+<p><strong>推导过程：</strong></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727318214529-9a96f593-e74e-4453-b1e1-d3a501ae295f.png" width="1661.6" title="" crop="0,0,1,1" id="u69941ddb" class="ne-image">
+</blockquote>
+<p>因此，最大化间隔等价于最小化$ ||w|| $，并且满足分类条件，这个问题可以转化为一个凸优化问题：</p>
+<p>$$ min_{w,b} \  \frac{1}{2}||w||^2 $$<br>
+$$ s.t. \ y_i(w^Tx_i+b) \geq 1, ∀i $$</p>
+<blockquote>
+<p>注：$ y_i是对应的类别标签，保证式子左边一定大于0 $</p>
+</blockquote>
+<p>这就是支持向量机的基本型</p>
+<p><strong>2、目标函数的求解</strong></p>
+<p>下一步求目标函数的最优值，有一个约束条件，故可以用拉格朗日乘子法求解</p>
+<p>把目标函数转换为：①$ L(w,b,\lambda)=\frac{1}{2}||w||^2-\sum^n_{i=1}\lambda_i[y_i(w^T·\Phi(x_i)+b)-1] $</p>
+<p>对w求偏导：②$ \frac{\partial L}{\partial w}=0 \Longrightarrow<br>
+w=\sum^n_{i=1}\lambda_i y_i \Phi(x_i) $</p>
+<p>对b求偏导：③$ \frac{\partial L}{\partial b}=0 \Longrightarrow<br>
+\sum^n_{i=1}\lambda_i y_i=0 $</p>
+<p>代回拉格朗日函数中，得到的就是原函数的对偶函数：</p>
+<p>④$ \underset{\lambda}{\max} \sum^n_{i=1}\lambda_i-<br>
+\frac{1}{2}\sum^n_{i=1}\sum^n_{j=1}<br>
+\lambda_i y_i \Phi^T(x_i)<br>
+\lambda_j y_j \Phi(j_i) $</p>
+<p>$ s.t. \sum^n_{i=1}\lambda_i y_i=0,\lambda_i\geq0,∀i $</p>
+<p>对目标函数求出极大值 λ，将 λ 代入②式，从而求出w</p>
+<p>将w代入超平面的表达式，计算b</p>
+<p>得到的w，b就是我们要寻找的最优超平面参数</p>
+<p><strong>例子</strong>：</p>
+<p>三个数据点：正例$ x_1=(3,3),x_2=(4,3) $，负例点$ x_3=(1,1) $，求线性可分支持向量机。</p>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727234427223-5eaf2f7f-47b8-41be-beb3-1c009ba0e9de.png" width="361.6" title="" crop="0,0,1,1" id="u2e72b820" class="ne-image">
-
-1、首先确定目标函数：
-
-$ \frac{1}{2}\sum^n_{i=1}\sum^n_{j=1}
-\lambda_i y_i x_i
-\lambda_j y_j x_j
--\sum^n_{i=1}\lambda_i $
-
-$ 约束： \lambda_1+\lambda_2-\lambda_3=0\\
-\lambda_i\geq0,i=1,2,3
- $
-
-2、求得目标函数的极值
-
-把数据代入公式中：$ \frac{1}{2}(18\lambda_1^2+25\lambda_2^2+2\lambda_3^2+42\lambda_1\lambda_2-12\lambda_1\lambda_3-14\lambda_2\lambda_3)-\lambda_1-\lambda_2-\lambda_3 $
-
-将约束①代入，并化简得：$ 4\lambda_1^2+\frac{13}{2}\lambda_2^2+10\lambda_1\lambda_2-2\lambda_1-2\lambda_2 $
-
-对$ \lambda_1,\lambda_2 $求偏导，并令式子为0（在草稿纸上计算）
-
-可得$ \lambda_1,\lambda_2 $在（1.5，-1）处取得极值
-
-但其不满足大于等于0的条件，故最小值在边界上
-
-+ 当$ \lambda_1=0 $时，最小值$ (\lambda_1,\lambda_2)=(0,\frac{2}{13})代入得-0.1538 $
-+ 当$ \lambda_2=0 $时，最小值$ (\lambda_1,\lambda_2)=(\frac{1}{4},0)代入得-0.25 $
-
-于是在$ \lambda_1=0,\lambda_2=0 $时达到最小，此时$ \lambda_3=\frac{1}{4} $
-
-代入$ w=\sum^n_{i=1}\lambda_i y_i \Phi(x_i) $，计算的出$ 0.5x_1+0.5x_2-2=0 $
-
-> **chatGPT给出的过程：**
->
-> **1. 数据点和标记**
-+ 正例点（A类）：( (3, 3) ) 和 ( (4, 3) )
-+ 负例点（B类）：( (1, 1) )
-
-我们将它们标记为：
-
-+ $ ( (3, 3) \rightarrow +1 ) $
-+ $ ( (4, 3) \rightarrow +1 ) $
-+ $ ( (1, 1) \rightarrow -1 ) $
-
-**2. 超平面的方程**
-假设超平面的方程为：  
-$ [
-w_1 x_1 + w_2 x_2 + b = 0
-] $
-
-**3.** 目标和约束条件
-我们需要最小化：  
-$ [
-\frac{1}{2} | \mathbf{w} |^2
-] $
-
-约束条件为：
-
-1. 对于正例 ( (3, 3) ):  
-$ [
-3w_1 + 3w_2 + b \geq 1
-] $
-2. 对于正例 ( (4, 3) ):  
-$ [
-4w_1 + 3w_2 + b \geq 1
-] $
-3. 对于负例 ( (1, 1) ):  
-$ [
-w_1 + w_2 + b \leq -1
-] $
-
-**4.** 转化为标准形式
-将约束条件转化为标准形式：
-
-1. $ ( 3w_1 + 3w_2 + b \geq 1 ) $
-2. $ ( 4w_1 + 3w_2 + b \geq 1 ) $
-3. $ ( w_1 + w_2 + b \leq -1 ) $
-
-**5.** 构造拉格朗日函数
-构造拉格朗日函数：  
-$ [
-L(w_1, w_2, b, \alpha_1, \alpha_2, \alpha_3) = \frac{1}{2} (w_12 + w_22) + \alpha_1 (1 - (3w_1 + 3w_2 + b)) + \alpha_2 (1 - (4w_1 + 3w_2 + b)) + \alpha_3 (-1 - (w_1 + w_2 + b))
-] $
-
-**6.** 求导并求解
-对 (w_1)、(w_2) 和 (b) 求偏导数并设置为零：
-
-1. 对 (w_1) 求导：  
-$ [
-w_1 + 3\alpha_1 + 4\alpha_2 - \alpha_3 = 0
-] $
-2. 对 (w_2) 求导：  
-$ [
-w_2 + 3\alpha_1 + 3\alpha_2 - \alpha_3 = 0
-] $
-3. 对 (b) 求导：  
-$ [
-\alpha_1 + \alpha_2 - \alpha_3 = 0
-] $
-
-**7.** 代入约束求解
-1. 从第一个方程得到$  (w_1)  $和$  (w_2) $ 之间的关系。
-2. 代入约束条件，求解 $ (w_1)、(w_2)  $和$  (b)  $的值。
-
-**8.** 求解具体值
-为简化计算，使用数值方法（如 Python 中的优化库）求解上述方程组。手动求解可能比较复杂。
-
-**9.** 使用Python示例（可选）
-可以用以下 Python 代码来解决这个优化问题：
-
+<p>1、首先确定目标函数：</p>
+<p>$ \frac{1}{2}\sum^n_{i=1}\sum^n_{j=1}<br>
+\lambda_i y_i x_i<br>
+\lambda_j y_j x_j<br>
+-\sum^n_{i=1}\lambda_i $</p>
+<p>$$ 约束： \lambda_1+\lambda_2-\lambda_3=0 $$<br>
+$$ \lambda_i\geq0,i=1,2,3 $$</p>
+<p>2、求得目标函数的极值</p>
+<p>把数据代入公式中：$ \frac{1}{2}(18\lambda_1^2+25\lambda_2^2+2\lambda_3^2+42\lambda_1\lambda_2-12\lambda_1\lambda_3-14\lambda_2\lambda_3)-\lambda_1-\lambda_2-\lambda_3 $</p>
+<p>将约束①代入，并化简得：$ 4\lambda_1^2+\frac{13}{2}\lambda_2^2+10\lambda_1\lambda_2-2\lambda_1-2\lambda_2 $</p>
+<p>对$ \lambda_1,\lambda_2 $求偏导，并令式子为0（在草稿纸上计算）</p>
+<p>可得$ \lambda_1,\lambda_2 $在（1.5，-1）处取得极值</p>
+<p>但其不满足大于等于0的条件，故最小值在边界上</p>
+<ul>
+<li>当$ \lambda_1=0 $时，最小值$ (\lambda_1,\lambda_2)=(0,\frac{2}{13})代入得-0.1538 $</li>
+<li>当$ \lambda_2=0 $时，最小值$ (\lambda_1,\lambda_2)=(\frac{1}{4},0)代入得-0.25 $</li>
+</ul>
+<p>于是在$ \lambda_1=0,\lambda_2=0 $时达到最小，此时$ \lambda_3=\frac{1}{4} $</p>
+<p>代入$ w=\sum^n_{i=1}\lambda_i y_i \Phi(x_i) $，计算的出$ 0.5x_1+0.5x_2-2=0 $</p>
+<blockquote>
+<p><strong>chatGPT给出的过程：</strong></p>
+<p><strong>1. 数据点和标记</strong></p>
+</blockquote>
+<ul>
+<li>正例点（A类）：( (3, 3) ) 和 ( (4, 3) )</li>
+<li>负例点（B类）：( (1, 1) )</li>
+</ul>
+<p>我们将它们标记为：</p>
+<ul>
+<li>$ ( (3, 3) \rightarrow +1 ) $</li>
+<li>$ ( (4, 3) \rightarrow +1 ) $</li>
+<li>$ ( (1, 1) \rightarrow -1 ) $</li>
+</ul>
+<p><strong>2. 超平面的方程</strong><br>
+假设超平面的方程为：<br>
+$ [<br>
+w_1 x_1 + w_2 x_2 + b = 0<br>
+] $</p>
+<p><strong>3.</strong> 目标和约束条件<br>
+我们需要最小化：<br>
+$ [<br>
+\frac{1}{2} | \mathbf{w} |^2<br>
+] $</p>
+<p>约束条件为：</p>
+<ol>
+<li>对于正例 ( (3, 3) ):<br>
+$ [<br>
+3w_1 + 3w_2 + b \geq 1<br>
+] $</li>
+<li>对于正例 ( (4, 3) ):<br>
+$ [<br>
+4w_1 + 3w_2 + b \geq 1<br>
+] $</li>
+<li>对于负例 ( (1, 1) ):<br>
+$ [<br>
+w_1 + w_2 + b \leq -1<br>
+] $</li>
+</ol>
+<p><strong>4.</strong> 转化为标准形式<br>
+将约束条件转化为标准形式：</p>
+<ol>
+<li>$ ( 3w_1 + 3w_2 + b \geq 1 ) $</li>
+<li>$ ( 4w_1 + 3w_2 + b \geq 1 ) $</li>
+<li>$ ( w_1 + w_2 + b \leq -1 ) $</li>
+</ol>
+<p><strong>5.</strong> 构造拉格朗日函数<br>
+构造拉格朗日函数：<br>
+$ [<br>
+L(w_1, w_2, b, \alpha_1, \alpha_2, \alpha_3) = \frac{1}{2} (w_12 + w_22) + \alpha_1 (1 - (3w_1 + 3w_2 + b)) + \alpha_2 (1 - (4w_1 + 3w_2 + b)) + \alpha_3 (-1 - (w_1 + w_2 + b))<br>
+] $</p>
+<p><strong>6.</strong> 求导并求解<br>
+对 (w_1)、(w_2) 和 (b) 求偏导数并设置为零：</p>
+<ol>
+<li>对 (w_1) 求导：<br>
+$ [<br>
+w_1 + 3\alpha_1 + 4\alpha_2 - \alpha_3 = 0<br>
+] $</li>
+<li>对 (w_2) 求导：<br>
+$ [<br>
+w_2 + 3\alpha_1 + 3\alpha_2 - \alpha_3 = 0<br>
+] $</li>
+<li>对 (b) 求导：<br>
+$ [<br>
+\alpha_1 + \alpha_2 - \alpha_3 = 0<br>
+] $</li>
+</ol>
+<p><strong>7.</strong> 代入约束求解</p>
+<ol>
+<li>从第一个方程得到$  (w_1)  $和$  (w_2) $ 之间的关系。</li>
+<li>代入约束条件，求解 $ (w_1)、(w_2)  $和$  (b)  $的值。</li>
+</ol>
+<p><strong>8.</strong> 求解具体值<br>
+为简化计算，使用数值方法（如 Python 中的优化库）求解上述方程组。手动求解可能比较复杂。</p>
+<p><strong>9.</strong> 使用Python示例（可选）<br>
+可以用以下 Python 代码来解决这个优化问题：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据点</span></span><br><span class="line">X = np.array([[<span class="number">3</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">3</span>], [<span class="number">1</span>, <span class="number">1</span>]])</span><br><span class="line">y = np.array([<span class="number">1</span>, <span class="number">1</span>, -<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建SVM模型</span></span><br><span class="line">model = svm.SVC(kernel=<span class="string">&#x27;linear&#x27;</span>, C=<span class="number">1e5</span>)</span><br><span class="line">model.fit(X, y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出超平面参数</span></span><br><span class="line">w = model.coef_[<span class="number">0</span>]</span><br><span class="line">b = model.intercept_[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;超平面: <span class="subst">&#123;w[<span class="number">0</span>]&#125;</span>x1 + <span class="subst">&#123;w[<span class="number">1</span>]&#125;</span>x2 + <span class="subst">&#123;b&#125;</span> = 0&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-## 4、SVM的损失函数
-这里主要讨论三种损失函数：
-
+<h2 id="4、SVM的损失函数">4、SVM的损失函数</h2>
+<p>这里主要讨论三种损失函数：</p>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727239291063-64c99e5f-fa2a-403b-924a-149c7f2b249f.png" width="1079.2" title="" crop="0,0,1,1" id="u2c124315" class="ne-image">
-
-+ 0/1损失
-    - 当正例的点落在y=0这个超平面的下边，说明分类正确，无论距离超平面多远多近，误差都是0
-    - 当这个正例的样本落在y=0的上方的时候，说明分类错误，无论距离超平面多远多近，误差都是1
-    - 图像为上图绿色线
-+  合页损失（Hinge Loss）
-    - 数学形式：$   L(y,f(x))=max(0,1−yf(x)) $
-    - 当一个正例的点落在y=1的直线上，距离超平面长度1，那么误差为0
-    - 当它落在距离超平面0.5的地方，误差为0.5
-    - 总的来说就是：
-        * **正确分类且有间隔**：如果样本被正确分类并且距离决策边界至少有一个单位的间隔（即 $ yf(x)≥1 $），损失为0。
-        * **错误分类或不足间隔**：如果样本被错误分类或在决策边界附近（即$  yf(x)<1 $），损失将增加，具体取决于距离决策边界的程度。
-+ Logistic损失函数
-    - 损失函数：$ L(y, \^y)= - \frac{1}{N}∑^N_{i=1}[y_i log(\^y_i)+(1−y_i)log(1− \^y_i)] $
-
-
-
-## 5、核方法
-> 核函数并不是SVM特有的，核函数可以和其他算法也进行结合，只是核函数与SVM结合的优势非常大。
->
-
-### 5.1 什么是核函数
-> 核函数，是将原始输入空间映射到新的特征空间，从而，使得原本线性不可分的样本可能在核空间可分。
->
-
+<ul>
+<li>0/1损失
+<ul>
+<li>当正例的点落在y=0这个超平面的下边，说明分类正确，无论距离超平面多远多近，误差都是0</li>
+<li>当这个正例的样本落在y=0的上方的时候，说明分类错误，无论距离超平面多远多近，误差都是1</li>
+<li>图像为上图绿色线</li>
+</ul>
+</li>
+<li>合页损失（Hinge Loss）
+<ul>
+<li>数学形式：$   L(y,f(x))=max(0,1−yf(x)) $</li>
+<li>当一个正例的点落在y=1的直线上，距离超平面长度1，那么误差为0</li>
+<li>当它落在距离超平面0.5的地方，误差为0.5</li>
+<li>总的来说就是：
+<ul>
+<li><strong>正确分类且有间隔</strong>：如果样本被正确分类并且距离决策边界至少有一个单位的间隔（即 $ yf(x)≥1 $），损失为0。</li>
+<li><strong>错误分类或不足间隔</strong>：如果样本被错误分类或在决策边界附近（即$  yf(x)&lt;1 $），损失将增加，具体取决于距离决策边界的程度。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Logistic损失函数
+<ul>
+<li>损失函数：$ L(y, ^y)= - \frac{1}{N}∑^N_{i=1}[y_i log(^y_i)+(1−y_i)log(1− ^y_i)] $</li>
+</ul>
+</li>
+</ul>
+<h2 id="5、核方法">5、核方法</h2>
+<blockquote>
+<p>核函数并不是SVM特有的，核函数可以和其他算法也进行结合，只是核函数与SVM结合的优势非常大。</p>
+</blockquote>
+<h3 id="5-1-什么是核函数">5.1 什么是核函数</h3>
+<blockquote>
+<p>核函数，是将原始输入空间映射到新的特征空间，从而，使得原本线性不可分的样本可能在核空间可分。</p>
+</blockquote>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727243019081-c1ec747f-d6b4-4be3-b461-b63fd1a7cc66.png" width="672" title="" crop="0,0,1,1" id="u93ebe5a6" class="ne-image">
-
-如图所示，该如何将其分开呢？
-
+<p>如图所示，该如何将其分开呢？</p>
 <img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727243079241-7e29167b-a24a-4448-b386-7dd7e97df2b4.png" width="389.6" title="" crop="0,0,1,1" id="u60d0be46" class="ne-image">
-
-+ 假设X为输入空间
-+ H是特征空间
-+ 存在一个映射<font style="color:rgb(0,0,0);">ϕ使得X中的点x能够计算得到H空间中的点h</font>
-+ <font style="color:rgb(0,0,0);">对于所有的X中的点都成立：</font>$ h=ϕ(x) $
-+ 若x，z是X空间的点，函数$ k(x,z) $满足条件：$ k(x,z)=ϕ(x) · ϕ(z) $，那么都成立，则称k为核函数，而<font style="color:rgb(0,0,0);">ϕ为映射函数</font>
-
-<font style="color:rgb(0,0,0);"></font>
-
-<h3 id="5-2-核方法举例"><a href="#5-2-核方法举例" class="headerlink" title="5.2 核方法举例"></a><font style="color:rgb(0,0,0);">5.2 核方法举例</font></h3><p>例1：</p>
+<ul>
+<li>假设X为输入空间</li>
+<li>H是特征空间</li>
+<li>存在一个映射<font style="color:rgb(0,0,0);">ϕ使得X中的点x能够计算得到H空间中的点h</font></li>
+<li><font style="color:rgb(0,0,0);">对于所有的X中的点都成立：</font>$ h=ϕ(x) $</li>
+<li>若x，z是X空间的点，函数$ k(x,z) $满足条件：$ k(x,z)=ϕ(x) · ϕ(z) $，那么都成立，则称k为核函数，而<font style="color:rgb(0,0,0);">ϕ为映射函数</font></li>
+</ul>
+<p><font style="color:rgb(0,0,0);"></font></p>
+<h3 id="font-style-color-rgb-0-0-0-5-2-核方法举例-font"><font style="color:rgb(0,0,0);">5.2 核方法举例</font></h3>
+<p>例1：</p>
 <p>$ ϕ:R^2\rightarrow R^3 $</p>
-<p>$<br>(x_1,x_2)\rightarrow(z_1,z_2,z_3)=(x_1^2,\sqrt{2}x_1x_2,x_2^2) $</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727267065630-65ab0d56-4cbd-4976-a287-5999e233d80f.png" width="719.2" title="" crop="0,0,1,1" id="u4153435e" class="ne-image"></p>
+<p>$<br>
+(x_1,x_2)\rightarrow(z_1,z_2,z_3)=(x_1^2,\sqrt{2}x_1x_2,x_2^2) $</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727267065630-65ab0d56-4cbd-4976-a287-5999e233d80f.png" width="719.2" title="" crop="0,0,1,1" id="u4153435e" class="ne-image">
 <p>具体细节此处不列举。核函数的作用就是一个从低维到高维的映射，这个映射可以将低维空间中线性不可分的两类点变成线性可分的。</p>
 <p>常用核函数：</p>
 <ul>
-<li>线性核：$ k(x_i,x_j)=x^T_ix_j<br>$</li>
+<li>线性核：$ k(x_i,x_j)=x^T_ix_j<br>
+$</li>
 <li>多项式核：$ k(x_i,x_j)=(x^T_ix_j)^d $  d≥1为多项式的次数</li>
 <li>高斯（径向基（RBF））核：$ k(x_i,x_j)=\exp(-\frac{||x_i-x_j||^2}{2\sigma^2}) $  <font style="color:rgb(51, 51, 51);">σ＞0</font></li>
 <li>拉普拉斯核：$ k(x_i,x_j)=\exp(-\frac{||x_i-x_j||}{\sigma}) $<font style="color:rgb(51, 51, 51);">  σ＞0</font></li>
 <li><font style="color:rgb(51, 51, 51);">Sigmoid核：</font>$ k(x_i,x_j)=\tanh(\beta x^T_ix_j+\theta) $</li>
 </ul>
-<font style="color:rgb(51, 51, 51);">此处不深入了解，若有需要，日后补充</font>
-
+<p><font style="color:rgb(51, 51, 51);">此处不深入了解，若有需要，日后补充</font></p>
 <blockquote>
 <p><strong>选取核函数指导：</strong></p>
 <ul>
@@ -812,37 +782,46 @@ $ [
 <li>应用最广的应该是RBF核，大样本还是小样本，高维还是低维，RBF核均适用</li>
 </ul>
 </blockquote>
-<h2 id="6、SVM回归"><a href="#6、SVM回归" class="headerlink" title="6、SVM回归"></a><font style="color:rgb(51, 51, 51);">6、SVM回归</font></h2><p>SVM回归是让尽可能多的实例位于预测线上，同时限制间隔违例。线距的宽度由超参数ε控制</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727319022452-3ad4ca2d-5790-4e66-a3ae-d94f9a62e70b.png" width="770.4" title="" crop="0,0,1,1" id="u868d9397" class="ne-image"></p>
-<h2 id="7、SVM算法API（二）"><a href="#7、SVM算法API（二）" class="headerlink" title="7、SVM算法API（二）"></a>7、SVM算法API（二）</h2><h3 id="7-1-综述"><a href="#7-1-综述" class="headerlink" title="7.1 综述"></a>7.1 综述</h3><ul>
+<h2 id="font-style-color-rgb-51-51-51-6、SVM回归-font"><font style="color:rgb(51, 51, 51);">6、SVM回归</font></h2>
+<p>SVM回归是让尽可能多的实例位于预测线上，同时限制间隔违例。线距的宽度由超参数ε控制</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1727319022452-3ad4ca2d-5790-4e66-a3ae-d94f9a62e70b.png" width="770.4" title="" crop="0,0,1,1" id="u868d9397" class="ne-image">
+<h2 id="7、SVM算法API（二）">7、SVM算法API（二）</h2>
+<h3 id="7-1-综述">7.1 综述</h3>
+<ul>
 <li>SVM可用于分类，也可用于回归和异常值检测</li>
 <li>SVM具有良好的鲁棒性，对未知数据有很强的泛化能力，特别是在数据量较少的情况下</li>
-<li>使用SVM通常流程如下：<ol>
+<li>使用SVM通常流程如下：
+<ol>
 <li>对样本归一化</li>
 <li>应用核函数对样本进行映射（RBF或Linear比较常用）</li>
 <li>用cross-validation和grid-search对超参数进行优选</li>
 <li>用最优参数训练模型并测试</li>
 </ol>
 </li>
-<li>sklearn中SVM主要有：<code>SVC</code>，<code>NuSVC</code>，<code>LinearSVC</code>，扩展为三个支持向量回归方法：<code>SVR</code>，<code>NuSVR</code>，<code>LinearSVR</code><ul>
+<li>sklearn中SVM主要有：<code>SVC</code>，<code>NuSVC</code>，<code>LinearSVC</code>，扩展为三个支持向量回归方法：<code>SVR</code>，<code>NuSVR</code>，<code>LinearSVR</code>
+<ul>
 <li><code>SVC</code>和<code>NuSVC</code>方法基本一致，唯一区别就是损失函数的度量方式不同</li>
 <li><code>LinearSVC</code>是线性核函数支持向量分类，没有kernel参数</li>
 </ul>
 </li>
 </ul>
-<h3 id="7-2-SVC"><a href="#7-2-SVC" class="headerlink" title="7.2 SVC"></a>7.2 SVC</h3><p><code>class sklearn.svm.SVC(C=1.0, kernel=&#39;rbf&#39;, degree=3,coef0=0.0,random_state=None)</code></p>
+<h3 id="7-2-SVC">7.2 SVC</h3>
+<p><code>class sklearn.svm.SVC(C=1.0, kernel='rbf', degree=3,coef0=0.0,random_state=None)</code></p>
 <ul>
-<li>C：惩罚系数，控制损失函数的惩罚系数，类似于线性回归中的正则化系数<ul>
+<li>C：惩罚系数，控制损失函数的惩罚系数，类似于线性回归中的正则化系数
+<ul>
 <li>C越大，相当于惩罚松弛变量，希望松弛变量接近于0，对误分类的惩罚增大，准确率很高，但会出现过拟合</li>
 <li>C越大，对误分类的惩罚越小，泛化能力较强，但可能欠拟合</li>
 </ul>
 </li>
-<li>kernel：采用核函数的类型<ul>
+<li>kernel：采用核函数的类型
+<ul>
 <li>参数有：有RBF, Linear, Poly（多项式核）, Sigmoid或者自定义⼀个核函数</li>
 </ul>
 </li>
 <li>degree：该参数只对’poly’有用，指定多项式最高次数</li>
-<li>coef0: 核函数常数值(y=kx+b中的b值)，<ul>
+<li>coef0: 核函数常数值(y=kx+b中的b值)，
+<ul>
 <li>只有‘poly’和‘sigmoid’核函数有，默认值是0。</li>
 </ul>
 </li>
@@ -851,15 +830,17 @@ $ [
 <ul>
 <li>nu：简单的说是控制模型的复杂度，取值（0，1）</li>
 </ul>
-<p><code>class sklearn.svm.LinearSVC(penalty=&#39;l2&#39;, loss=&#39;squared_hinge&#39;, dual=True, C=1.0)</code></p>
+<p><code>class sklearn.svm.LinearSVC(penalty='l2', loss='squared_hinge', dual=True, C=1.0)</code></p>
 <ul>
 <li>penalty：正则化参数，L1或L2</li>
 <li>loss函数：有hinge和squared_hinge两种可选，前者⼜称L1损失，后者称为L2损失，默认是squared_hinge</li>
 <li>dual：是否转化为对偶问题求解，默认true</li>
 <li>C：与上文的相同</li>
 </ul>
-<h2 id="8、案例：数字识别器"><a href="#8、案例：数字识别器" class="headerlink" title="8、案例：数字识别器"></a>8、案例：数字识别器</h2><p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2024/pdf/21443679/1727330319721-a81ee4d2-da36-413b-9fd1-1fc3bf49b1e5.pdf">案例_手写数字分类.pdf</a></p>
-<h2 id="9、总结"><a href="#9、总结" class="headerlink" title="9、总结"></a>9、总结</h2><p><strong>优点</strong>：</p>
+<h2 id="8、案例：数字识别器">8、案例：数字识别器</h2>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2024/pdf/21443679/1727330319721-a81ee4d2-da36-413b-9fd1-1fc3bf49b1e5.pdf">案例_手写数字分类.pdf</a></p>
+<h2 id="9、总结">9、总结</h2>
+<p><strong>优点</strong>：</p>
 <ul>
 <li>高维空间中非常有效，即时在数据维度比样本数量大的情况下仍然有效</li>
 <li>在决策函数（支持向量）中使用训练集的子集，因此它也是高效利用内存的</li>
@@ -1020,7 +1001,7 @@ $ [
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1、定义</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-SVM%E7%AE%97%E6%B3%95%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1 SVM算法定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-%E8%B6%85%E5%B9%B3%E9%9D%A2%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%94%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2 超平面最大间隔介绍</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-3-%E7%A1%AC%E9%97%B4%E9%9A%94%E4%B8%8E%E8%BD%AF%E9%97%B4%E9%9A%94"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">1.3 硬间隔与软间隔</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81SVM%E7%AE%97%E6%B3%95API"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2、SVM算法API</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81SVM%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3、SVM算法原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-1-%E5%AE%9A%E4%B9%89%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1 定义输入数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-2-%E7%BA%BF%E6%80%A7%E5%8F%AF%E5%88%86%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">3.2 线性可分支持向量机</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-2-%E6%A0%B8%E6%96%B9%E6%B3%95%E4%B8%BE%E4%BE%8B"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">5.2 核方法举例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#6%E3%80%81SVM%E5%9B%9E%E5%BD%92"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">6、SVM回归</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#7%E3%80%81SVM%E7%AE%97%E6%B3%95API%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">7、SVM算法API（二）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-1-%E7%BB%BC%E8%BF%B0"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">7.1 综述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-2-SVC"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">7.2 SVC</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#8%E3%80%81%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB%E5%99%A8"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">8、案例：数字识别器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#9%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">9、总结</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1、定义</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-SVM%E7%AE%97%E6%B3%95%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1 SVM算法定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-%E8%B6%85%E5%B9%B3%E9%9D%A2%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%94%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2 超平面最大间隔介绍</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-3-%E7%A1%AC%E9%97%B4%E9%9A%94%E4%B8%8E%E8%BD%AF%E9%97%B4%E9%9A%94"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">1.3 硬间隔与软间隔</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81SVM%E7%AE%97%E6%B3%95API"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2、SVM算法API</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81SVM%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3、SVM算法原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-1-%E5%AE%9A%E4%B9%89%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1 定义输入数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-2-%E7%BA%BF%E6%80%A7%E5%8F%AF%E5%88%86%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">3.2 线性可分支持向量机</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-3-SVM%E7%9A%84%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B%E4%B8%8E%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3.3 SVM的计算过程与算法步骤</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4%E3%80%81SVM%E7%9A%84%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4、SVM的损失函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5%E3%80%81%E6%A0%B8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5、核方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%A0%B8%E5%87%BD%E6%95%B0"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">5.1 什么是核函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#font-style-color-rgb-0-0-0-5-2-%E6%A0%B8%E6%96%B9%E6%B3%95%E4%B8%BE%E4%BE%8B-font"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">5.2 核方法举例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#font-style-color-rgb-51-51-51-6%E3%80%81SVM%E5%9B%9E%E5%BD%92-font"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">6、SVM回归</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#7%E3%80%81SVM%E7%AE%97%E6%B3%95API%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">7、SVM算法API（二）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-1-%E7%BB%BC%E8%BF%B0"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">7.1 综述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-2-SVC"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">7.2 SVC</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#8%E3%80%81%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB%E5%99%A8"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">8、案例：数字识别器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#9%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">9、总结</span></a></li></ol>
         
         </div>
       </aside>
@@ -1582,5 +1563,23 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ["$","$"], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: false
+        },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
