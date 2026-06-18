@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="大模型算法/应用开发，个人学习笔记分享博客"/>
+  <meta name="keyword" content="ypb,机器学习,深度学习,大模型,算法,博客"/>
+  <!-- 解除第三方图片防盗链限制 -->
+  <meta name="referrer" content="no-referrer"/>
+  <link rel="shortcut icon" href="/img/avatar/y.png"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://nova-chaser.github.io/机器学习/黑马教程/5、集成学习与随机森林/">
+  <title>
+    
+      集成学习与随机森林 - Your Potential Beyond
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Your Potential Beyond</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-toggle-item">
+            <a class="toggle" onclick="document.body.classList.toggle('body--dark'); return false;" title="切换主题">
+              <i class="mdui-icon material-icons light-mode"></i>
+              <i class="mdui-icon material-icons dark-mode"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('/img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
+              
+              <a class="tag" href="/tags/#集成学习" title="集成学习">集成学习</a>
+              
+              <a class="tag" href="/tags/#随机森林" title="随机森林">随机森林</a>
+              
+              <a class="tag" href="/tags/#Bagging" title="Bagging">Bagging</a>
+              
+            </div>
+            <h1>集成学习与随机森林</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by ypb on
+              2026-06-18
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">17</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="1、什么是集成学习">1、什么是集成学习</h2>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723795159352-eee306d4-62ff-4510-a268-bdd5b28615d0.png" width="970.4" title="" crop="0,0,1,1" id="u0c7e6d82" class="ne-image">
+<p><strong>集成学习</strong>通过建立几个模型来解决单一预测问题。工作原理是生成多个分类器/模型。各自独立的学习与做出预测。这些预测最后结合成组合预测，因此优于任何⼀个单分类的做出预测。</p>
+<p><strong>boosting与Bagging</strong></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723795272899-6c4fe91c-6793-41ef-a506-f8213d60e743.png" width="1021.6" title="" crop="0,0,1,1" id="u02464030" class="ne-image">
+<h2 id="2、Bagging和随机森林">2、Bagging和随机森林</h2>
+<h3 id="2-1-Bagging集成原理">2.1 Bagging集成原理</h3>
+<p>目标：把下图的圆与方块进行分类</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723795403816-b44f4812-b5ec-4fd7-afa9-d91a5a179677.png" width="836" title="" crop="0,0,1,1" id="u4be3f45f" class="ne-image">
+<p>实现过程：</p>
+<p>（1）采用不同的数据集</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723795652966-3ab134f3-cac7-43b7-ae2b-4c3c9cb84b64.png" width="834.4" title="" crop="0,0,1,1" id="u02741819" class="ne-image">
+<p>（2）训练分类器</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723795682046-d1b70ae5-78f2-4b34-8184-0f9977b28d4c.png" width="829.6" title="" crop="0,0,1,1" id="u79cba690" class="ne-image">
+<p>（3）平均投票，获取最终结果</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723795927807-fca8f11b-71d7-4d3a-8608-7f11f6a52bae.png" width="820.8" title="" crop="0,0,1,1" id="ubf9e5d1a" class="ne-image">
+<h3 id="2-2-随机森林构造过程">2.2 随机森林构造过程</h3>
+<p>机器学习中，随机森林是一个包含多个决策树的分类器，并其输出的类别是由个别树输出的类别的众数而定。</p>
+<p><strong>随机森林 = Bagging + 决策树</strong></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723796354995-1e4cb418-1ea8-40e6-85f8-60a186085cc9.png" width="1053.6" title="" crop="0,0,1,1" id="u9c01ae24" class="ne-image">
+<p>例如：训练了5个树，其中有4个树的结果是TRUE，1个树的结果是FALSE，那么最终投票结果就是TRUE</p>
+<p>随机森林构造的关键步骤：<br>
+（1）一次随机选出一个样本，<strong>有放回的抽样</strong>，重复N次</p>
+<p>（2）随机选出m个特征m&lt;&lt;M，建立决策树（M表示特征数目）</p>
+<ul>
+<li>为什么要随机抽样训练集？</li>
+</ul>
+<p>如果不进行随机抽样，每棵树的训练集都一样，那么最终训练出的树分类结果也完全是一样的</p>
+<ul>
+<li>为什么要有放回地抽样？</li>
+</ul>
+<p>如果不是有放回的抽样，那么每课树的训练样本都是<strong>不同的</strong>，都是没有交集的，这样每棵树都是“有偏的”，也就是每棵树训练出来都是有很大的差异的；而随机森林最后分类取决于多棵树（弱分类器）的投票表决</p>
+<h3 id="2-3-包外估计（Out-Of-Bag-Estimate）">2.3 包外估计（Out-Of-Bag Estimate）</h3>
+<p>包外估计的定义： 是随机森林（Random Forest）中的一种模型评估方法。它的特点是无需额外的验证集，可以直接利用训练数据进行模型的性能评估。</p>
+<p>随机森林的Bagging过程，对于每一颗训练出来的决策树gt，与数据集有下列关系：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723800082580-8cdf7e3d-5af1-4fab-9a9b-64bf282a0629.png" width="1116.8" title="" crop="0,0,1,1" id="uaf713003" class="ne-image">
+<p>星号部分是没有选择到的数据，称之为out-of-bag（OOB）数据，当数据足够多，对于任意一组数据（xn,yn）是包外数据的概率为：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723800287203-a34faf82-c03a-48e9-84cf-f23fc43e844f.png" width="703.2" title="" crop="0,0,1,1" id="u52daaa9f" class="ne-image">
+<p>由于基分类器是构建在训练样本的自助抽样集上的，只有约63.2%原样本集出现在中，而剩余的36.8%（1/e）的数据作为包外数据，可以用于基分类器的<strong>验证集</strong>。</p>
+<p>经验证，包外估计是对集成分类器泛化误差的<strong>无偏估计</strong></p>
+<blockquote>
+<p>无偏估计：通俗的讲就是认为所有的样本抽取概率都是相同的</p>
+</blockquote>
+<p>包外估计可用于：</p>
+<ul>
+<li>基学习器是决策树时，可使用包外样本来辅助剪枝，或用于各节点的后验概率以辅助对零训练样本节点的处理</li>
+<li>基学习器是神经网络时，可使用包外样本来辅助早期停止以减少过拟合</li>
+</ul>
+<h2 id="3、随机森林API">3、随机森林API</h2>
+<p><code>sklearn.ensemble.RandomForestClassifier(n_estimators=10, criterion=’gini’, max_depth=None, bootstrap=True, random_state=None, min_samples_split=2)</code></p>
+<ul>
+<li>n_estimators：integer，optional(default = 10)森林里面的树的数量</li>
+<li>criterion：string，optional（default=“gini”）分割特征的测量方法</li>
+<li><strong>max_depth</strong>：integer或None，optional(default = None)树的最大深度</li>
+<li><strong>max_features</strong>=&quot;auto”,每个决策树的最⼤特征数量
+<ul>
+<li>If “auto”，then <code>max_features=sqrt(n_features)</code></li>
+<li>If “sqrt”，then <code>max_features=sqrt(n_features)</code>(same as “auto”)</li>
+<li>If “log2”，then <code>max_features=log2(n_features)</code></li>
+<li>If None，then <code>max_features=n_features</code></li>
+</ul>
+</li>
+<li>bootstrap： boolean，optional(default	=True)，是否使用放回取样</li>
+<li><strong>min_samples_split</strong>：内部节点再划分所需要最小样本数</li>
+<li><strong>min_samples_leaf</strong>：叶子结点最小的样本数</li>
+</ul>
+<p>随机森林预测案例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> GridSearchCV</span><br><span class="line"></span><br><span class="line">param = &#123;<span class="string">&#x27;n_estimators&#x27;</span>: [<span class="number">120</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">500</span>, <span class="number">800</span>, <span class="number">1200</span>], <span class="string">&quot;max_depth&quot;</span>: [<span class="number">5</span>, <span class="number">8</span>, <span class="number">15</span>, <span class="number">25</span>, <span class="number">30</span>]&#125;</span><br><span class="line">rf = RandomForestClassifier()</span><br><span class="line"></span><br><span class="line">gc = GridSearchCV(rf, param_grid=param, cv=<span class="number">2</span>)</span><br><span class="line">gc.fit(x_train, y_train)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;随机森林预测的准确率为：&quot;</span>, gc.score(x_test, y_test))</span><br></pre></td></tr></table></figure>
+<p>Bagging集成的优点</p>
+<p>Bagging + 决策树/线性回归/逻辑回归/深度学习… = bagging集成学习⽅法</p>
+<p>经过上述的集成学习方法，均可在原有算法提高约2%左右的泛化正确率</p>
+<h2 id="4、otto案例介绍-–-Otto-Group-Product-Classification-Challenge">4、otto案例介绍 – Otto Group Product Classification Challenge</h2>
+<p>本案例要求,你对奥拓集团的产品进行正确的分类。尽可能的提供分类的准确性。</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2024/html/21443679/1723823771877-a971971e-6d3f-432d-9b8a-274a4a7e94ce.html">4.RF_otto.html</a></p>
+<h2 id="5、Boosting">5、Boosting</h2>
+<p>随着学习的积累从弱到强</p>
+<p>简而言之：每新加入⼀个弱学习器，整体能⼒就会得到提升</p>
+<p>代表算法：Adaboost，GBDT，XGBoost，LightGBM</p>
+<h3 id="5-1-实现过程">5.1 实现过程</h3>
+<p>1、训练第一个学习器</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723877054287-7f7a59c2-977d-4133-95d4-5e520ad05d2a.png" width="974.4" title="" crop="0,0,1,1" id="u2fb3265a" class="ne-image">
+<p>2、调整数据分布</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723878690876-5a56edd1-04fa-4338-b2e1-54e46fd39414.png" width="928.8" title="" crop="0,0,1,1" id="uc6dccfaf" class="ne-image">
+<p>3、训练第二个学习器</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723881907539-ae037a21-b8c7-4c9c-b43e-522561f5c5e0.png" width="953.6" title="" crop="0,0,1,1" id="u735fc108" class="ne-image">
+<p>4、再次调整数据分布</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723881968122-d92990d8-3c3e-42c0-8f45-3b4e20735954.png" width="977.6" title="" crop="0,0,1,1" id="u56d80f4a" class="ne-image">
+<p>5、依次训练学习器，调整数据分布</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723888749353-be35b14f-ce49-4afc-a3c0-dfd233950d47.png" width="924" title="" crop="0,0,1,1" id="u5c17dde7" class="ne-image">
+<p>整体过程实现：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723888816030-a5ba179a-3a53-407c-bb79-433f3d726806.png" width="964.8" title="" crop="0,0,1,1" id="ued7280c6" class="ne-image">
+<h3 id="5-2-Bagging集成与boosting集成的区别：">5.2 Bagging集成与boosting集成的区别：</h3>
+<ul>
+<li>数据方面：
+<ul>
+<li>Bagging：对数据进行采样训练</li>
+<li>Boosting：根据前一轮学习结果调整数据的重要性</li>
+</ul>
+</li>
+<li>投票方面：
+<ul>
+<li>Bagging：所有学习器平权投票</li>
+<li>Boosting：对学习器加权投票</li>
+</ul>
+</li>
+<li>学习顺序：
+<ul>
+<li>Bagging：并行，每个学习器没有依赖关系</li>
+<li>Boosting：串行，有先后顺序</li>
+</ul>
+</li>
+<li>主要作用：
+<ul>
+<li>Bagging：提高泛化性能（解决过拟合，降低方差）</li>
+<li>Boosting：提高训练精度（解决欠拟合，降低偏差）</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-AdaBoost">5.3 AdaBoost</h3>
+<h4 id="1、构造过程的细节">1、构造过程的细节</h4>
+<ol>
+<li>初始化训练数据权重相等，训练第一个学习器
+<ol>
+<li>假设每个训练样本在基分类器的学习中作用相同，这一假设可以保证第一步能在原始数据上学习基本分类器H1(x)</li>
+</ol>
+</li>
+<li>AdaBoost反复学习基本分类器，在每一轮m = 1,2,…,M顺次执行下列操作：
+<ol>
+<li>在权值分布为Dt的训练数据上，确定基分类器</li>
+<li>计算该学习器在训练数据中的错误率<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723889441998-65aa3eb8-01e6-45f2-b999-75e81f015bca.png" width="187.8000030517578" title="" crop="0,0,1,1" id="uf4ea53c0" class="ne-image"></li>
+<li>计算该学习器的投票权重<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723889477311-8956f05a-fdf3-4f3e-9745-ef97b8092c35.png" width="184.60000610351562" title="" crop="0,0,1,1" id="ucf48be38" class="ne-image"></li>
+<li>根据投票权重，对训练数据重新赋权<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723889523784-baf2f48a-35c9-4b03-83c2-acbcce6a9e18.png" width="624" title="" crop="0,0,1,1" id="ue459bd9a" class="ne-image">Zt为归一化因子（规范化常数）<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723895889776-403ce1ba-7328-439f-9513-edf1d957dd00.png" width="339.3999938964844" title="" crop="0,0,1,1" id="uc84b101d" class="ne-image">
+<ul>
+<li>$ α_t $是分配给弱分类器的权重。</li>
+<li>$ y_i $是样本$ x_i $的真实标签。</li>
+<li>$ h_t(x_i) $是弱分类器对样本$ x_i $的预测结果。</li>
+</ul>
+</li>
+<li>重复执行a~d，M次。</li>
+</ol>
+</li>
+<li>对M个学习器进行加权投票<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723889595242-0a7614aa-6093-4914-8209-5fc442008bd2.png" width="329.20001220703125" title="" crop="0,0,1,1" id="u02ea296d" class="ne-image"></li>
+</ol>
+<h4 id="2、案例">2、案例</h4>
+<p>对下列数据使用Adaboost算法学习一个强分类器</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723889714580-6fefe77e-aea5-452e-8e9b-6d7c347a7f41.png" width="1161.6" title="" crop="0,0,1,1" id="u39fbc278" class="ne-image">
+<ol>
+<li>初始化数据权重相等，训练第一个学习器
+<ol>
+<li>D1 = （w11,w12,…,w110）</li>
+<li>w1i = 0.1，i=1,2,…,10</li>
+</ol>
+</li>
+<li>AdaBoost反复学习基本分类器，在每一轮m = 1,2,…,M顺次执行下列操作：</li>
+</ol>
+<p><strong>当m=1时</strong>：</p>
+<pre><code>1. 在权值分布为D1的训练数据上，阈值v取2.5时分类误差率最低，故基本分类器为：&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723889984587-bba2d45e-31d2-4da1-939c-b26b27aabe58.png&quot; width=&quot;459.2&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;ud84dd0d1&quot; class=&quot;ne-image&quot;&gt;（6,7,8）被分错
+2. 计算该学习器的在训练数据中的错误率：&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723895011140-86e0f468-a435-4eda-b970-c61add460a8b.png&quot; width=&quot;227.60000610351562&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;uab8e6912&quot; class=&quot;ne-image&quot;&gt;（3/10=0.3）
+3. 计算该学习器的投票权重：&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723895105892-3b339baa-2757-429a-9b1f-414a50d656c3.png&quot; width=&quot;264.6000061035156&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;u06683691&quot; class=&quot;ne-image&quot;&gt;
+4. 根据投票权重，对训练数据重新赋权：&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723895165771-4aaf3bf5-74cb-4ad7-83d6-6ab2174b4b0a.png&quot; width=&quot;255.39999389648438&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;u3a301800&quot; class=&quot;ne-image&quot;&gt;，根据公式：&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723895246944-03ef8ccd-1bcd-48c3-acda-1cf0cfd2b007.png&quot; width=&quot;1020.8&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;u446c79c5&quot; class=&quot;ne-image&quot;&gt;经过计算，D2的值为&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723895376700-acf95a87-a699-4b9d-8bc4-0a027d03c75e.png&quot; width=&quot;1637.6&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;u241fb9a8&quot; class=&quot;ne-image&quot;&gt;
+</code></pre>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723895411690-41ca07ed-2340-4843-8e55-5c6d3c4d6cf2.png" width="576" title="计算过程" crop="0,0,1,1" id="u4f172bad" class="ne-image">
+<pre><code>$ {H}_{1}\left( x\right)  = {sign}\left\lbrack  {{0.4236}{h}_{1}\left( x\right) }\right\rbrack $（sign符号函数，大于0的返回1，小于0的返回-1，等于0的返回0）
+</code></pre>
+<p><strong>当m=2时</strong>：</p>
+<pre><code>1. 在权值分布为D的训练数据上，阈值v取8.5时分类误差率最低，故基本分类器为：&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723896642848-5e79bbf2-ede0-4143-b715-a7fb1950aacf.png&quot; width=&quot;316&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;uc1b5ad5b&quot; class=&quot;ne-image&quot;&gt;
+2. 错误率：&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723899554498-3b0b0cdf-8ed8-4ba9-80e0-268d5365b2f1.png&quot; width=&quot;283&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;u9f5db80d&quot; class=&quot;ne-image&quot;&gt;
+3. 投票权重：&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723899667577-19782b71-423a-49f4-b920-96ea708da859.png&quot; width=&quot;347.3999938964844&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;u2e856095&quot; class=&quot;ne-image&quot;&gt;
+4. 重新赋权：&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2024/png/21443679/1723899694728-75a7e9b9-dacd-46b9-bd91-6b422fd789b5.png&quot; width=&quot;584&quot; title=&quot;&quot; crop=&quot;0,0,1,1&quot; id=&quot;u0aeebb1a&quot; class=&quot;ne-image&quot;&gt;
+</code></pre>
+<p>分类器$ H_2(x) $在训练集上有三个误分类点</p>
+<p><strong>当m=3时：</strong></p>
+<p>最终计得<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723899868803-2ba8476f-712d-466d-8151-a3eaa10268b8.png" width="479.8000183105469" title="" crop="0,0,1,1" id="ue7b9220a" class="ne-image"></p>
+<p>分类器H (x)在训练数据集上的误分类点个数为0。</p>
+<ol start="3">
+<li>对m个学习器进行加权投票,获取最终分类器$ H_3(x) = sign[0.4236h_1(x)+0.6496h_2(x)+0.7514h_3(x)] $</li>
+</ol>
+<h3 id="5-4-API">5.4 API</h3>
+<p><code>class sklearn.ensemble.AdaBoostClassifier(estimator=None, *, n_estimators=50, learning_rate=1.0, algorithm='SAMME.R', random_state=None)</code></p>
+<ul>
+<li>estimator：基分类器，默认为**<font style="color:rgb(60, 60, 67);background-color:rgb(247, 247, 247);">DecisionTreeClassifier(max_depth=1)</font>**</li>
+<li>n_estimators：基础估计器的数量，默认为50</li>
+<li>learning_rate：学习率</li>
+<li>algorithm：可选值为 ‘SAMME’ 和 ‘SAMME.R’。‘SAMME.R’ 使用概率估计来更新模型权重，通常比 ‘SAMME’ 更稳定和准确</li>
+</ul>
+<h2 id="6、GBDT">6、GBDT</h2>
+<blockquote>
+<p>GBDT 的全称是 Gradient Boosting Decision Tree，梯度提升树，在传统机器学习算法中，GBDT算的上TOP3的算法。 想要理解GBDT的真正意义，那就必须理解GBDT中的Gradient Boosting 和Decision Tree分别是什么</p>
+</blockquote>
+<p>GBDT使用的是CART回归树</p>
+<p>为什么不使用CART分类树？因为GBDT每次迭代要拟合的是梯度值，是连续值所以要用回归树</p>
+<h3 id="6-1-Gradient-Boosting：拟合负梯度">6.1 Gradient Boosting：拟合负梯度</h3>
+<p>梯度提升树（Gradient Boosting）是提升树（Boosting Tree）的一种改进算法。</p>
+<p>对于提升树，有一个通俗的例子：假如有个人30岁，我们先先用20岁去拟合，发现损失有10岁，这时我们用6岁去拟合剩下的损失，发现差距还有4岁，第三轮我们用3岁拟合剩下的差距，差距就只有一岁了。如果我们的迭代轮数还没有完，可以继续迭代下面，每一轮迭代，拟合的岁数误差都会减小。最后将每次拟合的岁数加起来便是模型输出的结果。</p>
+<p><strong>提升树算法</strong>：</p>
+<ol>
+<li>初始化$ f_0(x) = 0 $</li>
+<li>对m=1,2，…，M
+<ol>
+<li>计算残差$ r_{mi}=y_i-f_{m-1}(x),i=1,2,…,N $</li>
+<li>拟合残差$ r_{mi} $学习一个回归树，得到$ h_m(x)<br>
+$</li>
+<li>更新$ f_m(x)=f_{m-1}+h_m(x) $</li>
+</ol>
+</li>
+<li>得到回归问题提升树$ f_M(x)=\sum_{m=1}^M h_m(x) $</li>
+</ol>
+<p>上述算法中，<strong>残差</strong>是：</p>
+<p>在提升树算法中</p>
+<ul>
+<li>假设前一轮迭代得到的强学习器是：$ f_{t-1}(x) $</li>
+<li>损失函数是：$ L(y,f_{t-1}(x)) $</li>
+<li>本轮迭代的目标是找到一个弱学习器：$ h_t(x) $</li>
+<li>让本轮的损失最小化：$ L(y,f_{t}(x))=L(y,f_{t-1}(x)+h_t(x)) $</li>
+<li>采用平方损失函数时：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723948379828-b16e607e-d29b-47f2-ba5f-c385ba03b2d4.png" width="188.60000610351562" title="" crop="0,0,1,1" id="u37020610" class="ne-image"></li>
+<li>这里的$ r=y-f_{t-1}(x) $是当前模型拟合数据的残差（residual）</li>
+</ul>
+<p>用上面通俗的例子来看，第一次迭代的残差是10岁，第二次是4岁…</p>
+<p>针对这一问题，Friedman提出了梯度提升树算法，这是利用最速下降的近似方法，其关键是<strong>利用损失函数的负梯度作为提升树算法中的残差的近似值</strong>。</p>
+<p>负梯度长什么样呢？</p>
+<ul>
+<li>第t轮的第i个样本的损失函数的负梯度为<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723948868586-db78ef49-f5ac-4235-bb23-2119fa93ab51.png" width="288" title="" crop="0,0,1,1" id="ua1506396" class="ne-image"></li>
+<li>此时不同的损失函数会得到不同的负梯度，如选择平方损失：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723948915698-ade41629-9612-4b2b-9342-4e67d143feaa.png" width="256" title="" crop="0,0,1,1" id="uc2e74b27" class="ne-image"></li>
+<li>负梯度为：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723948950727-cb3af379-6e29-4bb3-a350-07148abc30b9.png" width="446" title="" crop="0,0,1,1" id="u1302753e" class="ne-image"></li>
+</ul>
+<p>此时发现GBDT的负梯度就是残差，所以说对于回归问题，我们要拟合的就是残差</p>
+<p>对于分类问题，损失函数都是logloss</p>
+<h3 id="6-2-GBDT算法原理">6.2 GBDT算法原理</h3>
+<ol>
+<li>初始化弱学习器<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723949304173-f9584b61-811e-4d27-ba5f-0dab942d4b33.png" width="279.20001220703125" title="" crop="0,0,1,1" id="ufacd0d8b" class="ne-image"></li>
+</ol>
+<blockquote>
+<p>注：$ arg min_c $ 表示找到参数 c 使得后面的函数达到最小值。</p>
+</blockquote>
+<ol start="2">
+<li>对m=1,2,…,M有：
+<ol>
+<li>对每个样本i=1,2,…,N，计算负梯度，即残差：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723949414336-af20d08b-fe61-4bd6-8018-b0ba0931b5fd.png" width="337.8000183105469" title="" crop="0,0,1,1" id="uf1093d9a" class="ne-image"></li>
+<li>将上步得到的残差作为样本新的真实值，并将数据$ (x_i,r_{im}),i=1,2,…,N $作为下棵树的训练数据，得到一棵新的回归树$ f_m(x) $其对应的叶子节点区域为$ R_{jm},i=1,2,…,J $。其中J为回归树t的叶子节点的个数。</li>
+<li>对叶子区域 j=1,2,…,J 计算最佳拟合值<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723950712895-da462b3c-f09a-4d59-a5fd-d11b5fe265b3.png" width="406.6000061035156" title="" crop="0,0,1,1" id="uf9684b9f" class="ne-image"></li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>$ Υ_{jm} $表示在叶节点$ R_{jm} $上找到的最优值</li>
+<li>$ {arg} {min}_Υ $表示要找到一个值$ Υ $，使得后面的损失函数达到最小。<br>
+4. 更新强学习器：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723950743186-e87d9e3a-e084-408f-8bdd-2d291fee15a8.png" width="466.60003662109375" title="" crop="0,0,1,1" id="ua93b8462" class="ne-image"></li>
+</ul>
+<ol start="3">
+<li>得到最终学习器：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723950766419-3e1cb5bb-e7d1-4999-8a0b-74bed3fcae4a.png" width="574.2000122070312" title="" crop="0,0,1,1" id="u93024ab4" class="ne-image"></li>
+</ol>
+<h3 id="6-3-实例">6.3 实例</h3>
+<p>有数据如下，预测最后一个样本的身高</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723951038081-97a6dc99-531c-4173-a2f2-d1fefd20539b.png" width="1436.8" title="" crop="0,0,1,1" id="uedc97f01" class="ne-image">
+<p><strong>1、预设参数</strong></p>
+<ul>
+<li>学习率：learning_rate = 0.1</li>
+<li>迭代次数：n_tree = 5</li>
+<li>树的深度：max_depth = 3</li>
+</ul>
+<p><strong>2、开始训练</strong></p>
+<ol>
+<li>初始化弱学习器<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723985193989-b09e90cc-ee5f-4478-920e-eb51c8d9e79b.png" width="298.3999938964844" title="" crop="0,0,1,1" id="u6e9fbf50" class="ne-image"></li>
+</ol>
+<p>损失函数为平方损失，因为平方损失函数式一个凸函数，直接求导，导数等于0，得到c<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723985288401-eff0f8c8-104f-4ed7-b077-ce7798d54210.png" width="567.6000061035156" title="" crop="0,0,1,1" id="u9912327f" class="ne-image"></p>
+<p>令导数=0<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723985335482-ecc9459f-c127-45b1-9f24-579cfe8f67fb.png" width="148.8000030517578" title="" crop="0,0,1,1" id="u00af2766" class="ne-image"><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723985350079-834c7e0c-436b-45da-90b3-ef5062a97af4.png" width="209.40000915527344" title="" crop="0,0,1,1" id="ua7f13362" class="ne-image"></p>
+<p>所以初始化时，c取值为所有训练样本标签的均值。<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723985408737-734f596e-5bc7-49e7-9190-07a940711b30.png" width="350.8000183105469" title="" crop="0,0,1,1" id="uff624a9f" class="ne-image"></p>
+<p>此时得到初始学习器：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1723985628698-03750b2d-1183-4b25-81af-a8c0df1d2c61.png" width="180.1999969482422" title="" crop="0,0,1,1" id="u0c3fd6da" class="ne-image"></p>
+<p>2、迭代轮数</p>
+<p>我们设置了n_tree=5，故M = 5</p>
+<p>计算负梯度，根据上述损失函数为平方损失时，负梯度就是残差，即y与上一轮得到的学习器$ f_{m-1} $的差值：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724000183740-24c03118-8223-4ffc-baec-732ac27b2d67.png" width="340.6000061035156" title="" crop="0,0,1,1" id="uf95c7106" class="ne-image">
+<p>残差在下表列出：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724000215145-fd3789d8-3076-4fbd-a732-1d8e18eb0212.png" width="1437.6" title="" crop="0,0,1,1" id="ua1e2d854" class="ne-image">
+<p>此时将<strong>残差</strong>作为<strong>样本的真实值</strong>来训练弱学习器$ f_1(x) $,即下表数据：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724000433047-3174ea73-1470-4700-a148-39392f56d396.png" width="1448.8" title="" crop="0,0,1,1" id="ud0787489" class="ne-image">
+<p>接着，寻找回归树的最佳划分点，遍历每个特征的每个可能取值</p>
+<p>从年龄特征的5开始，到体重特征70结束，分别计算分裂后两组数据的平方损失（Square Error）</p>
+<p>$ SE_l $左节点平方损失，$ SE_r $右节点平方损失，找到使平方损失和$ SE_{sum}=SE_l+SE_r $最小的那个划分点</p>
+<p>例如：以年龄21为划分节点，将小于21的样本划到左节点，大于21划到右节点。节点包括$ x_0,x_1 $，右节点包括$ x_2,x_3 $</p>
+<p>$ SE_l=0.02，SE_r=0.005,SE_{sum}=0.025\其中:\SE_l = [-0.375-(-0.275)]^2+[-0.175-(-0.275)]^2=0.02\SE_r=[0.225-0.275]^2+[0.325-0.275]^2=0.005 $注：-0.275是两个标签值的均值。0.275同理</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724001764489-7f72625a-51df-41b8-9349-886e9da442dc.png" width="749" title="" crop="0,0,1,1" id="ucf1f003b" class="ne-image">
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724001783187-704be504-ed9f-4f1f-8e60-c32e1de45f89.png" width="1074" title="" crop="0,0,1,1" id="u4e79ef34" class="ne-image">
+<p>由以上计算可得最小损失为0.025，有两个划分点，我们随机选择一个，这里选择年龄21。现在我们的第一颗树长这样：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724049082202-b6d0a554-c57f-42a9-89da-ef98d89efe7b.png" width="604.6000366210938" title="" crop="0,0,1,1" id="u52a8ee99" class="ne-image">
+<p>我们的max深度为3，故再作一次划分，对两边两个节点进行划分。</p>
+<p>对左节点，遍历计算所有划分特征的$ SE_{sum} $：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724049402778-205bcf92-e72c-4552-8c73-ad4493c5585b.png" width="1264.8" title="" crop="0,0,1,1" id="u48afa0f8" class="ne-image">
+<p>最终选择根据年龄7划分</p>
+<p>对于右节点，同理，最后选择年龄30划分：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724049526110-0a293a09-fc80-4c12-bb5b-6afdb4fcb740.png" width="1260" title="" crop="0,0,1,1" id="u5ab2b73c" class="ne-image"><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724049534643-5fa9f5e2-a742-4fbd-8bc3-bd82eb6f3b90.png" width="1259.2" title="" crop="0,0,1,1" id="ub5f3961c" class="ne-image"></p>
+<p>现在这棵树长这样：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724049567862-eef2b9e7-3362-42af-a7e8-374abe14ae7c.png" width="604.6000366210938" title="" crop="0,0,1,1" id="u0958ddc2" class="ne-image">
+<p>深度满足设置：还需要给每个叶子结点分别赋一个参数<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724049627500-fd094e78-bab4-4db0-a9f8-17a0d3cbcdf2.png" width="15" title="" crop="0,0,1,1" id="ue10970d9" class="ne-image"> 来拟合残差：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724049650040-d4eee849-f63b-4369-990d-977c162aca9b.png" width="588" title="" crop="0,0,1,1" id="u1f642482" class="ne-image">
+<p>这里其实和上面初始化学习器一个道理，平方损失，求导，令导数等于0，化简后得到每个叶子节点的参数$ Υ $，其实就是标签值的均值。标签值是本轮要拟合的残差$ y-f_0(x) $</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724050492961-066c9c9a-5787-40ed-831a-c5410baae089.png" width="352" title="" crop="0,0,1,1" id="ua69fa893" class="ne-image">
+<p>此时树长这样：（这棵树应该就是$ f_1(x) $）</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724050529978-2f849228-03b7-4e7f-b209-6a5ca687ced9.png" width="607.6000366210938" title="" crop="0,0,1,1" id="ud6e55975" class="ne-image">
+<p>现在可更新强学习器：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724050568892-b0b18c4f-f66d-4bd9-bab4-b4320c654da6.png" width="555.2" title="" crop="0,0,1,1" id="u10b592bd" class="ne-image"></p>
+<p>其中：</p>
+<ul>
+<li>$ f_0(x) $= 1.475</li>
+<li>lr为学习率，设为0.1</li>
+<li>j 表示这颗树第 j 个叶节点</li>
+<li>$ R_{j1} $表示这棵树第 j 个叶节点所对应区域（数据点集）</li>
+<li>$ I(x∈R_{j1}) $ 指示函数，表示如果输入的x属于叶节点$ R_{j1} $，则值为1，否则为0</li>
+</ul>
+<p>故在$ f_1(x) $中，有$ f_1(X) = 1.475+0.1*(0.225) = 1.4975 $（这里的X为预测值，进入第三个叶子节点）</p>
+<p>继续迭代：计算残差：<br>
+$ Υ_{11} 省略<br>
+\Υ_{21}省略<br>
+\Υ_{31}=y_1-f_1(x_1)=1.7-1.4975=0.2025<br>
+\Υ_{41}省略 $</p>
+<p>得到这棵树：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724055680095-7b2caf8c-f98c-4cce-a09e-797fd34cbc3d.png" width="343.6000061035156" title="" crop="0,0,1,1" id="u8ff1f28d" class="ne-image">
+<p>然后更新强学习器：$ f_2(X) = 1.4975+0.1*(0.2025) = 1.51775 $</p>
+<hr>
+<p>如此往复：可得$ f(x)=f_5(x)=f_0(x)+\sum_{m=1}^5\sum_{j=1}^4Υ_{jm}I(x∈R_{jm})=1.56714<br>
+$</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/机器学习/黑马教程/4、决策树算法/" data-toggle="tooltip" data-placement="top" title="决策树算法">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/机器学习/黑马教程/6、聚类算法(KMeans)/" data-toggle="tooltip" data-placement="top" title="聚类算法（KMeans）">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=集成学习与随机森林&body=Hi,I found this website and thought you might like it https://nova-chaser.github.io/机器学习/黑马教程/5、集成学习与随机森林/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Thu Jun 18 2026 17:35:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1、什么是集成学习</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81Bagging%E5%92%8C%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2、Bagging和随机森林</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-1-Bagging%E9%9B%86%E6%88%90%E5%8E%9F%E7%90%86"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1 Bagging集成原理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%9E%84%E9%80%A0%E8%BF%87%E7%A8%8B"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2 随机森林构造过程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-3-%E5%8C%85%E5%A4%96%E4%BC%B0%E8%AE%A1%EF%BC%88Out-Of-Bag-Estimate%EF%BC%89"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">2.3 包外估计（Out-Of-Bag Estimate）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97API"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3、随机森林API</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4%E3%80%81otto%E6%A1%88%E4%BE%8B%E4%BB%8B%E7%BB%8D-%E2%80%93-Otto-Group-Product-Classification-Challenge"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4、otto案例介绍 – Otto Group Product Classification Challenge</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5%E3%80%81Boosting"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5、Boosting</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-1-%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">5.1 实现过程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-2-Bagging%E9%9B%86%E6%88%90%E4%B8%8Eboosting%E9%9B%86%E6%88%90%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">5.2 Bagging集成与boosting集成的区别：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-3-AdaBoost"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">5.3 AdaBoost</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E6%9E%84%E9%80%A0%E8%BF%87%E7%A8%8B%E7%9A%84%E7%BB%86%E8%8A%82"><span class="toc-nav-number">5.3.1.</span> <span class="toc-nav-text">1、构造过程的细节</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E6%A1%88%E4%BE%8B"><span class="toc-nav-number">5.3.2.</span> <span class="toc-nav-text">2、案例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-4-API"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">5.4 API</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#6%E3%80%81GBDT"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">6、GBDT</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-1-Gradient-Boosting%EF%BC%9A%E6%8B%9F%E5%90%88%E8%B4%9F%E6%A2%AF%E5%BA%A6"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">6.1 Gradient Boosting：拟合负梯度</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-2-GBDT%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">6.2 GBDT算法原理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-3-%E5%AE%9E%E4%BE%8B"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">6.3 实例</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
+            
+            <a class="tag" href="/tags/#集成学习" title="集成学习">集成学习</a>
+            
+            <a class="tag" href="/tags/#随机森林" title="随机森林">随机森林</a>
+            
+            <a class="tag" href="/tags/#Bagging" title="Bagging">Bagging</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+          </li>
+          
+          <li>
+            <a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a>
+          </li>
+          
+          <li>
+            <a href="https://leetcode.cn/" target="_blank">力扣</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          ypb
+          2026
+          <br>
+          Powered by
+          <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+          &
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">LiveMyLife</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://nova-chaser.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

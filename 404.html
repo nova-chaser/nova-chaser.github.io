@@ -183,18 +183,14 @@
       : '';
   }
   let themeMode = 'dark';
-  let savedMode = getCookieValue('sb-color-mode');
-  let activeMode = savedMode || themeMode;
-
-  // 页面加载时设置初始主题 class
-  if (activeMode === 'dark') {
-    document.body.classList.add('body--dark');
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
   }
 
   //setCookieValue
   var toggleBtn = document.querySelector(".toggle");
   toggleBtn.addEventListener("click", function () {
-    document.body.classList.toggle('body--dark');
     var e = document.body.classList.contains("body--dark");
     var cookieString = e
       ? "dark"

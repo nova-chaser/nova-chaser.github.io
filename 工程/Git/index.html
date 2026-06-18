@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="大模型算法/应用开发，个人学习笔记分享博客"/>
+  <meta name="keyword" content="ypb,机器学习,深度学习,大模型,算法,博客"/>
+  <!-- 解除第三方图片防盗链限制 -->
+  <meta name="referrer" content="no-referrer"/>
+  <link rel="shortcut icon" href="/img/avatar/y.png"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://nova-chaser.github.io/工程/Git/">
+  <title>
+    
+      Git 学习笔记 - Your Potential Beyond
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Your Potential Beyond</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-toggle-item">
+            <a class="toggle" onclick="document.body.classList.toggle('body--dark'); return false;" title="切换主题">
+              <i class="mdui-icon material-icons light-mode"></i>
+              <i class="mdui-icon material-icons dark-mode"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('/img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Git" title="Git">Git</a>
+              
+              <a class="tag" href="/tags/#版本控制" title="版本控制">版本控制</a>
+              
+              <a class="tag" href="/tags/#工程工具" title="工程工具">工程工具</a>
+              
+            </div>
+            <h1>Git 学习笔记</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by ypb on
+              2026-06-18
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">13</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.3k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p><a target="_blank" rel="noopener" href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p>
+<hr>
+<h2 id="1、基础篇">1、基础篇</h2>
+<h3 id="1-1-git-commit">1.1 git commit</h3>
+<p>提交一个记录：<code>git commit</code></p>
+<p>:::info<br>
+<code>**&lt;font style=&quot;color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);&quot;&gt;git commit --amend&lt;/font&gt;**</code><font style="color:rgb(64, 64, 64);">修改 Git 仓库中的最后一次提交</font></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732689750652-a53f23a1-d0c1-46bc-91d8-5bbf6554b30b.png" width="647" title="" crop="0,0,1,1" id="sejN3" class="ne-image">
+<p>:::</p>
+<h3 id="1-2-git-branch">1.2 git branch</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732625026449-63cdae2f-4158-405d-8b0c-e9a96a6a4da1.png" width="172.8" title="" crop="0,0,1,1" id="uc4fe9823" class="ne-image">
+<p>创建一个新的分支：<code>git branch newImage</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732625039714-698b7084-a7a8-4500-ab00-124bfd58ef81.png" width="184.8" title="" crop="0,0,1,1" id="u28106ebc" class="ne-image">
+<p>提交：<code>git commit</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732625073313-1692a38c-f073-4bf8-a726-7ceb37f72eb6.png" width="174.4" title="" crop="0,0,1,1" id="uaab5c399" class="ne-image">
+<p>切换分支：<code>git checkout newImage</code></p>
+<p><code>git commit</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732625421253-4a655efb-75c1-4b4b-aff1-2418418fee15.png" width="156.8000030517578" title="" crop="0,0,1,1" id="u17d84111" class="ne-image">
+<p>:::tips<br>
+创建新分支并切换</p>
+<p><code>git checkout -b &lt;branch-name&gt;</code></p>
+<p>:::</p>
+<h3 id="1-3-git-merge">1.3 git merge</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732625686180-c7c1d455-fd89-4ff3-80e5-74f50e68bfd1.png" width="195.80001831054688" title="" crop="0,0,1,1" id="u8066aae3" class="ne-image">
+<p>把<code>bugFix</code>合并到<code>main</code>中：<code>git merge bugFix</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732625749135-105d4ea2-130c-4832-a26f-7f3f1f1dd324.png" width="265.8000030517578" title="" crop="0,0,1,1" id="u8cc9236f" class="ne-image">
+<p>再把<code>main</code>分支合并到<code>bugFix</code>：<code>git checkout bugFix;git merge main</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732625886277-4fa1542a-2289-4883-97a3-ca73cff3517b.png" width="304" title="" crop="0,0,1,1" id="u3641acbc" class="ne-image">
+<p>因为 <code>main</code> 继承自 <code>bugFix</code>，Git 什么都不用做，只是简单地把 <code>bugFix</code> 移动到 <code>main</code> 所指向的那个提交记录。</p>
+<h3 id="1-4-git-rebase">1.4 git rebase</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732626006219-d8df009d-2348-4a51-aaa6-a174a2658b66.png" width="224.1999969482422" title="" crop="0,0,1,1" id="ub673839c" class="ne-image">
+<p><code>git rebase main</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732626134780-8ba16118-3ecb-484e-a2d7-477a56fbf209.png" width="244.8" title="" crop="0,0,1,1" id="uc7bb6fb5" class="ne-image">
+<p>提交记录 C3 依然存在（树上那个半透明的节点），而 C3’ 是我们 Rebase 到 main 分支上的 C3 的副本。</p>
+<p>现在我们切换到了 <code>main</code> 上。把它 rebase 到 <code>bugFix</code> 分支上</p>
+<p><code>git rebase bugFix</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732626218139-124ebb39-c0f2-4cfe-8d74-a22dab005a77.png" width="218.80001831054688" title="" crop="0,0,1,1" id="ue1b7cf35" class="ne-image">
+<p>由于 <code>bugFix</code> 继承自 <code>main</code>，所以 Git 只是简单的把 <code>main</code> 分支的引用向前移动了一下而已</p>
+<h2 id="2、高级篇">2、高级篇</h2>
+<h3 id="2-1-分离HEAD">2.1 分离HEAD</h3>
+<p>我们首先看一下 “HEAD”。 HEAD 是一个对当前所在分支的符号引用 —— 也就是指向你正在其基础上进行工作的提交记录。</p>
+<p>HEAD 总是指向当前分支上最近一次提交记录。大多数修改提交树的 Git 命令都是从改变 HEAD 的指向开始的。</p>
+<p>可以把它看成一个指针</p>
+<p>分离的 HEAD 就是让其指向了某个具体的提交记录而不是分支名。在命令执行之前的状态如下所示</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732626780674-d09d87f9-df16-4480-8c41-c4a7cd17bb53.png" width="160.8" title="" crop="0,0,1,1" id="uf8ec4cdc" class="ne-image">
+<p>HEAD -&gt; main -&gt; C1 （HEAD 指向 main， main 指向 C1）</p>
+<p><code>git checkout C1</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732626843244-904229e8-5f17-4d5d-8cef-f944bcef83d0.png" width="257.6" title="" crop="0,0,1,1" id="ub5d401b4" class="ne-image">
+<p>现在变成了 HEAD -&gt; C1</p>
+<h3 id="2-2-相对引用（-）">2.2 相对引用（^）</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732626977947-8e79a6e5-37f5-4ed3-91a9-2b2bdd739f4c.png" width="102.19999694824219" title="" crop="0,0,1,1" id="u5ffa0c67" class="ne-image">
+<p>把HEAD指针指向main的parent节点：<code>git checkout main^</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732627050454-24df607e-ddb0-4889-ac63-9a148206b6e6.png" width="111" title="" crop="0,0,1,1" id="u9f5156bf" class="ne-image">
+<h3 id="2-3-相对引用（-）">2.3 相对引用（~）</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732627245138-444cf6c7-28a7-4123-b003-393b7eb749b0.png" width="103.79999923706055" title="" crop="0,0,1,1" id="u1b8883aa" class="ne-image">
+<p>一次退四步：<code>git checkout HEAD~4</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732627278987-4857f657-b75d-4731-9e95-85bc9da5f399.png" width="144.60000610351562" title="" crop="0,0,1,1" id="u73e18d3e" class="ne-image">
+<p>下面是强制将分支移动到某个节点</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732627320050-232348f0-0b59-4798-a0ea-4d775d27cecc.png" width="122.80000305175781" title="" crop="0,0,1,1" id="u2cf477d4" class="ne-image">
+<p><code>git branch -f main HEAD~3</code></p>
+<p>这里<code>HEAD~3</code>可以替换成具体哈希值（直接引用）如<code>git branch -f main C6</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732627402433-9326c803-fafb-4216-8888-99440d2d67a6.png" width="138.8000030517578" title="" crop="0,0,1,1" id="ubcee573e" class="ne-image">
+<h3 id="2-4-撤销变更">2.4 撤销变更</h3>
+<p><code>git reset</code>与<code>git revert</code></p>
+<p><code>git reset</code> 通过把分支记录回退几个提交记录来实现撤销改动。你可以将这想象成“改写历史”。<code>git reset</code> 向上移动分支，原来指向的提交记录就跟从来没有提交过一样。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732627956147-5629cba5-87b8-4773-a8b7-c4c8e192c459.png" width="123.80000305175781" title="" crop="0,0,1,1" id="ueccf988a" class="ne-image">
+<p><code>git reset HEAD~1</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732627996923-a36f02bb-dbc8-4179-b40e-897706b95bb5.png" width="108.80000305175781" title="" crop="0,0,1,1" id="ude64bb8a" class="ne-image">
+<p>虽然在你的本地分支中使用 <code>git reset</code> 很方便，但是这种“改写历史”的方法对大家一起使用的远程分支是无效的哦！为了撤销更改并分享给别人，我们需要使用 <code>git revert</code>。</p>
+<p><code>git revert HEAD</code>（注意HEAD不要与分支名分离，否则需要多一步强制移动分支）</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732628104254-141b08e1-11fb-492f-af70-6cd188bba2c7.png" width="112.20000457763672" title="" crop="0,0,1,1" id="u495e9a49" class="ne-image">
+<p>在我们要撤销的提交记录后面居然多了一个新提交！这是因为新提交记录 <code>C2'</code> 引入了更改 —— 这些更改刚好是用来撤销 <code>C2</code> 这个提交的。也就是说 <code>C2'</code> 的状态与 <code>C1</code> 是相同的。revert 之后就可以把你的更改推送到远程仓库与别人分享啦。</p>
+<h2 id="3、移动提交记录">3、移动提交记录</h2>
+<h3 id="3-1-git-cherry-pick">3.1 git cherry-pick</h3>
+<p>这里有一个仓库, 我们想将 <code>side</code> 分支上的工作复制到 <code>main</code> 分支，这里我们不使用 <code>rebase</code> 试试</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732688691552-cf8572ac-badd-4b07-a8e8-afef9971e80b.png" width="290.3999938964844" title="" crop="0,0,1,1" id="u6d8f5c57" class="ne-image">
+<p><code>git cherry-pick C2 C4</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732688854565-7bffe56c-88d6-4aa6-85fd-a45e3e1f46e2.png" width="296" title="" crop="0,0,1,1" id="u1201d905" class="ne-image">
+<p>我们只需要提交记录 <code>C2</code> 和 <code>C4</code>，所以 Git 就将被它们抓过来放到当前分支下了。</p>
+<h3 id="3-2-交互式-rebase">3.2 交互式 rebase</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732689134390-b74dc2b7-7657-4360-af92-3ceaba6dbb28.png" width="146.4" title="" crop="0,0,1,1" id="u8ffc1ee7" class="ne-image">
+<p><code>git rebase -i HEAD~4</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732689148943-6573cb84-dc04-4768-a3e6-09d725f6c3ad.png" width="767.2" title="" crop="0,0,1,1" id="uceeb1082" class="ne-image">
+<p>当 rebase UI界面打开时, 你能做3件事:</p>
+<ul>
+<li>调整提交记录的顺序（通过鼠标拖放来完成）</li>
+<li>删除你不想要的提交（通过切换 <code>pick</code> 的状态来完成，关闭就意味着你不想要这个提交记录）</li>
+<li>合并提交。 遗憾的是由于某种逻辑的原因，我们的课程不支持此功能，因此我不会详细介绍这个操作。简而言之，它允许你把多个提交记录合并成一个。</li>
+</ul>
+<h2 id="4、Git-技巧">4、Git 技巧</h2>
+<h3 id="4-1-git-tag">4.1 git tag</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732690123424-dd3ce72e-7a55-439a-9961-968720353eaa.png" width="132.60000610351562" title="" crop="0,0,1,1" id="uc8e01910" class="ne-image">
+<p><code>git tag v1 C1</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732690154089-a1d9eff2-4a33-4fea-b266-e03649c0e92e.png" width="135.8000030517578" title="" crop="0,0,1,1" id="u3e9522be" class="ne-image">
+<h3 id="4-2-Git-Describe">4.2 Git Describe</h3>
+<p><code>git describe &lt;ref&gt;</code></p>
+<p>输出结果如下：</p>
+<p><code>&lt;tag&gt;_&lt;numCommits&gt;_g&lt;hash&gt;</code></p>
+<p><code>tag</code> 表示的是离 <code>ref</code> 最近的标签， <code>numCommits</code> 是表示这个 <code>ref</code> 与 <code>tag</code> 相差有多少个提交记录， <code>hash</code> 表示的是你所给定的 <code>ref</code> 所表示的提交记录哈希值的前几位。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732690376045-55e19f8a-3e70-431c-89b7-0a70c2b1068e.png" width="285.6" title="" crop="0,0,1,1" id="udda01045" class="ne-image">
+<p><code>git describe main</code> 会输出：</p>
+<p><code>v1_2_gC2</code></p>
+<p><code>git describe side</code> 会输出：</p>
+<p><code>v2_1_gC4</code></p>
+<h2 id="5、高级技巧">5、高级技巧</h2>
+<h3 id="5-1-两个parent节点">5.1 两个parent节点</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732690660484-3dd376e4-210e-452a-833a-640a8ae315d1.png" width="260.8" title="" crop="0,0,1,1" id="u6479b8da" class="ne-image">
+<p><code>git checkout main^</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732690686983-c5b2c143-b699-42e2-99d2-67cd85a55179.png" width="293.6" title="" crop="0,0,1,1" id="uaffc63b5" class="ne-image">
+<p>如果是另一个parent提交：<code>git checkout main^2</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732690723630-1a25ec3c-e5ae-482a-8954-1a7a91ad0a03.png" width="298.4" title="" crop="0,0,1,1" id="u9df36320" class="ne-image">
+<p>并且支持链式操作：<code>git checkout HEAD~^2~2</code></p>
+<h2 id="6、远程仓库">6、远程仓库</h2>
+<h3 id="6-1-clone与远程分支">6.1 clone与远程分支</h3>
+<p>克隆远程仓库<code>git clone</code></p>
+<p>如果切换到远程分支会怎么样呢？</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732691193024-80520a67-1f68-4524-b9b3-e8658c7d612a.png" width="327.2" title="" crop="0,0,1,1" id="udb825f62" class="ne-image">
+<p><code>git checkout origin/main;git commit</code></p>
+<p>正如你所见，Git 变成了分离 HEAD 状态，当添加新的提交时 <code>o/main</code> 也不会更新。这是因为 <code>o/main</code> 只有在远程仓库中相应的分支更新了以后才会更新。</p>
+<h3 id="6-2-Git-Fetch">6.2 Git Fetch</h3>
+<p>这里我们有一个远程仓库, 它有两个我们本地仓库中没有的提交</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732691832158-0d1f077f-2e1b-45e2-bc1d-af1e729bc841.png" width="323.2" title="" crop="0,0,1,1" id="ubad0de09" class="ne-image">
+<p><code>git fetch</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732691921161-006ebaee-f628-407b-9961-47b634fab880.png" width="328.8" title="" crop="0,0,1,1" id="uabc58da4" class="ne-image">
+<p><code>C2</code>,<code>C3</code> 被下载到了本地仓库，同时远程分支 <code>o/main</code> 也被更新，反映到了这一变化</p>
+<p><code>git fetch</code> 完成了仅有的但是很重要的两步:</p>
+<ul>
+<li>从远程仓库下载本地仓库中缺失的提交记录</li>
+<li>更新远程分支指针(如 <code>o/main</code>)</li>
+</ul>
+<p><strong>git fetch 不会做的事</strong></p>
+<p><code>git fetch</code> 并不会改变你本地仓库的状态。它不会更新你的 <code>main</code> 分支，也不会修改你磁盘上的文件。</p>
+<p>理解这一点很重要，因为许多开发人员误以为执行了 <code>git fetch</code> 以后，他们本地仓库就与远程仓库同步了。它可能已经将进行这一操作所需的所有数据都下载了下来，但是并没有修改你本地的文件。</p>
+<h3 id="6-3-git-pull">6.3 git pull</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732692193081-7a8b3bf3-c1c8-44ac-86eb-21c3dacf3c41.png" width="336.8" title="" crop="0,0,1,1" id="u89c20e8e" class="ne-image">
+<p><code>git pull</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732692216761-1e312cf3-055f-4b80-bf00-3cc8dcabf278.png" width="358.3999938964844" title="" crop="0,0,1,1" id="ub8e5280e" class="ne-image">
+<p>实际上<code>git pull</code>=<code>git fetch</code> + <code>git merge</code></p>
+<h3 id="6-4-git-push">6.4 git push</h3>
+<p>把本地的记录提交到远程仓库</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732707651296-f49d5da1-d197-492c-a6f9-4806f7e77b6f.png" width="324.8" title="" crop="0,0,1,1" id="ua622e8af" class="ne-image">
+<p><code>git push</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732707669805-7e560570-eb72-4bb8-8e79-4884048904e7.png" width="322.4" title="" crop="0,0,1,1" id="u19bbfcf8" class="ne-image">
+<h3 id="6-5-历史偏离">6.5 历史偏离</h3>
+<p>假设你周一克隆了一个仓库，然后开始研发某个新功能。到周五时，你新功能开发测试完毕，可以发布了。但是 —— 天啊！你的同事这周写了一堆代码，还改了许多你的功能中使用的 API，这些变动会导致你新开发的功能变得不可用。但是他们已经将那些提交推送到远程仓库了，因此你的工作就变成了基于项目旧版的代码，与远程仓库最新的代码不匹配了。</p>
+<p>这种情况下, <code>git push</code> 就不知道该如何操作了。如果你执行 <code>git push</code>，Git 应该让远程仓库回到星期一那天的状态吗？还是直接在新代码的基础上添加你的代码，亦或由于你的提交已经过时而直接忽略你的提交？</p>
+<p>因为这情况（历史偏离）有许多的不确定性，Git 是<strong>不会允许</strong>你 <code>push</code> 变更的。实际上它会强制你先合并远程最新的代码，然后才能分享你的工作。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732708065866-c0dd02fd-b48c-455f-b814-abcd9bd43651.png" width="332.8" title="" crop="0,0,1,1" id="u7f63b05d" class="ne-image">
+<p><code>git fetch;git rebase origin/main;git push</code></p>
+<p>可以简写成：<code>git pull --rebase;git push</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732708132749-c5f7ed29-6e56-47c2-8b43-aca09772a2b6.png" width="393.6" title="" crop="0,0,1,1" id="u6dd5e6cd" class="ne-image">
+<p>还有另一种方法：<code>merge</code></p>
+<p><code>git fetch;git merge origin/main;git push</code></p>
+<p>可以简写成：<code>git pull;git push</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732708269840-d9bca643-991c-46dd-9762-50a9c754d4a8.png" width="364.8" title="" crop="0,0,1,1" id="ua49abff1" class="ne-image">
+<h3 id="6-6-main分支锁定">6.6 main分支锁定</h3>
+<p>如果你是在一个大的合作团队中工作, 很可能是main被锁定了, 需要一些Pull Request流程来合并修改。如果你直接提交(commit)到本地main, 然后试图推送(push)修改, 你将会收到这样类似的信息:</p>
+<p><code>! [远程服务器拒绝] main -&gt; main (TF402455: 不允许推送(push)这个分支; 你必须使用pull request来更新这个分支.)</code></p>
+<p><strong>解决办法</strong></p>
+<p>新建一个分支feature, 推送到远程服务器. 然后reset你的main分支和远程服务器保持一致, 否则下次你pull并且他人的提交和你冲突的时候就会有问题.</p>
+<h2 id="7、Git-远程仓库高级操作">7、Git 远程仓库高级操作</h2>
+<h3 id="7-1-推送主分支">7.1 推送主分支</h3>
+<p>rebase使用拓展：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732709692781-17214a86-aa31-4568-b9d2-2f686f43074b.png" width="413" title="" crop="0,0,1,1" id="uaca74abd" class="ne-image">
+<p><code>git rebase o/main side1``side1</code>合并到<code>o/main</code>中</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732709880854-a993017f-bf37-47da-b35e-e4f87f028c8c.png" width="467" title="" crop="0,0,1,1" id="u2690c890" class="ne-image">
+<h3 id="7-2-合并远程分支">7.2 合并远程分支</h3>
+<p><strong>rebase优点:</strong></p>
+<p>Rebase 使你的提交树变得很干净, 所有的提交都在一条线上</p>
+<p><strong>rebase缺点:</strong></p>
+<p>Rebase 修改了提交树的历史</p>
+<p>比如, 提交 C1 可以被 rebase 到 C3 之后。这看起来 C1 中的工作是在 C3 之后进行的，但实际上是在 C3 之前。一些开发人员喜欢保留提交历史，因此更偏爱 merge。而其他人（比如我自己）可能更喜欢干净的提交树，于是偏爱 rebase。</p>
+<h3 id="7-3-远程跟踪分支">7.3 远程跟踪分支</h3>
+<p><font style="color:rgb(64, 64, 64);">远程跟踪分支（Remote-tracking branches）是 Git 中的一种特殊类型的分支，用于跟踪远程仓库中的分支。</font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;main&lt;/font&gt;</code><font style="color:rgb(64, 64, 64);"> 和 </font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;o/main&lt;/font&gt;</code><font style="color:rgb(64, 64, 64);"> 的关联关系就是由分支的“remote tracking”属性决定的。</font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;main&lt;/font&gt;</code><font style="color:rgb(64, 64, 64);"> 被设定为跟踪 </font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;o/main&lt;/font&gt;</code><font style="color:rgb(64, 64, 64);"> —— 这意味着为 </font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;main&lt;/font&gt;</code><font style="color:rgb(64, 64, 64);"> 分支指定了推送的目的地以及拉取后合并的目标。</font></p>
+<p><font style="color:rgb(64, 64, 64);">可以自定义分支跟踪</font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;o/main&lt;/font&gt;</code></p>
+<p><font style="color:rgb(64, 64, 64);">方式1：</font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;git checkout -b totallyNotMain o/main&lt;/font&gt;</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732710952179-be82529c-18e5-4e96-9958-c77527b75335.png" width="324" title="" crop="0,0,1,1" id="u2b89a613" class="ne-image">
+<p><code>git checkout -b foo o/main;git pull</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732710986779-816d5196-136b-45ce-9458-86be639b1fd4.png" width="307.20001220703125" title="" crop="0,0,1,1" id="ubc641917" class="ne-image">
+<p><font style="color:rgb(64, 64, 64);">正如你所看到的, 我们使用了隐含的目标 </font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;o/main&lt;/font&gt;</code><font style="color:rgb(64, 64, 64);"> 来更新 </font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;foo&lt;/font&gt;</code><font style="color:rgb(64, 64, 64);"> 分支。需要注意的是 main 并未被更新！</font></p>
+<p><font style="color:rgb(64, 64, 64);">方式2：</font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;git branch -u o/main foo&lt;/font&gt;</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732711054410-33b208cc-a781-4d8e-bdc5-8d00592798b8.png" width="327.2" title="" crop="0,0,1,1" id="u832afb29" class="ne-image">
+<p><code>git branch -u o/main foo;git commit;git push</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732711170064-88da2541-b932-455e-84bf-18794fc2b448.png" width="322.4" title="" crop="0,0,1,1" id="u5f2781f8" class="ne-image">
+<h3 id="7-4-Git-Push-的参数">7.4 Git Push 的参数</h3>
+<p><font style="color:rgb(64, 64, 64);">首先来看 </font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;git push&lt;/font&gt;</code><font style="color:rgb(64, 64, 64);">。在远程跟踪课程中，你已经学到了 Git 是通过当前所在分支的属性来确定远程仓库以及要 push 的目的地的。这是未指定参数时的行为，我们可以为 push 指定参数，语法是：</font></p>
+<p><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;git push &lt;remote&gt; &lt;place&gt;&lt;/font&gt;</code></p>
+<p><font style="color:rgb(64, 64, 64);">看个例子：</font><code>&lt;font style=&quot;color:rgb(64, 64, 64);&quot;&gt;git push origin main&lt;/font&gt;</code></p>
+<p><font style="color:rgb(64, 64, 64);">把这个命令翻译过来就是：</font></p>
+<p><font style="color:rgb(64, 64, 64);">切到本地仓库中的“main”分支，获取所有的提交，再到远程仓库“origin”中找到“main”分支，将远程仓库中没有的提交记录都添加上去，搞定之后告诉我。</font></p>
+<p><font style="color:rgb(64, 64, 64);">我们通过“place”参数来告诉 Git 提交记录来自于 main, 要推送到远程仓库中的 main。它实际就是要同步的</font><strong><font style="color:rgb(64, 64, 64);">两个</font></strong><font style="color:rgb(64, 64, 64);">仓库的位置。</font></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732711725939-d7dc6202-fa22-414b-adf0-09f5428a8195.png" width="331.2" title="" crop="0,0,1,1" id="ub4f03de4" class="ne-image">
+<p><code>git checkout C0;git push origin main</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732711759693-5e44a657-7ef6-4923-82c2-ac483cd1b942.png" width="391.2" title="" crop="0,0,1,1" id="udc8c5cd0" class="ne-image">
+<h3 id="7-5-Git-Push-的参数2">7.5 Git Push 的参数2</h3>
+<p>还记得之前课程说的吧，当为 git push 指定 place 参数为 main 时，我们同时指定了提交记录的来源和去向。</p>
+<p>你可能想问 —— 如果来源和去向分支的名称不同呢？比如你想把本地的 foo 分支推送到远程仓库中的 bar 分支。</p>
+<p><code>git push origin &lt;source&gt;:&lt;destination&gt;</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712113563-90c2c982-924f-49c3-a9f3-427611b7c738.png" width="327.2" title="" crop="0,0,1,1" id="ud6822c90" class="ne-image">
+<p><code>git push origin foo^:main</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712140625-abecb762-b331-47a1-a9a7-55cf3daf20bd.png" width="324.8" title="" crop="0,0,1,1" id="u8df7435c" class="ne-image">
+<p>如果你要推送到的目的分支不存在会怎么样呢？没问题！Git 会在远程仓库中根据你提供的名称帮你创建这个分支！</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712192272-b9aabd52-6d76-428f-a58e-d161690e8d97.png" width="317.6" title="" crop="0,0,1,1" id="u474d2aec" class="ne-image">
+<p><code>git push origin main:newBranch</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712231257-2799dd3d-1281-4106-94e8-68cc69736061.png" width="334.4" title="" crop="0,0,1,1" id="ucdb41af7" class="ne-image">
+<h3 id="7-6-Git-fetch-的参数">7.6 Git fetch 的参数</h3>
+<p><code>git fetch origin foo</code></p>
+<p>Git 会到远程仓库的 foo 分支上，然后获取所有本地不存在的提交，放到本地的 o/foo 上。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712478978-bbfd2527-e440-470c-bdd1-85808961a51e.png" width="328" title="" crop="0,0,1,1" id="ufb91d797" class="ne-image">
+<p><code>git fetch origin foo</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712502544-4c9cc848-f7dc-411a-a61b-d66ab8588241.png" width="328.8" title="" crop="0,0,1,1" id="uf6617dca" class="ne-image">
+<p>同样的，fetch也支持冒号，只是方向不同（很少用）</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712750149-e7fe712b-aaaa-4b9d-ab35-3533f289abb6.png" width="297.8000183105469" title="" crop="0,0,1,1" id="u6cb71175" class="ne-image">
+<p><code>git getch origin C2:bar</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712788161-75ca48b5-b924-446b-a09c-640337dcba86.png" width="324" title="" crop="0,0,1,1" id="ue2daf6d9" class="ne-image">
+<p>如果本地没有bar分支，这个命令也会在本地创建一个bar分支，再进行fetch操作</p>
+<p>如果没有参数，它会下载所有的提交记录到各个远程分支：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712870919-e311c8c2-761a-45be-8ed0-565407901fc8.png" width="295.2" title="" crop="0,0,1,1" id="uf9bc6220" class="ne-image"></p>
+<p><code>git fetch</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732712889204-39853ef8-d961-4a67-bee2-f3ed1325ac21.png" width="349.6" title="" crop="0,0,1,1" id="u41176959" class="ne-image">
+<h3 id="7-7-source-参数">7.7 <source>参数</h3>
+<p>Git 有两种关于 <source> 的用法是比较诡异的，即你可以在 git push 或 git fetch 时不指定任何 source，方法就是仅保留冒号和 destination 部分，source 部分留空。</p>
+<ul>
+<li><code>git push origin :side</code></li>
+<li><code>git fetch origin :bugFix</code></li>
+</ul>
+<p>如果 push 空 到远程仓库会如何呢？它会删除远程仓库中的分支！</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732713458741-bc0993ba-a274-4b4f-8a71-2ed552f13309.png" width="318.4" title="" crop="0,0,1,1" id="u28e70a6b" class="ne-image">
+<p><code>git push origin :foo</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732713479206-2a40cbee-2a2a-41d6-a399-1da3c9bd2faf.png" width="326.4" title="" crop="0,0,1,1" id="ubb577091" class="ne-image">
+<p>如果 fetch 空 到本地，会在本地创建一个新分支。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732713505895-69dd63eb-ce86-45d0-bac8-ab922f035bbd.png" width="341.6" title="" crop="0,0,1,1" id="ubab25915" class="ne-image">
+<p><code>git fetch origin :bar</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732713524746-e19926b5-17fa-49c4-bac1-c2faf7bdeceb.png" width="324.8" title="" crop="0,0,1,1" id="u84039272" class="ne-image">
+<h3 id="7-8-Git-pull-的参数">7.8 Git pull 的参数</h3>
+<p><code>git pull origin foo</code> 相当于：<code>git fetch origin foo; git merge o/foo</code></p>
+<p><code>git pull origin bar:bugFix</code> 相当于：<code>git fetch origin bar:bugFix; git merge bugFix</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732713721497-39ae2ab2-9253-49c9-b91a-2d5fff9612ed.png" width="331.2" title="" crop="0,0,1,1" id="u4adc0a3e" class="ne-image">
+<p><code>git pull origin main</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732713758561-8f369329-8e74-43aa-bd8c-8d169a338500.png" width="384.8" title="" crop="0,0,1,1" id="u257fe6a8" class="ne-image">
+<p>通过指定 <code>main</code> 我们更新了 <code>o/main</code>。然后将 <code>o/main</code> merge 到我们的所在的分支，无论我们当前所在的位置是哪。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732713815107-2863f840-99ad-4a54-ac5e-76fef5027b1d.png" width="328" title="" crop="0,0,1,1" id="ufde14b28" class="ne-image">
+<p><code>git pull origin main:foo</code></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1732713862117-c52b6c52-2844-4948-a7c9-a010646eca88.png" width="389.6" title="" crop="0,0,1,1" id="u7d3d2a58" class="ne-image">
+<p>它先在本地创建了一个叫 <code>foo</code> 的分支，从远程仓库中的 main 分支中下载提交记录，并合并到 <code>foo</code>，然后再 merge 到我们的当前所在的分支 <code>bar</code> 上。</p>
+<h2 id="some-git-message-specification">some git message specification</h2>
+<img src="https://cdn.nlark.com/yuque/0/2024/jpeg/21443679/1731328291477-ff070354-5a8f-49ec-bc9d-e94477bfedf3.jpeg" width="1080" title="" crop="0,0,1,1" id="ub83091a0" class="ne-image">
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/Agent 学习/知识点学习笔记/" data-toggle="tooltip" data-placement="top" title="Agent 与 MCP 知识点学习笔记">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Git 学习笔记&body=Hi,I found this website and thought you might like it https://nova-chaser.github.io/工程/Git/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Thu Jun 18 2026 18:05:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E5%9F%BA%E7%A1%80%E7%AF%87"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1、基础篇</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-git-commit"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1 git commit</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-git-branch"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2 git branch</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-3-git-merge"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">1.3 git merge</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-4-git-rebase"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">1.4 git rebase</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81%E9%AB%98%E7%BA%A7%E7%AF%87"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2、高级篇</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-1-%E5%88%86%E7%A6%BBHEAD"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1 分离HEAD</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-%E7%9B%B8%E5%AF%B9%E5%BC%95%E7%94%A8%EF%BC%88-%EF%BC%89"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2 相对引用（^）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-3-%E7%9B%B8%E5%AF%B9%E5%BC%95%E7%94%A8%EF%BC%88-%EF%BC%89"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">2.3 相对引用（~）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-4-%E6%92%A4%E9%94%80%E5%8F%98%E6%9B%B4"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">2.4 撤销变更</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81%E7%A7%BB%E5%8A%A8%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3、移动提交记录</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-1-git-cherry-pick"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1 git cherry-pick</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-2-%E4%BA%A4%E4%BA%92%E5%BC%8F-rebase"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">3.2 交互式 rebase</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4%E3%80%81Git-%E6%8A%80%E5%B7%A7"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4、Git 技巧</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-1-git-tag"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">4.1 git tag</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-2-Git-Describe"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">4.2 Git Describe</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5%E3%80%81%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5、高级技巧</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-1-%E4%B8%A4%E4%B8%AAparent%E8%8A%82%E7%82%B9"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">5.1 两个parent节点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#6%E3%80%81%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">6、远程仓库</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-1-clone%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">6.1 clone与远程分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-2-Git-Fetch"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">6.2 Git Fetch</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-3-git-pull"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">6.3 git pull</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-4-git-push"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">6.4 git push</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-5-%E5%8E%86%E5%8F%B2%E5%81%8F%E7%A6%BB"><span class="toc-nav-number">6.5.</span> <span class="toc-nav-text">6.5 历史偏离</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-6-main%E5%88%86%E6%94%AF%E9%94%81%E5%AE%9A"><span class="toc-nav-number">6.6.</span> <span class="toc-nav-text">6.6 main分支锁定</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#7%E3%80%81Git-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">7、Git 远程仓库高级操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-1-%E6%8E%A8%E9%80%81%E4%B8%BB%E5%88%86%E6%94%AF"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">7.1 推送主分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-2-%E5%90%88%E5%B9%B6%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">7.2 合并远程分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-3-%E8%BF%9C%E7%A8%8B%E8%B7%9F%E8%B8%AA%E5%88%86%E6%94%AF"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">7.3 远程跟踪分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-4-Git-Push-%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-nav-number">7.4.</span> <span class="toc-nav-text">7.4 Git Push 的参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-5-Git-Push-%E7%9A%84%E5%8F%82%E6%95%B02"><span class="toc-nav-number">7.5.</span> <span class="toc-nav-text">7.5 Git Push 的参数2</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-6-Git-fetch-%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-nav-number">7.6.</span> <span class="toc-nav-text">7.6 Git fetch 的参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-7-source-%E5%8F%82%E6%95%B0"><span class="toc-nav-number">7.7.</span> <span class="toc-nav-text">7.7 参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7-8-Git-pull-%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-nav-number">7.8.</span> <span class="toc-nav-text">7.8 Git pull 的参数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#some-git-message-specification"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">some git message specification</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Git" title="Git">Git</a>
+            
+            <a class="tag" href="/tags/#版本控制" title="版本控制">版本控制</a>
+            
+            <a class="tag" href="/tags/#工程工具" title="工程工具">工程工具</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+          </li>
+          
+          <li>
+            <a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a>
+          </li>
+          
+          <li>
+            <a href="https://leetcode.cn/" target="_blank">力扣</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          ypb
+          2026
+          <br>
+          Powered by
+          <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+          &
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">LiveMyLife</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://nova-chaser.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

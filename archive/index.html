@@ -183,18 +183,14 @@
       : '';
   }
   let themeMode = 'dark';
-  let savedMode = getCookieValue('sb-color-mode');
-  let activeMode = savedMode || themeMode;
-
-  // 页面加载时设置初始主题 class
-  if (activeMode === 'dark') {
-    document.body.classList.add('body--dark');
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
   }
 
   //setCookieValue
   var toggleBtn = document.querySelector(".toggle");
   toggleBtn.addEventListener("click", function () {
-    document.body.classList.toggle('body--dark');
     var e = document.body.classList.contains("body--dark");
     var cookieString = e
       ? "dark"
@@ -455,11 +451,193 @@
         <ul>
           
           <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/工程/Git/" style="color: #0085a1">
+              <span>
+                Git 学习笔记
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/Agent 学习/知识点学习笔记/" style="color: #0085a1">
+              <span>
+                Agent 与 MCP 知识点学习笔记
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/3、逻辑回归与分类评估/" style="color: #0085a1">
+              <span>
+                逻辑回归与分类评估
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/4、决策树算法/" style="color: #0085a1">
+              <span>
+                决策树算法
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/5、集成学习与随机森林/" style="color: #0085a1">
+              <span>
+                集成学习与随机森林
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/6、聚类算法(KMeans)/" style="color: #0085a1">
+              <span>
+                聚类算法（KMeans）
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/7、朴素贝叶斯算法/" style="color: #0085a1">
+              <span>
+                朴素贝叶斯算法
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/8、支持向量机(SVM)/" style="color: #0085a1">
+              <span>
+                支持向量机（SVM）
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/10、马尔科夫链/" style="color: #0085a1">
+              <span>
+                马尔科夫链
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/9、EM算法/" style="color: #0085a1">
+              <span>
+                EM算法
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/2、线性回归与梯度下降/" style="color: #0085a1">
+              <span>
+                线性回归与梯度下降
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/黑马教程/1、K-近邻算法(KNN)/" style="color: #0085a1">
+              <span>
+                K-近邻算法（KNN）
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/吴恩达课程/第三部分：无监督学习 推荐系统、强化学习/" style="color: #0085a1">
+              <span>
+                第三部分：无监督学习 推荐系统、强化学习
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-18
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/机器学习/吴恩达课程/第二部分：高级学习算法/" style="color: #0085a1">
+              <span>
+                第二部分：高级学习算法
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
             06-17
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/监督机器学习：回归与分类/" style="color: #0085a1">
+            <a href="/机器学习/吴恩达课程/第一部分：监督机器学习 回归与分类/" style="color: #0085a1">
               <span>
-                监督机器学习：回归与分类
+                第一部分：监督机器学习 回归与分类
                 
                 -- 
                 
@@ -517,7 +695,7 @@
   <div class="tags">
     
     
-    <a href="/tags/#机器学习" title="机器学习" rel="1">机器学习</a>
+    <a href="/tags/#机器学习" title="机器学习" rel="13">机器学习</a>
     
     
     
@@ -526,6 +704,142 @@
     
     
     <a href="/tags/#分类" title="分类" rel="1">分类</a>
+    
+    
+    
+    <a href="/tags/#Agent" title="Agent" rel="1">Agent</a>
+    
+    
+    
+    <a href="/tags/#MCP" title="MCP" rel="1">MCP</a>
+    
+    
+    
+    <a href="/tags/#LLM" title="LLM" rel="1">LLM</a>
+    
+    
+    
+    <a href="/tags/#AI" title="AI" rel="1">AI</a>
+    
+    
+    
+    <a href="/tags/#Git" title="Git" rel="1">Git</a>
+    
+    
+    
+    <a href="/tags/#版本控制" title="版本控制" rel="1">版本控制</a>
+    
+    
+    
+    <a href="/tags/#工程工具" title="工程工具" rel="1">工程工具</a>
+    
+    
+    
+    <a href="/tags/#马尔科夫链" title="马尔科夫链" rel="1">马尔科夫链</a>
+    
+    
+    
+    <a href="/tags/#HMM" title="HMM" rel="1">HMM</a>
+    
+    
+    
+    <a href="/tags/#线性回归" title="线性回归" rel="1">线性回归</a>
+    
+    
+    
+    <a href="/tags/#梯度下降" title="梯度下降" rel="1">梯度下降</a>
+    
+    
+    
+    <a href="/tags/#KNN" title="KNN" rel="1">KNN</a>
+    
+    
+    
+    <a href="/tags/#K-近邻" title="K-近邻" rel="1">K-近邻</a>
+    
+    
+    
+    <a href="/tags/#逻辑回归" title="逻辑回归" rel="1">逻辑回归</a>
+    
+    
+    
+    <a href="/tags/#分类评估" title="分类评估" rel="1">分类评估</a>
+    
+    
+    
+    <a href="/tags/#决策树" title="决策树" rel="2">决策树</a>
+    
+    
+    
+    <a href="/tags/#信息熵" title="信息熵" rel="1">信息熵</a>
+    
+    
+    
+    <a href="/tags/#集成学习" title="集成学习" rel="1">集成学习</a>
+    
+    
+    
+    <a href="/tags/#随机森林" title="随机森林" rel="1">随机森林</a>
+    
+    
+    
+    <a href="/tags/#Bagging" title="Bagging" rel="1">Bagging</a>
+    
+    
+    
+    <a href="/tags/#聚类" title="聚类" rel="2">聚类</a>
+    
+    
+    
+    <a href="/tags/#KMeans" title="KMeans" rel="1">KMeans</a>
+    
+    
+    
+    <a href="/tags/#SVM" title="SVM" rel="1">SVM</a>
+    
+    
+    
+    <a href="/tags/#支持向量机" title="支持向量机" rel="1">支持向量机</a>
+    
+    
+    
+    <a href="/tags/#朴素贝叶斯" title="朴素贝叶斯" rel="1">朴素贝叶斯</a>
+    
+    
+    
+    <a href="/tags/#文本分类" title="文本分类" rel="1">文本分类</a>
+    
+    
+    
+    <a href="/tags/#EM算法" title="EM算法" rel="1">EM算法</a>
+    
+    
+    
+    <a href="/tags/#极大似然估计" title="极大似然估计" rel="1">极大似然估计</a>
+    
+    
+    
+    <a href="/tags/#无监督学习" title="无监督学习" rel="1">无监督学习</a>
+    
+    
+    
+    <a href="/tags/#异常检测" title="异常检测" rel="1">异常检测</a>
+    
+    
+    
+    <a href="/tags/#推荐系统" title="推荐系统" rel="1">推荐系统</a>
+    
+    
+    
+    <a href="/tags/#强化学习" title="强化学习" rel="1">强化学习</a>
+    
+    
+    
+    <a href="/tags/#神经网络" title="神经网络" rel="1">神经网络</a>
+    
+    
+    
+    <a href="/tags/#深度学习" title="深度学习" rel="1">深度学习</a>
     
     
   </div>
@@ -579,8 +893,24 @@
 <div class="widget">
   <ul>
     
-    <a href="../%E7%9B%91%E7%9D%A3%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%9B%9E%E5%BD%92%E4%B8%8E%E5%88%86%E7%B1%BB/">
-      <li>监督机器学习：回归与分类</li>
+    <a href="../%E5%B7%A5%E7%A8%8B/Git/">
+      <li>Git 学习笔记</li>
+    </a>
+    
+    <a href="../Agent%20%E5%AD%A6%E4%B9%A0/%E7%9F%A5%E8%AF%86%E7%82%B9%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+      <li>Agent 与 MCP 知识点学习笔记</li>
+    </a>
+    
+    <a href="../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%BB%91%E9%A9%AC%E6%95%99%E7%A8%8B/3%E3%80%81%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E4%B8%8E%E5%88%86%E7%B1%BB%E8%AF%84%E4%BC%B0/">
+      <li>逻辑回归与分类评估</li>
+    </a>
+    
+    <a href="../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%BB%91%E9%A9%AC%E6%95%99%E7%A8%8B/4%E3%80%81%E5%86%B3%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95/">
+      <li>决策树算法</li>
+    </a>
+    
+    <a href="../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%BB%91%E9%A9%AC%E6%95%99%E7%A8%8B/5%E3%80%81%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/">
+      <li>集成学习与随机森林</li>
     </a>
     
   </ul>
@@ -609,7 +939,7 @@
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2026/06/">June 2026</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2026/06/">June 2026</a><span class="archive-list-count">15</span></li></ul>
 </div>
 
 
@@ -623,6 +953,14 @@
     
     <a href="/categories/#机器学习">
       <li>机器学习</li>
+    </a>
+    
+    <a href="/categories/#AI">
+      <li>AI</li>
+    </a>
+    
+    <a href="/categories/#工程">
+      <li>工程</li>
     </a>
     
   </ul>

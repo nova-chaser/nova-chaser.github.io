@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="大模型算法/应用开发，个人学习笔记分享博客"/>
+  <meta name="keyword" content="ypb,机器学习,深度学习,大模型,算法,博客"/>
+  <!-- 解除第三方图片防盗链限制 -->
+  <meta name="referrer" content="no-referrer"/>
+  <link rel="shortcut icon" href="/img/avatar/y.png"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://nova-chaser.github.io/机器学习/黑马教程/6、聚类算法(KMeans)/">
+  <title>
+    
+      聚类算法（KMeans） - Your Potential Beyond
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Your Potential Beyond</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-toggle-item">
+            <a class="toggle" onclick="document.body.classList.toggle('body--dark'); return false;" title="切换主题">
+              <i class="mdui-icon material-icons light-mode"></i>
+              <i class="mdui-icon material-icons dark-mode"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('/img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
+              
+              <a class="tag" href="/tags/#聚类" title="聚类">聚类</a>
+              
+              <a class="tag" href="/tags/#KMeans" title="KMeans">KMeans</a>
+              
+            </div>
+            <h1>聚类算法（KMeans）</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by ypb on
+              2026-06-18
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">15</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="1、什么是聚类">1、什么是聚类</h2>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724057052681-ddcb34b9-c48f-49c4-ab21-d46a1cda9ee9.png" width="528.2000122070312" title="" crop="0,0,1,1" id="uc6341a1c" class="ne-image">
+<p>使用不同的聚类准则，产生不同的聚类结果</p>
+<h3 id="1-1-应用场景">1.1 应用场景</h3>
+<ul>
+<li>用户画像，广告推荐，流量推荐，恶意流量识别</li>
+<li>基于位置的商业推送，新闻聚类，筛选排序</li>
+<li>图像分割，降维，识别，离群点检测，信用卡异常消费，挖掘相同功能的基因片段</li>
+</ul>
+<h3 id="1-2-概念">1.2 概念</h3>
+<p>是一种无监督学习方法，主要用于将类似的样本自动归类到一个类别中。分别有粗聚类与细聚类。</p>
+<p>在聚类算法中根据样本之间的相似性，将样本划分到不同的类别中，对于不同的相似度计算方法，会得到不同的聚类结果，常用的相似度计算方法有欧式距离法。</p>
+<p>聚类算法是无监督的学习算法，而分类算法属于监督的学习算法。</p>
+<h2 id="2、聚类算法API">2、聚类算法API</h2>
+<p><code>sklearn.cluster.KMeans(n_clusters=8)</code></p>
+<ul>
+<li>n_clusters：聚类中心数量
+<ul>
+<li>整型，缺省值=8，生成的聚类数，即产⽣的质心（centroids）数</li>
+</ul>
+</li>
+<li>estimator.fit(x)</li>
+<li>estimator.predict(x)</li>
+<li>estimator.fit_predict(x)：计算聚类中心并预测每个样本属于哪个类别,相当于先调用fit(x),然后再调⽤predict(x)</li>
+</ul>
+<p>案例：</p>
+<p>随机创建不同⼆维数据集作为训练集，并结合k-means算法将其聚类，你可以尝试分别聚类不同数量的簇，并观察聚类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sklearn.datasets._samples_generator <span class="keyword">import</span> make_blobs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建数据集</span></span><br><span class="line"><span class="comment"># x为样本特征，y为样本簇类别，共1000个样本，每个样本2个特征，共4个簇 (4个类别)</span></span><br><span class="line"><span class="comment"># 簇中心在[-1, -1], [0, 0], [1, 1], [2, 2]，簇方差分别为 -&gt; cluster_std</span></span><br><span class="line">centers = [[-<span class="number">1</span>, -<span class="number">1</span>], [<span class="number">0</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">2</span>]]</span><br><span class="line">cluster_std = [<span class="number">0.4</span>, <span class="number">0.2</span>, <span class="number">0.2</span>, <span class="number">0.2</span>]</span><br><span class="line">x, y = make_blobs(n_samples=<span class="number">1000</span>, n_features=<span class="number">2</span>, centers=centers, cluster_std=cluster_std, random_state=<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(x)</span><br><span class="line"><span class="built_in">print</span>(y)</span><br><span class="line">plt.scatter(x[:, <span class="number">0</span>], x[:, <span class="number">1</span>], marker=<span class="string">&#x27;o&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>打印：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724420670624-62fa46b3-56f8-44f7-b15a-a3b4f451035e.png" width="732" title="" crop="0,0,1,1" id="ua097a6ff" class="ne-image">
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724420519627-7c8d77f9-6ec2-45a5-833c-feba52241e6f.png" width="512" title="" crop="0,0,1,1" id="uc7b3b0cf" class="ne-image">
+<p>使用K-means进行聚类，并使用CH方法评估</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里的n_clusters可以尝试其他值试试</span></span><br><span class="line">y_pred = KMeans(n_clusters=<span class="number">2</span>, random_state=<span class="number">0</span>).fit_predict(x)</span><br><span class="line">plt.scatter(x[:, <span class="number">0</span>], x[:, <span class="number">1</span>], c=y_pred)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用 Calinski-Harabasz Index评估聚类分数</span></span><br><span class="line"><span class="built_in">print</span>(calinski_harabasz_score(x, y_pred))</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724421071452-36856c4e-a263-47c2-a3cc-f2cbd6cdaa68.png" width="220" title="" crop="0,0,1,1" id="u4c3b6cb1" class="ne-image"><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724421080691-29508b23-15d6-4c4e-80e1-69eb659a9d40.png" width="221" title="" crop="0,0,1,1" id="uef96cf5a" class="ne-image"><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724421095650-f40b4cc3-a3c5-4cd5-ae84-a2a7d1f58d39.png" width="221" title="" crop="0,0,1,1" id="u5d5f137b" class="ne-image"></p>
+<h2 id="3、聚类算法实现流程">3、聚类算法实现流程</h2>
+<h3 id="3-1-K-means聚类步骤">3.1 K-means聚类步骤</h3>
+<ol>
+<li>随机设置K个特征空间内的点作为初始的聚类中心</li>
+<li>对于其他每个点计算到K个中心的距离，未知的点选择最近的一个聚类中心带你作为标记类别</li>
+<li>接着对着标记的聚类中心之后，重新计算出每个聚类的新中心点</li>
+<li>如果计算得出的新中心点与原中心点一样，则结束，否则进行第二步</li>
+</ol>
+<blockquote>
+<p>具体过程不再列出，详细可以看吴恩达笔记的第三部分</p>
+</blockquote>
+<h2 id="4、模型评估">4、模型评估</h2>
+<h3 id="4-1-误差平方和（SSE-the-sum-of-squares-due-to-error）">4.1 误差平方和（SSE\the sum of squares due to error）</h3>
+<p>举例：<br>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724421936914-e347eec9-c522-428e-a416-09a18b0f7a5d.png" width="347.2" title="" crop="0,0,1,1" id="u7288015a" class="ne-image">图中的数据都是真实值与预测值的差</p>
+<p>$ SSE=(-0.2)^2+(0.4)^2+(-0.8)^2+(1.3)^2+(-0.7)^2=3.02 $</p>
+<p>在K-means的应用：</p>
+<p>$ SSE=\sum_{i=1}^k\sum_{p∈C_i}|p-m_i|^2 $</p>
+<p>各部分在图中的含义：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724422375303-8dffeb94-d33c-44d4-b324-0b42077b5d9a.png" width="995.2" title="" crop="0,0,1,1" id="u935d7376" class="ne-image">
+<p>图中k=2</p>
+<ul>
+<li>SSE图最终的结果，对图松散程度的衡量（SSE左&lt;SSE右）</li>
+<li>SSE随着聚类迭代，其值会越来越小，直到趋于稳定</li>
+<li>如果质心的初始值选择不好，SSE只会达到一个不怎好的局部最优解</li>
+</ul>
+<h3 id="4-2-”肘“方法（Elbow-method）——K值确定">4.2 ”肘“方法（Elbow method）——K值确定</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724423354481-96cb770a-6201-4e5c-9c40-a0532adbbf81.png" width="1093.6" title="" crop="0,0,1,1" id="uccc9d78c" class="ne-image">
+<ol>
+<li>对于n个点的数据集，迭代计算k from 1 to n，每次聚类完成后计算每个点到其所属的簇中心的距离的平方和</li>
+<li>平方和是会逐渐变小的，直到k==n时平方和为0，因为每个点都是它所在的簇中心本身</li>
+<li>在这个平方和变化过程中，会出现一个拐点，下降率突然变缓时即认为是最佳k值</li>
+</ol>
+<h3 id="4-3-轮廓系数法（Silhouette-Coefficient）">4.3 轮廓系数法（Silhouette Coefficient）</h3>
+<p>结合了聚类的凝聚度（Cohesion）和分离度（Separation），用于评估聚类效果</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1724424187446-773af047-6168-4ee7-aaed-dc7066f9d1e0.png" width="1020.8" title="" crop="0,0,1,1" id="u2e584ad6" class="ne-image">
+<ol>
+<li>计算样本 i 到<strong>同簇</strong>其他样本的平均距离$ a_i $，$ a_i $越小样本 i 的簇内不相似度越小，说明样本 i 越应该被聚类到该簇</li>
+<li>计算样本 i 到最近簇$ C_j $的所有样本的平均距离$ b_{ij} $，称样本 i 与最近簇$ C_j $的不相似度，定义为样本 i 的簇间不相似度：$ b_i=min{ b_{i1},b_{i2},…,b_{ik} } $这个值越大，说明样本 i 越不属于其他簇</li>
+<li>求出所有样本的轮廓系数后再求平均值就得到了平均轮廓系数</li>
+</ol>
+<p>平均轮廓系数的取值范围[-1,1]，系数越大，聚类效果越好</p>
+<p>簇内样本的距离越近，簇间样本距离越远</p>
+<p><strong>案例</strong>：</p>
+<p>下图是500个样本含有2个feature的数据分布情况</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725005980172-83ed77c9-2453-44f5-899a-769f65de26f7.png" width="620" title="" crop="0,0,1,1" id="u37296803" class="ne-image">
+<p>以下是不同的n_clusters得到的不同的SC系数</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725006134292-9d3535fb-3e33-4750-8228-ce367f42583c.png" width="743.2" title="" crop="0,0,1,1" id="u7b14d99a" class="ne-image">
+<p>每次聚类，都会得到一个轮廓系数，为1时，说明这个点与周围簇距离较远，结果非常好；为0时，说明这个点可能处于两个簇的边界上，当值为负时，暗含该点可能被误分了</p>
+<p>从上述结果来看，n_clusters为2,4时的结果较好，那么取2还是4呢？</p>
+<p>当n_clusters取2时：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725006362510-16c0c83f-aa71-4ce4-b750-1b8126815d7d.png" width="1117.6" title="" crop="0,0,1,1" id="u9241859d" class="ne-image">
+<p>第0簇的宽度远宽于第1簇</p>
+<p>当n_clusters取4时：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725006387936-d3d85032-4da5-41ba-88ea-f2f7fb4caab2.png" width="1129.6" title="" crop="0,0,1,1" id="u72d90a37" class="ne-image">
+<p>各簇宽度相差不大，因此选择K=4，作为最终聚类个数</p>
+<h3 id="4-4-CH系数（Calinski-Harabasz-Index）">4.4 CH系数（Calinski-Harabasz Index）</h3>
+<p>类别内部数据的协方差越小越好，类别之间的协方差越大越好（类别内部数据的距离平方和越小越好，类别之间的距离平方和越大越好），这样Calinski-Harabasz分数S会高，聚类效果越好</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725007075753-09ebfc42-6a0d-4b80-bc03-f0dc5925fc1a.png" width="757.6" title="" crop="0,0,1,1" id="u2ed0f86d" class="ne-image">
+<p>tr为矩阵的迹，$ B_k $为类别之间的协方差矩阵，$ W_k $为类别内部数据的协方差矩阵</p>
+<p>m为训练样本数，k为类别数</p>
+<blockquote>
+<p>使用迹进行求解的理解：矩阵的对角线可以表示一个物体的相似性，在机器学习中，主要为了获取特征值。在一个矩阵计算出来后，都可以简单化，只需要获得矩阵的迹，就可以表示这一块数据最重要的特征了。</p>
+</blockquote>
+<p>CH需要达到的目的：用尽量少的类别聚类尽量多的样本，同时获得较好的聚类结果。</p>
+<h2 id="5、算法优化">5、算法优化</h2>
+<p>k-means的优点：</p>
+<ol>
+<li>原理简单，实现容易</li>
+<li>聚类效果中上</li>
+<li>空间复杂度O(N)，时间复杂度O(IKN)</li>
+</ol>
+<blockquote>
+<p>N为样本点个数，K为中心点个数，I为迭代次数</p>
+</blockquote>
+<p>缺点：</p>
+<ol>
+<li>对离群点，噪声敏感（中心点易偏移）</li>
+<li>很难发现大小差别很大的簇以及进行增量计算</li>
+<li>结果不一定是全局最优，只能保证局部最优</li>
+</ol>
+<h3 id="5-1-Canopy算法配合初始聚类">5.1 Canopy算法配合初始聚类</h3>
+<p>Canopy算法是一种用于初始聚类的方法，通常用于K-means等聚类算法的预处理步骤。Canopy算法通过快速生成一组初始的聚类中心（称为Canopies），从而减少后续聚类算法的计算量。</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>设置参数
+<ol>
+<li>T1：松散距离阈值（Loose Distance Threshold），用于判断一个点是否属于某个Canopy</li>
+<li>T2：紧密距离阈值（Tight Distance Threshold），用于判断一个点是否可以作为新的Canopy中心。T2&lt;T1</li>
+</ol>
+</li>
+<li>遍历数据集：
+<ol>
+<li>对于每个数据点，计算其与所有现有Canopy中心的距离</li>
+<li>如果距离小于T2，则将该点标记为属于最近的Canopy，并不再考虑该点</li>
+<li>如果距离大于T1，则将该点作为新的Canopy中心</li>
+<li>如果距离在T2和T1之间，则将该点标记为属于最近的Canopy，但仍考虑该点作为潜在的新Canopy中心</li>
+</ol>
+</li>
+<li>重复步骤2，直到所有数据点都被处理</li>
+</ol>
+<p><strong>使用Canopy结果进行初始聚类</strong></p>
+<ul>
+<li>选择Canopy中心：从生成的Canopy中心中选择一部分作为初始聚类中心</li>
+<li>K-means或其他聚类算法：使用选定的初始聚类中心运行K-means或其他聚类算法，进行最终的聚类。</li>
+<li>根据评估结果调整T1和T2的值，重新运行Canopy算法和后续聚类算法，直到获得满意的聚类结果</li>
+</ul>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725263843009-c6968fd7-dca7-46f9-844a-a27537eb33c8.png" width="629.6" title="" crop="0,0,1,1" id="u0ecebe12" class="ne-image">
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725263854684-3e2bd5a1-210f-4837-bf27-ec8eb4cdd6b3.png" width="636" title="" crop="0,0,1,1" id="u06746404" class="ne-image">
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725263862954-bef9c8d1-8166-4c24-bfd0-90dcb6cd5268.png" width="643.2" title="" crop="0,0,1,1" id="ub4016b99" class="ne-image">
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725263870979-eb5cfc8b-3872-457e-a082-7dca8b14ad30.png" width="286.4" title="" crop="0,0,1,1" id="u17a5295f" class="ne-image">
+<p><strong>优缺点</strong>：</p>
+<p>优点：</p>
+<ol>
+<li>Kmeans对噪声抗干扰较弱，通过Canopy对比，将较小的NumPoint的Cluster直接去掉有利于抗干扰</li>
+<li>Canopy选择出来的每个Canopy的centerPoint作为K会更精确</li>
+<li>只是针对每个Canopy内做Kmeans聚类，减少相似计算的数量</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>算法中T1，T2的确定问题，依旧可能落入局部最优解</li>
+</ol>
+<h3 id="5-2-K-means">5.2 K-means++</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725264912534-dc15a259-3669-48ec-bd04-f81fd2ea8ca8.png" width="497.6" title="" crop="0,0,1,1" id="u3780eabd" class="ne-image">
+<p>其中：$ \sum_{x∈X}D(x)^2=1^2+2^2+1^2+2… $为了方便表示，将其记为A</p>
+<p>$ D(x)^2 $为x到聚类中心的距离的平方</p>
+<p>P为概率，对于每个点x，其被选择为下一个聚类中心的概率为P</p>
+<p>如：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725329263496-9a3ae491-d58a-440e-be4a-c45991190a44.png" width="704.8" title="" crop="0,0,1,1" id="u85294470" class="ne-image">
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725329274510-60c1946a-50fd-4b5d-9aea-a68829684c11.png" width="694.4" title="" crop="0,0,1,1" id="u99c49376" class="ne-image">
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725329290021-ce5a4f9a-e0b7-44b7-b83d-e9515ab04735.png" width="704" title="" crop="0,0,1,1" id="uf2dd8925" class="ne-image">
+<p>K-means++目的，让选择的质心尽可能的分散</p>
+<h3 id="5-3-二分-K-means">5.3 二分 K-means</h3>
+<p>实现流程：</p>
+<ol>
+<li>初始化：所有点作为一个簇</li>
+<li>迭代分裂：每次迭代，选择一个簇进行分裂，选择的标准通常是簇内平方和（SSE）最大的簇，因为该簇通常包含较多的异质性数据点</li>
+<li>K-means分裂：对选定的簇应用标准的K-means算法，将其分裂成两个子簇</li>
+<li>评估分裂：计算分裂后的总SSE，并与分裂前的SSE进行比较。如果分裂降低了总SSE，则接收这次分裂，否则不接受</li>
+<li>以此进行下去，直到簇的数目等于用户给定的数目k为止</li>
+</ol>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725329922413-a2e6db8e-4075-453c-a6db-a8630108812a.png" width="480.79998779296875" title="" crop="0,0,1,1" id="u463daa5d" class="ne-image">
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725329934422-51a89458-673f-4cce-900b-4d85f41e62ba.png" width="278.6000061035156" title="" crop="0,0,1,1" id="ue6b64769" class="ne-image"><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725329949174-2517aade-fb00-4081-8690-59ca76fdd262.png" width="305.6000061035156" title="" crop="0,0,1,1" id="uc5f0d5d8" class="ne-image"></p>
+<h3 id="5-4-K-medoids（K-中心聚类算法）">5.4 K-medoids（K-中心聚类算法）</h3>
+<p>K-medoids与K-means不一样的地方在于中心点的选取</p>
+<ul>
+<li>K-means中，将中心点取为当前Cluster中所有数据点的平均值，对异常点很敏感</li>
+<li>K-medoids中，将从当前Cluster中选取到其他所有（当前Cluster中的）点的距离之和最小的点作为中心点</li>
+</ul>
+<p>算法流程：</p>
+<ol>
+<li>总体n个样本点中任意选取k个点作为medoids</li>
+<li>按照与medoids最近的原则，将剩余的n-k个点分配到当前最佳的medoids代表的类中</li>
+<li>对于第i个类中除对应medoids点外的所有其他点，按顺序计算当其为新的medoids时，代价函数的值，遍历所有可能，选取代价函数最小时对应的点作为新的medoids</li>
+<li>重复2-3，直到所有的medoids点不再变化或达到最大迭代数</li>
+<li>产出最终确定的k个类</li>
+</ol>
+<p><strong>K-medoids对噪声鲁棒性好</strong></p>
+<p>例：当一个Cluster样本点只有少数几个，如（1,1）（1,2），（2,1）（1000,1000）。其中（1000，1000）是噪声。如果按照K-means质心大致会处在（1,1）（1000,1000）中间，这显然不是我们想要的。K-medoids可以避免这种情况。</p>
+<p>K-medoids只对小样本起作用，大样本就慢了。大样本时，少数噪音对K-means没有那么大的影响。</p>
+<h3 id="5-5-总结">5.5 总结</h3>
+<p>优化方法：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725348266734-fe81cd5b-f49c-4275-aa0c-958ec7de5673.png" width="1139.2" title="" crop="0,0,1,1" id="u7fc63c87" class="ne-image">
+<h2 id="6、特征降维">6、特征降维</h2>
+<h3 id="6-1-定义">6.1 定义</h3>
+<p>降维在某些限定条件下，降低随机变量（特征）个数，得到一组“不相关”主变量的过程</p>
+<ul>
+<li>降低随机变量的个数</li>
+<li>相关特征
+<ul>
+<li>相对湿度与降雨量之间的相关</li>
+</ul>
+</li>
+</ul>
+<p>降维的两种方式</p>
+<ul>
+<li>特征选择</li>
+<li>主成分分析（可理解为一种特征提取的方式）</li>
+</ul>
+<h3 id="6-2-特征选择">6.2 特征选择</h3>
+<p>数据中包含冗余或无关变量（或称特征、属性、指标等），旨在从原有特征中找出主要特征</p>
+<p><strong>方法</strong>：</p>
+<ul>
+<li>Filter（过滤式）：主要探究特征本身特点、特征与特征和目标值之间关联
+<ul>
+<li>方差选择法：低方差特征过滤</li>
+<li>相关系数</li>
+</ul>
+</li>
+<li>Embedded（嵌入式）：算法自动选择特征（特征与目标之间的关联）
+<ul>
+<li>决策树：信息熵、信息增益</li>
+<li>正则化：L1、L2</li>
+<li>深度学习：卷积等</li>
+</ul>
+</li>
+</ul>
+<p><strong>低方差特征过滤：</strong></p>
+<blockquote>
+<p>删除低方差的一些特征，结合方差的大小来考虑这个方式的角度</p>
+</blockquote>
+<ul>
+<li>特征方差小：某个特征大多样本的值比较接近</li>
+<li>特征方差大：某个特征很多样本的值都有差别</li>
+</ul>
+<p><strong>API</strong>：</p>
+<p><code>sklearn.feature_selection.VarianceThreshold(threshold = 0.0)</code></p>
+<ul>
+<li>删除所有低方差特征</li>
+<li><code>Variance.fit_transform(X)</code>
+<ul>
+<li>X：Numpy array格式的数据<code>[n_samples,n_features]</code></li>
+<li>返回值：训练集差异低于threshold的特征将被删除。默认值是保留所有非零⽅差特征，即删除所有样本中具有相同值的特征。</li>
+</ul>
+</li>
+</ul>
+<p>例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.feature_selection <span class="keyword">import</span> VarianceThreshold</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">variance_demo</span>(<span class="params">data</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    删除低方差特征</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 实例化一个转换器</span></span><br><span class="line">    transfer = VarianceThreshold(threshold=<span class="number">0.7</span>)</span><br><span class="line">    <span class="comment"># 调用fit_transform</span></span><br><span class="line">    data = transfer.fit_transform(data[:, <span class="number">1</span>:<span class="number">10</span>])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;删除低方差特征的结果：\n&quot;</span>, data)</span><br><span class="line">    <span class="built_in">print</span>(data.shape)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-3-相关系数">6.3 相关系数</h3>
+<h4 id="6-3-1-皮尔逊相关系数（Pearson-Correlation-Coefficient）">6.3.1 皮尔逊相关系数（Pearson Correlation Coefficient）</h4>
+<blockquote>
+<p>反映变量之间相关关系密切程度的统计指标</p>
+</blockquote>
+<p><strong>公式（不用记）</strong>：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725353551197-4e818381-6633-420d-91b8-6eebf8a42a19.png" width="724" title="" crop="0,0,1,1" id="u07466767" class="ne-image">
+<p>例：<br>
+下表为广告费与月均销售额相关表</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725353701790-6b08bded-c522-43ac-b3b9-41f251f611e6.png" width="263.20001220703125" title="" crop="0,0,1,1" id="ue3b617cb" class="ne-image">
+<p>那么其系数计算：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725353724843-257b708b-d9f6-440c-ab0f-936fddb32874.png" width="597.6" title="" crop="0,0,1,1" id="uf39975f6" class="ne-image">
+<p>最终计算：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725353772909-dd39ec7b-f948-4917-a74c-dbe6af957343.png" width="428.20001220703125" title="" crop="0,0,1,1" id="uc1ee5fc3" class="ne-image">=0.9942</p>
+<p>故最终得出是广告投入费与月平均销售额之间有高度的正相关关系</p>
+<p>特点：</p>
+<ul>
+<li>其值介于<code>[-1,1]</code>之间</li>
+<li>r&gt;0时，表示两者正相关，r&lt;0时，两变量为负相关</li>
+<li>|r|越接近1，两者关系越密切；越接近0，两者关系越弱</li>
+<li>一般来说：|r|&lt;0.4为低相关，0.4≤|r|≤0.7,为显著相关，0.7≤|r|≤1为高度相关</li>
+</ul>
+<p><strong>API：</strong></p>
+<p><code>from scipy.stats import pearsonr</code></p>
+<ul>
+<li>x：（N，）array_like</li>
+<li>y： (N,)	array_like	Returns: (Pearson’s correlation coefficient, p-value)</li>
+</ul>
+<p>例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.stats <span class="keyword">import</span> pearsonr</span><br><span class="line"></span><br><span class="line">x1 = [<span class="number">12.5</span>, <span class="number">15.3</span>, <span class="number">23.2</span>, <span class="number">26.4</span>, <span class="number">33.5</span>, <span class="number">34.4</span>, <span class="number">39.4</span>, <span class="number">45.2</span>, <span class="number">55.4</span>, <span class="number">60.9</span>]</span><br><span class="line">x2 = [<span class="number">21.2</span>, <span class="number">23.9</span>, <span class="number">32.9</span>, <span class="number">34.1</span>, <span class="number">42.5</span>, <span class="number">43.2</span>, <span class="number">49.0</span>, <span class="number">52.8</span>, <span class="number">59.4</span>, <span class="number">63.5</span>]</span><br><span class="line"><span class="built_in">print</span>(pearsonr(x1, x2))</span><br></pre></td></tr></table></figure>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725354435530-82f63fc4-5e09-4a20-9645-6ccda49ffc23.png" width="681.6" title="" crop="0,0,1,1" id="ubda0ca71" class="ne-image">
+<h4 id="6-3-2-斯皮尔曼相关系数（Rank-IC）">6.3.2 斯皮尔曼相关系数（Rank IC）</h4>
+<blockquote>
+<p>反映变量之间相关关系密切程度的统计指标</p>
+</blockquote>
+<p><strong>公式</strong>：$ RankIC=1- \frac{6\sum{d_i^2}}{n(n^2-1)} $ （n为等级个数，d为二列成对变量的等级差数）</p>
+<p>例：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725696553763-e1cf00f7-8b85-45f9-b78a-7f4ea7c21952.png" width="629.6" title="" crop="0,0,1,1" id="u8b69a3e2" class="ne-image">
+<p><strong>特点</strong>：</p>
+<ul>
+<li>斯皮尔曼相关系数表明 X（自变量）和 Y（因变量）的相关方向。如果当X增加时，Y趋向于增加，斯皮尔曼相关系数则为正</li>
+<li>与之前的皮尔逊相关系数大小性质⼀样，取值 [-1, 1]之间</li>
+</ul>
+<p>API：</p>
+<p><code>from scipy.stats import spearmanr</code></p>
+<h3 id="6-4-主成分分析">6.4 主成分分析</h3>
+<blockquote>
+<p>定义：高维数据转化为低维数据的过程，在此过程中可能会舍弃原有数据、创造新的变量</p>
+<p>作用：是数据维度的压缩，尽可能的降低原数据的维度，损失少量信息</p>
+<p>应用：回归分析或者聚类分析当中</p>
+</blockquote>
+<p>API：</p>
+<p><code>sklearn.decomposition.PCA(n_components=None)</code></p>
+<ul>
+<li>n_components：
+<ul>
+<li>小数：保留百分之多少的信息</li>
+<li>整数：减少到多少特征</li>
+</ul>
+</li>
+<li><code>PCA.fit_transform(X)</code> X:numpy array格式的数据</li>
+<li>return：指定维度的array</li>
+</ul>
+<p>例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.decomposition <span class="keyword">import</span> PCA</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">pca_demo</span>():</span><br><span class="line">    data = [[<span class="number">2</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">5</span>], [<span class="number">6</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">8</span>], [<span class="number">5</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">1</span>]]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 实例化PCA</span></span><br><span class="line">    pca = PCA(n_components=<span class="number">0.9</span>)</span><br><span class="line">    data1 = pca.fit_transform(data)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;保留90%的信息，结果为：\n&quot;</span>, data1)</span><br><span class="line">    pca2 = PCA(n_components=<span class="number">3</span>)</span><br><span class="line">    data2 = pca2.fit_transform(data)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;降维到3维的信息，结果为：\n&quot;</span>, data2)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pca_demo()</span><br></pre></td></tr></table></figure>
+<h3 id="6-5-探究用户对物品类别的喜好细分">6.5 探究用户对物品类别的喜好细分</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.decomposition <span class="keyword">import</span> PCA</span><br><span class="line"><span class="keyword">from</span> sklearn.cluster <span class="keyword">import</span> KMeans</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> silhouette_score</span><br><span class="line"><span class="comment"># 读数据</span></span><br><span class="line">order_products = pd.read_csv(<span class="string">&#x27;./dataset/Market_Analysis/order_products__prior.csv&#x27;</span>)</span><br><span class="line">products = pd.read_csv(<span class="string">&#x27;./dataset/Market_Analysis/products.csv&#x27;</span>)</span><br><span class="line">orders = pd.read_csv(<span class="string">&#x27;./dataset/Market_Analysis/orders.csv&#x27;</span>)</span><br><span class="line">aisles = pd.read_csv(<span class="string">&#x27;./dataset/Market_Analysis/aisles.csv&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 合并表格</span></span><br><span class="line">table1 = pd.merge(order_products, products, on=[<span class="string">&#x27;product_id&#x27;</span>, <span class="string">&#x27;product_id&#x27;</span>])</span><br><span class="line">table2 = pd.merge(table1, orders, on=[<span class="string">&#x27;order_id&#x27;</span>, <span class="string">&#x27;order_id&#x27;</span>])</span><br><span class="line">table = pd.merge(table2, aisles, on=[<span class="string">&quot;aisle_id&quot;</span>, <span class="string">&quot;aisle_id&quot;</span>])</span><br><span class="line"><span class="comment"># 交叉表</span></span><br><span class="line">table = pd.crosstab(table[<span class="string">&quot;user_id&quot;</span>], table[<span class="string">&quot;aisle&quot;</span>])</span><br><span class="line"></span><br><span class="line">table = table[:<span class="number">1000</span>]</span><br><span class="line"><span class="comment"># 降维</span></span><br><span class="line">transfer = PCA(n_components=<span class="number">0.9</span>)</span><br><span class="line">data = transfer.fit_transform(table)</span><br><span class="line"><span class="comment"># 预测</span></span><br><span class="line">estimator = KMeans(n_clusters=<span class="number">8</span>, random_state=<span class="number">10</span>)</span><br><span class="line">y_predict = estimator.fit_predict(data)</span><br><span class="line"><span class="built_in">print</span>(silhouette_score(data, y_predict))</span><br></pre></td></tr></table></figure>
+<h3 id="6-6-法选择指导">6.6 法选择指导</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1725700266543-0a0f6711-ce35-4192-bcb4-2383ce339008.png" width="1191.2" title="" crop="0,0,1,1" id="uf17e1854" class="ne-image">
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/机器学习/黑马教程/5、集成学习与随机森林/" data-toggle="tooltip" data-placement="top" title="集成学习与随机森林">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/机器学习/黑马教程/7、朴素贝叶斯算法/" data-toggle="tooltip" data-placement="top" title="朴素贝叶斯算法">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=聚类算法（KMeans）&body=Hi,I found this website and thought you might like it https://nova-chaser.github.io/机器学习/黑马教程/6、聚类算法(KMeans)/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Thu Jun 18 2026 17:30:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%9A%E7%B1%BB"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1、什么是聚类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1 应用场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2 概念</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95API"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2、聚类算法API</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E6%B5%81%E7%A8%8B"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3、聚类算法实现流程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-1-K-means%E8%81%9A%E7%B1%BB%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1 K-means聚类步骤</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4%E3%80%81%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4、模型评估</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-1-%E8%AF%AF%E5%B7%AE%E5%B9%B3%E6%96%B9%E5%92%8C%EF%BC%88SSE-the-sum-of-squares-due-to-error%EF%BC%89"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">4.1 误差平方和（SSE\the sum of squares due to error）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-2-%E2%80%9D%E8%82%98%E2%80%9C%E6%96%B9%E6%B3%95%EF%BC%88Elbow-method%EF%BC%89%E2%80%94%E2%80%94K%E5%80%BC%E7%A1%AE%E5%AE%9A"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">4.2 ”肘“方法（Elbow method）——K值确定</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-3-%E8%BD%AE%E5%BB%93%E7%B3%BB%E6%95%B0%E6%B3%95%EF%BC%88Silhouette-Coefficient%EF%BC%89"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">4.3 轮廓系数法（Silhouette Coefficient）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-4-CH%E7%B3%BB%E6%95%B0%EF%BC%88Calinski-Harabasz-Index%EF%BC%89"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">4.4 CH系数（Calinski-Harabasz Index）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5%E3%80%81%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5、算法优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-1-Canopy%E7%AE%97%E6%B3%95%E9%85%8D%E5%90%88%E5%88%9D%E5%A7%8B%E8%81%9A%E7%B1%BB"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">5.1 Canopy算法配合初始聚类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-2-K-means"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">5.2 K-means++</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-3-%E4%BA%8C%E5%88%86-K-means"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">5.3 二分 K-means</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-4-K-medoids%EF%BC%88K-%E4%B8%AD%E5%BF%83%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">5.4 K-medoids（K-中心聚类算法）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-5-%E6%80%BB%E7%BB%93"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">5.5 总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#6%E3%80%81%E7%89%B9%E5%BE%81%E9%99%8D%E7%BB%B4"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">6、特征降维</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-1-%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">6.1 定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-2-%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">6.2 特征选择</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-3-%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">6.3 相关系数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-3-1-%E7%9A%AE%E5%B0%94%E9%80%8A%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%EF%BC%88Pearson-Correlation-Coefficient%EF%BC%89"><span class="toc-nav-number">6.3.1.</span> <span class="toc-nav-text">6.3.1 皮尔逊相关系数（Pearson Correlation Coefficient）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#6-3-2-%E6%96%AF%E7%9A%AE%E5%B0%94%E6%9B%BC%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%EF%BC%88Rank-IC%EF%BC%89"><span class="toc-nav-number">6.3.2.</span> <span class="toc-nav-text">6.3.2 斯皮尔曼相关系数（Rank IC）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-4-%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">6.4 主成分分析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-5-%E6%8E%A2%E7%A9%B6%E7%94%A8%E6%88%B7%E5%AF%B9%E7%89%A9%E5%93%81%E7%B1%BB%E5%88%AB%E7%9A%84%E5%96%9C%E5%A5%BD%E7%BB%86%E5%88%86"><span class="toc-nav-number">6.5.</span> <span class="toc-nav-text">6.5 探究用户对物品类别的喜好细分</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6-6-%E6%B3%95%E9%80%89%E6%8B%A9%E6%8C%87%E5%AF%BC"><span class="toc-nav-number">6.6.</span> <span class="toc-nav-text">6.6 法选择指导</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
+            
+            <a class="tag" href="/tags/#聚类" title="聚类">聚类</a>
+            
+            <a class="tag" href="/tags/#KMeans" title="KMeans">KMeans</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+          </li>
+          
+          <li>
+            <a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a>
+          </li>
+          
+          <li>
+            <a href="https://leetcode.cn/" target="_blank">力扣</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          ypb
+          2026
+          <br>
+          Powered by
+          <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+          &
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">LiveMyLife</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://nova-chaser.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

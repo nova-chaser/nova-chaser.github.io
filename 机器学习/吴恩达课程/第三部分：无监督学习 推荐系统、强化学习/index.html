@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="大模型算法/应用开发，个人学习笔记分享博客"/>
+  <meta name="keyword" content="ypb,机器学习,深度学习,大模型,算法,博客"/>
+  <!-- 解除第三方图片防盗链限制 -->
+  <meta name="referrer" content="no-referrer"/>
+  <link rel="shortcut icon" href="/img/avatar/y.png"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://nova-chaser.github.io/机器学习/吴恩达课程/第三部分：无监督学习 推荐系统、强化学习/">
+  <title>
+    
+      第三部分：无监督学习 推荐系统、强化学习 - Your Potential Beyond
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Your Potential Beyond</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-toggle-item">
+            <a class="toggle" onclick="document.body.classList.toggle('body--dark'); return false;" title="切换主题">
+              <i class="mdui-icon material-icons light-mode"></i>
+              <i class="mdui-icon material-icons dark-mode"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('/img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
+              
+              <a class="tag" href="/tags/#聚类" title="聚类">聚类</a>
+              
+              <a class="tag" href="/tags/#无监督学习" title="无监督学习">无监督学习</a>
+              
+              <a class="tag" href="/tags/#异常检测" title="异常检测">异常检测</a>
+              
+              <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
+              
+              <a class="tag" href="/tags/#强化学习" title="强化学习">强化学习</a>
+              
+            </div>
+            <h1>第三部分：无监督学习 推荐系统、强化学习</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by ypb on
+              2026-06-18
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">36</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">10.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="一、聚类">一、聚类</h2>
+<h3 id="1、什么是聚类">1、什么是聚类</h3>
+<p>聚类算法（clustering algorithm）着眼于数据点的数量，并自动找出彼此相关或相似的数据点。这是一种非监督学习算法，在无监督学习中，你会得到一个只有输入x的数据集，但没有标签或目标标签y，它看起来就像这样，我们要让算法自己找出数据中有趣的东西。聚类算法会像这样查看数据集，并试着将其分组成簇（clusters），即一组彼此相似的点</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718021517367-ce5ee2c8-05b1-4d9b-9ab1-7e81fa78bc8a.png" width="1618.4" title="" crop="0,0,1,1" id="u91ed5124" class="ne-image">
+<h3 id="2、K-均值聚类算法（k-means-clustering）">2、K-均值聚类算法（k-means clustering）</h3>
+<p>从一个例子开始，这里绘制了由30个未标记训练样本组成的数据集，所以这里有30个点，我们要做的是在这个数据集上运行K-means。K-means算法要做的第一件事是，它会随机猜测你给的两个簇的中心位置。我在这里用红叉和蓝叉表示，它们可能是两个不同簇的中心。这是随机的猜测，并不一定是最好的。k-means算法会重复执行两个步骤。第一步是将点分配给<strong>簇质心</strong>（clusters centroids），第二步是移动簇质心。簇的中心称为簇质心。在对簇质心的位置做出初步猜测后，它会遍历所有这些样本，X1到X30，共30个数据点。对于每一个数据点，算法会检查它是更接近红色簇的质心呢，还是更接近蓝色簇的质心。算法会把每一个点分配给离它更近的簇质心。下图将它涂成对应的颜色加以区分。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718029695845-9bd3884c-e3f8-4fd7-9823-6064cc8a9392.png" width="718" title="" crop="0,0,1,1" id="ud5cab33f" class="ne-image">
+<p>第二步，它会遍历所有的红点，然后对它们取平均值，并将红叉移到红点所在的平均位置。蓝色同样的处理。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718029976077-3e900bef-f79c-4bb9-8115-514e45916177.png" width="1376.8" title="" crop="0,0,1,1" id="ue95bd35b" class="ne-image">
+<p>然后我们再次重复相同的步骤。你会看到有一些点改变了颜色。重复执行这两个步骤，直到点的颜色和簇质心的位置没有任何变化。这意味着此刻K-means聚类算法已经收敛了。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718030543333-1d5e9a96-209f-4782-bada-097f2d396b39.png" width="1384.8" title="" crop="0,0,1,1" id="uacf7c79a" class="ne-image">
+<p>下面可以看一看它的详细代码。第一步是随机初始化K个簇质心μ1，μ2…μK。在下面的例子中，K=2。红叉代表簇质心1，蓝叉代表质心2，这代表两个簇的索引。所有的向量都是包含两个数字的列表，或者说二维向量，所以每个训练样本都有n=2个特征，意味着向量中的两个数字随机初始化了K个簇质心。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718113245196-b83f1a46-4ec6-40ca-bb03-49e8025fc7cd.png" width="1645.6" title="" crop="0,0,1,1" id="uc11c3473" class="ne-image">
+<p>然后开始重复那两个步骤。</p>
+<p>第一步是将点分配给簇质心。我们将为i=1到m，总共m个训练样本，将C_i赋值为索引，索引是最接近训练样本X_1的簇质心。数学上可以写成距离。找到这个最小值后，赋值给C_i。如下图，红色的点被赋值为1，蓝色的值为2。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718113340256-767da257-7111-4e31-9fb7-1f71113e8753.png" width="1687.2" title="" crop="0,0,1,1" id="u1b002847" class="ne-image">
+<p>第二步是移动簇质心。遍历所有点，并求出平均值，更新μ1（μ2）的值。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718112821889-b3e6dcda-6a7a-4a46-b6d9-3fb8ee638365.png" width="1703.2" title="" crop="0,0,1,1" id="u2e380d71" class="ne-image">
+<p>当出现有一个簇没有被分到样本，最常见的做法是消除该簇，K=K-1。如果真的需要K个簇，则重新随机初始化簇质心。</p>
+<h3 id="3、优化目标">3、优化目标</h3>
+<p>下面我们来看看聚类算法的代价函数。C_i为第i个样本的位置。μ_k为簇质心，μ_Ci是离样本i最近的的簇质心的位置。</p>
+<p>代价函数如下图所示。他是每个训练样本X_i与最近簇质心之间的平均平方距离。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718115856906-3a297b31-c473-47e0-9cee-c29622f20f9e.png" width="1627.2" title="" crop="0,0,1,1" id="u16a0005d" class="ne-image">
+<p>可视化后，大概是计算这些距离的平方的平均值。算法每一步都会更新Ci的值（i = 1~30），或者更新簇质心位置μ1和μ2，以继续降低这个代价函数J</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718118259859-7ba97d84-bb4b-42cf-ab55-0d5de0b2aa9d.png" width="1411.2" title="" crop="0,0,1,1" id="u8303b120" class="ne-image">
+<p>这个函数也叫畸变函数（distortion function）。</p>
+<p>让我们详细的看一下这个函数。</p>
+<p>k-means的第一步，是将点分配给簇质心，这意味通过更新C1~Cm，以尽可能地最小化代价函数J，同时保持μ1~μk不变。第二步相反，当你移动簇质心时，这是试图让C1~CM保持不变，但是要通过更新μ1~μk，尽量最小化代价函数或distortion函数。</p>
+<p>在第一步中，如果您想指定C1~Cm的值或保存某个特定Ci的值，请尝试将其最小化，是什么让 Xi-μCi 尽可能小,这是训练样本Xi和它被分配到的簇质心位置之间的距离或平方距离，所以如果你想最小化这个距离或这个平方距离，你应该做的是将Xi分配给最近的簇质心。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718119156548-b2fc2a74-bac1-47eb-909c-fd620906d326.png" width="1685.6" title="" crop="0,0,1,1" id="ud11b35c5" class="ne-image">
+<p>k-means的第二步做了些什么呢？也就是，移动簇质心。让μk作为点分配到簇的平均位置，就是选择让这些μ项最小化该表达式。举个简单的例子，如下图，41为初始时代价函数的值。把簇质心移到中间，那么它的平均平方距离为25，小得多。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718122804042-6618eac0-7b21-4287-84bc-f57ab2dbbfd7.png" width="1427.2" title="" crop="0,0,1,1" id="u712f322a" class="ne-image">
+<p>在每一次迭代中，distortion代价函数应该下降或保持不变，但是如果它没有下降，或者在最坏的情况下保持不变，如果它上升了，这意味着代码中存在错误，它不应该上升，因为K-means的每一步都意味着设置Ci和μK的值，以试图降低代价函数。或者在一些罕见的情况下，你运行k-means很长时间，代价函数或distortion函数只是下降得非常非常慢，可能这已经足够好了。</p>
+<h3 id="4、初始化-K均值聚类算法">4、初始化 K均值聚类算法</h3>
+<p>k-means聚类算法的第一步是，为簇质心μ1到μk选择随机位置作为初始猜测，但是如何随机猜测的呢？</p>
+<p>当运行k-means时，应该总是尝试去减少训练样本的簇质心K的数量，K大于M是没有意义的，因为这样就没有足够的训练样本让每个簇质心至少有一个训练样本，所以在我们之前的例子中，我们有K=2和m=30。选择簇质心最常见的方法是，随机挑选训练样本，这是一个训练集，如果我随机选择两个训练样本，让簇质心等于这个样本。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718199478858-669bb9c9-fcf2-416f-bcd6-98c483189807.png" width="1644.8" title="" crop="0,0,1,1" id="u2aee6ed5" class="ne-image">
+<p>让我们再看一个例子，随机选择三个样本，有可能会出现下面的情况，陷入了局部最小值。这时我们可以分别计算这三个代价函数，选择最低的那个</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718200439827-30db791f-cb38-4a4e-98c7-89e1e21ac09f.png" width="1719.2" title="" crop="0,0,1,1" id="uaa66d115" class="ne-image">
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718201245407-b8ecade3-f92e-4163-94b8-07abca4ea2aa.png" width="1533.6" title="" crop="0,0,1,1" id="ubb06ff26" class="ne-image">
+<h3 id="5、选择集群的数量">5、选择集群的数量</h3>
+<p>如何决定使用多少簇呢？有这样一种尝试选择K值的方法，称为肘部法则（elbow method），它的作用是你会运行具有各种K值的k-means，并将代价函数J绘制为簇数的函数，你会发现，当你有很少的簇时，比如说一个簇，distortion函数或代价函数J会很高，随着簇数量的增加，它可能会如下所示下降。它所做的是将代价函数视为簇数量的函数，看看是否有弯曲。在曲线上，我们称之为肘部，看起来代价函数正在迅速下降，直到横坐标簇数量K=3。但是在那之后下降得更慢了。吴恩达教授说不会他几乎不用这个方法，正确的类数量确实是模棱两可的（没有绝对的）。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718202245513-fb9ce4f8-2b8f-434c-a867-0d69c29f1eef.png" width="836" title="" crop="0,0,1,1" id="u2ec44d05" class="ne-image">
+<p>顺便说一下，它没有一个清晰的肘部（拐弯），来作为K的值，一种不起作用的技术是，选择K最小化代价函数J，因为这样做会让你几乎总是选择K的最大值</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718202969114-31d35b51-139c-400f-8987-95685ac0da1c.png" width="771.2" title="" crop="0,0,1,1" id="u0e5a9246" class="ne-image">
+<p>在实践中如何选择K的值呢？通常， 你运行k-means是为了在稍后或者说下游任务（downstream purpose ）中使用生成的簇。所以建议你做的是根据k-means在稍后或下游任务中的表现来评估具体的K值合不合适。</p>
+<p>让我用T恤尺码的例子来说明，你可以尝试在这个数据集上运行k-means来找出几组簇。应该有多少个T恤的尺码呢？嗯，这是模棱两可的，如果你运行k-means后得到五个簇，得到的簇可能看起来像这样。这样你可以让T恤的尺码有XS,S,M,L,XL，所以这两个有效地、精细地将数据分成了不同的簇。但是你是想用3个簇还是5个簇取决于哪个对你的T恤大业更有意义。所以在这种情况下，我要做的是运行K=3和K=5的k-means算法，然后看看这两种解决方案，看看尺寸和合身要如何权衡，到底是生产多尺码（高成本）还是少尺码（低成本）会对T恤业务更有好处。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718205469333-172993e0-160e-48b6-b49c-b4321a6ebae8.png" width="1602.4" title="" crop="0,0,1,1" id="u2e57d3a0" class="ne-image">
+<h2 id="二、异常检测">二、异常检测</h2>
+<h3 id="1、发现异常事件">1、发现异常事件</h3>
+<p>异常检测算法（Anomaly detection）通过观察正常事件的未标记数据集，从而学会检测异常或在异常事件发生时发出危险信号。假如我们需要判断新造出来的飞机发动机是否有问题，可以计算飞机发动机的许多不同特征，比如特征X1，它测量发动机功能产生的热量，特征X2测量振动强度等。大部分的发动机都是没有问题的，所以当我们获得一个新的测试样本，在很多个叉叉中间，我们则认为它和其他发动机很像，没什么问题。如果出现在角角落，我们则认为它可能有问题。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718287575595-804823e9-d171-46f7-a42f-f1f1daea9ee7.png" width="1656" title="" crop="0,0,1,1" id="u613450be" class="ne-image">
+<p>该如何处理这种问题？进行异常检测的最常见方法是通过一种称为密度估计（density estimation)的技术。这意味着当你得到这些有M个样本的训练集时，你要做的第一件事是为X的概率建立一个模型。换句话说，算法会尝试找出具有高概率的特征X1和X2的值，以及在数据集中不太可能有/遇见概率小的值是什么。</p>
+<p>我们这里的这个例子，我认为很有可能碰到在中间那个小椭圆里的样本，所以中间的那个区域概率很高，也许样本出现在这个椭圆里的概率有点低，出现在这个椭圆里的概率更低，出现在外面的概率还要更低。当你获得新的测试样本X_test时，你要做的是计算X_test的概率。如果它很小，或者更准确地说如果它小于某个小数字，称之为ε。此时我们会将其标记为异常。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718288864519-dbb9e536-34a3-4840-aa84-1ae64c4965b9.png" width="1609.6" title="" crop="0,0,1,1" id="udf1b517f" class="ne-image">
+<h3 id="2、高斯（正态）分布">2、高斯（正态）分布</h3>
+<p>为了应用异常检测，我们需要使用高斯分布，也称为正态分布。公式如下图所示。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718292644093-f3c7f993-a40d-48a5-99f8-e246914cd6da.png" width="1697.6" title="" crop="0,0,1,1" id="ue675b7c3" class="ne-image">
+<p>下图为μ与σ取值例子，图中的面积始终等于1。σ为标准差，σ²也被称为方差。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718292007686-56fad5ad-312a-45c6-96be-492030c72e3b.png" width="1644.8" title="" crop="0,0,1,1" id="u4dfd2686" class="ne-image">
+<p>当你将其应用于异常检测时，假如你获得了含有m个样本的数据集，这里X只是一个数字，这里是带有11个训练样本的图，我们要做的是尝试估计好的参数：平均值μ以及方差参数σ²</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718292912784-38219ef1-6cb2-4b8a-8d28-3ffa350442f7.png" width="502.4" title="" crop="0,0,1,1" id="GsAX7" class="ne-image">
+<p>我们对μ的估计，就是求所有训练样本的平均值，所以它是训练样本值的1/m倍。对于σ²的值是这样的。<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718292989358-998a7c42-60e5-4b50-ae2b-b856be6b95d2.png" width="202" title="" crop="0,0,1,1" id="u2d59e3f8" class="ne-image">，统计学中，更喜欢用1/(m-1)。</p>
+<p>所以如果得到一个样本，靠近中间位置，则他的p(x)非常高，我们可以把他看做一个正常的例子。但是如果是靠近边边，他的p(x)非常低，可能是个不寻常的样本。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718293232860-1611ece6-a82b-4ca6-935a-6276f0e82ebf.png" width="774.4" title="" crop="0,0,1,1" id="u9f018e79" class="ne-image">
+<h3 id="3、异常检测算法">3、异常检测算法</h3>
+<p>假如你有一个训练集x^1到x^m，这里每个样本x都有n个特征，所以每个样本x都是一个有n个数字的向量。以飞机发动机为例，我们有两个对应于热量和振动的特征，所以我们有两个轴（对应二维向量），即n等于2。给定这个训练集，我们想做的是进行密度估计，这意味着我们将建立一个模型。我们的p(x)模型如下所示。x是一个特征向量，由x_1、x_2直到x_n组成。我将p(x)建模为x_1的概率乘以x_2的概率，乘以x_3的概率，直到x_n。现在再加点东西到这个等式，我们说这个特征向量x的所有特征的概率是x_1的概率乘以x_2的概率，直到x_n。为了给x_1的概率建模，比如这个样本中的热量特征，我们将有两个参数μ_1，和σ_1或σ_1^2。这意味着我们要估计特征x_1的均值以及方差，即μ1和σ_1。为了建模p(x_2)，x_2是测量飞机发动机的振动特征，我们将有两个不同的参数，我将把它们写成μ_2，σ_2^2，事实上这将对应于振动特征的均值和方差。</p>
+<p>假设一个飞机发动机，有十分之一的可能过热很厉害，也许有20分之一的可能它会非常非常用力地振动，那么它同时过热和过度振动的概率是多少？我们说这种可能性是1/10 * 1 / 20，即1/200。因此，它真的不太可能有一个既运行非常热又振动非常剧烈的发动机，它是这两个概率的乘积，或者这两种情况发生的可能性。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718370473184-5a33febf-af0c-4fd4-b6ef-323ba592d90b.png" width="1677.6" title="" crop="0,0,1,1" id="u90e08cbd" class="ne-image">
+<p>让我们总的来看一下。第一步是选择你认为可能标示异常样本的特征x_i。在找到了你要使用的特征后，然后将这个n特征的参数μ_1到μ_n和σ_1^2到σn^2在数据集上进行拟合。μ__j是训练集中所有x_j的平均值。而σ__j^2</p>
+<p>则是你刚刚在上面计算的值μ_j和x_j之间的<strong>平方差的和</strong>的均值。最后，当你得到一个新样本x_test，这里写成x</p>
+<p>你要做的是计算p(x)，看它是大是小。所以p(x)是从j=1到n的各个特征概率的乘积。如果你用概率的公式代替这里的概率，你最终会得到这个表达式。最后一步是看看p(x)是否小于ε，如果是，那么你就标记它是一个异常。异常检测在这个算法中的作用，是一种系统的量化方法，量化这个新样本x是否具有异常大或异常小的特征。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718371166227-69c449d9-4af5-4aab-bced-42bf9f647c7e.png" width="1681.6" title="" crop="0,0,1,1" id="u652f4f94" class="ne-image">
+<h3 id="4、异常检测VS监督学习">4、异常检测VS监督学习</h3>
+<p>什么时候应该使用异常检测，什么时候应该使用监督学习？</p>
+<p>当你有非常少的正样本时，异常检测算法通常是更合适的选择。常见有0到20个正样本，和相对大量的负样本来构建p(x)模型。p(x)的参数只从负样本中学习，这个小得多的正样本集仅用于测试集中的交叉验证集，用于参数调整和评估。相反，如果你的正负样本都很多，监督学习可能更适用，即使你只有20个正样本。</p>
+<p>如果你认为有许多不同类型的异常或许多不同类型的正样本，那么异常检测可能更合适。比如如果明天飞机引擎可能会出现全新的问题，而你的20个正样本可能并没有涵盖飞机发动机可能出错的所有方面。未来的异常可能与我们迄今为止看到的任何异常例子都不一样，如果你遇到的是这样的问题，那么我会推荐你使用异常检测算法。</p>
+<h3 id="5、特征的选择">5、特征的选择</h3>
+<p>在选择特征时，尽可能确保你给它的特征或多或少是高斯的，如果你的特征不是高斯的，有时你可以改变它使它更高斯一点。</p>
+<p>如果你有一个特征X，我通常会绘制该特征的直方图，可以用Python命令plt.hist来完成。这样做可以看到数据的直方图，这个分布看起来很高斯。当你画特征的直方图时，你可能会经常发现该特征具有这样的分布（下面左图）。在这种情况下，我会想办法让这个特征更高斯一点，例如，如果你计算X的对数，然后画对数X的直方图，它看起来像这样，看起来更高斯。使用了这样高斯分布的异常检测模型为P（X1），比起对数函数能更好的拟合数据。</p>
+<p>你可能会做的另一件事是，给定另一个特征X2，将其替换为 log（x2+1），这是转换X2的另一种方式。更一般地说，你可以用像log(X2+C)这样的形式去替代X2，从而让它的分布更加高斯。对于另一个特征X3，你可以试试开个平方，也就是指数为2/3，指数项是可以更改的，因此，对于不同的特征X4，你可以用X4的1/3次方。所以当构建异常检测系统时，观察特征，如果画完直方图发现某个特征非常的不高斯，选择用这样或其他的转换让它变得更高斯。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718506871216-049c4410-cef1-4233-91c0-7d799004e6bc.png" width="1695.2" title="" crop="0,0,1,1" id="u0e430470" class="ne-image">
+<p>先训练模型，然后查看算法在交叉验证集中没能检测出的异常，然后查看这些样本，考虑是否有必要新建一个特征，从而使算法能够发现这些异常。异常的样本会在新特征上表现出有反常大或小的值，这样算法就可以成功地将这些样本标记为异常。</p>
+<p>例如，如果你发现有一台电脑，那么它的行为非常不正常，但是CPU负载和流量都正常，但不正常的是，它的CPU负载非常大，同时流量非常低。在这种情况下，你可以创建一个新特征X5，它是CPU负载与流量的比率，这个新特征可以让异常检测算法在未来碰到像异常的特定机器时可以做标记。或者你还可以考虑其他特征，例如CPU负载的平方除以流量，你可以选择不同的特征，这样P(x)对于普通样本来说仍然很大，但是在面对交叉验证集中的异常样本时又会变得很小。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718517878857-c6b2596f-086b-4699-82f9-fcfb68917241.png" width="1152.8" title="" crop="0,0,1,1" id="u14d8667a" class="ne-image">
+<h2 id="三、推荐系统">三、推荐系统</h2>
+<h3 id="1、做推荐">1、做推荐</h3>
+<p>假设你经营一个实时电影网站，你的用户用一到五星来评价电影。因此，在典型的推荐系统中，你有一组用户，这里我们有4个用户，Alice、Bob、Carol和Dave，编号为1到4，以及一系列电影，【在念左边的电影名】，用户所做的是为这些电影评一到五星，事实上，为了让这些例子更容易一点，我只是让他们给电影打分，从零到五星。我将用&quot;?&quot;表示暂无评级。在典型的推荐系统中，你会有一定数量的用户和物品，在现在这个情况下，物品指的是你要推荐给用户的电影。接下来我会使用n_u来表示用户的数量，所以在这个例子中n_u=4，因为你有4个用户。n_m表示电影的数量，或者实际上是物品的数量，所以在这个例子中，n_m=5，因为我们有5部电影。如果用户j给电影i评分了，此时令 r（i， j）= 1。请注意，并非每个用户都会对每部电影进行评分，系统了解哪些用户对哪些电影进行了评分是很重要的，所以我们要在用户j给电影i评分时，要让y(i,j) =1，如果用户没评分，就让y(i,j) =0，所以有了这个推荐系统的框架。解决这个问题的一种可能方法是，查看那些用户还没评分的电影， 并试图预测用户对这些电影的评价。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718524172747-03f92daf-d054-4132-857a-af1226bea877.png" width="1712.8" title="" crop="0,0,1,1" id="ua678c76d" class="ne-image">
+<h3 id="2、使用商品的特征">2、使用商品的特征</h3>
+<p>这是我们之前的数据集，四个用户对五部电影中的一些但不是全部进行了评分，我们增加电影的特征。</p>
+<p>所以在这里，我添加了两个特征X1和X2，告诉我们这部电影有多大程度上是浪漫电影或者是动作电影。例如，《love at last》是一部非常浪漫的电影，所以这部电影在x1上是0.9，但不是动作片，所以这个特征取0。但事实证明，《nonstop car chases》只有一点点浪漫，所以x1=0.1，但是它有很多动作元素，所以特征x2的值是1.0。用符号n_u来表示用户数量，即4。n_m 表示电影的数量，即5。我还将引入符号<strong>n</strong>来表示我们这里的<strong>特征数</strong>。所以n等于2。因为每部电影都有两个特征X1和X2，电影一的特征《Love At Last》的特征向量是[0.9,0]，第三部电影《Cute Puppies of Love 》的特征向量将是[0.99,0]。</p>
+<p>让我们从预测Alice的电影评分开始，所以对于用户一，那就是Alice，假设我们预测电影i的评分为 w · x^i +b</p>
+<p>这很像线性回归。例如，如果我们最终选择的参数w1=[5,0]，b^1=0，那么他们对电影3的评分预测，结果等于4.95。这个评分似乎很有道理，看起来Alice给了两部爱情片《love at last》《romance forever 》很高的评价。比如两部动作片的评分会低些，因此，预测她会给《cute puppies of love》打4.95分似乎是合理的。我将在这里的w和b上面加个上标1来表示这是用户1的参数。更一般地说，在这个模型中，我们可以针对用户j，而不仅仅是用户1。我们可以预测用户j对电影i的评分为：wj · xi +bj。所以这里的参数wj和bj是用于预测用户j给电影i的评分的参数，它是xi的函数，是电影i的一个特征。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718526248380-efbeae46-a225-42a7-b010-e4797eafd49f.png" width="1738.4" title="" crop="0,0,1,1" id="ud930f642" class="ne-image">
+<p>这很像线性回归，除了我们会拟合不同的线性回归模型，会拟合数据集中的四个用户中的每一个。</p>
+<p>回忆一下符号的含义，如果用户j将电影i评分，则r(i,j)=1，没评分则r(i,j)=0。y(i,j)是用户j对电影i的评分，wj、bj定义为用户j的参数。xi表示的是电影i的特征向量。所以我们的模型是预测用户j给电影i的评分：wj · xi + bj。</p>
+<p>用mj来表示用户j已评分的电影数量，所以用户评价了4部电影，那么mj=4。评价了3部电影，那么mj=3。</p>
+<p>代价函数将是这样的，其中yij是用户的真实评分，最后在平方一下。我们要选出能最小化（预测评分-实际评分）²的参数w和b，但因为用户并没有给所有的电影评分，所以如果要求和，我们只会对rij=1的i值进行求和。所以只有用户j真的对电影i进行评分了，我们才会放进对它进行求和。最后，我们进行通常的归一化，给这个求和式子乘上个 1/2mj。这将是代价函数J(wj,bj），如果我们要最小化这个代价函数J(wj,bj)，我们应该好好选择参数wj,bj的值来预测用户j给电影的评分，让我在这个代价函数中再添加一项，即防止过拟合的正则化项。常规的正则化项就是正则化参数λ除以2mj，然后乘以参数w的平方和，所以n指的是特征xi的个数，与wj的个数相同。如果你最小化代价函数J(w,b)，你应该会得到一组很好的参数，用于预测用户j对其他电影的评分。mj只是这个表达式中的一个常量，所以即使你去掉它，你得到的w和b也不会改变。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718532486424-7b16fc3a-3a7f-496f-806c-d363972b0bcb.png" width="1718.4" title="" crop="0,0,1,1" id="ue977e534" class="ne-image">
+<p>与其关注单个用户，不如让我们来看看如何学习所有用户的参数。学习n_u个用户的参数 w1 ~ w^nu，b1~b^nu，我们把这个代价函数放到上面，并对所有n_u个用户用户进行求和。这样算出来就是学习所有用户的参数的代价函数，我们使用梯度下降或任何其他优化算法来最小化J( w1 ~ w^nu，b1~b^nu)，然后你就有了一组很好的参数来预测所有用户的电影评分。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718534146407-12c70eb3-8136-4e9f-b2df-a0801d77c0d0.png" width="1688" title="" crop="0,0,1,1" id="ue46d545e" class="ne-image">
+<h3 id="3、协同过滤算法">3、协同过滤算法</h3>
+<p>这里没听懂</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1718543734497-3e44b570-0d62-42dd-a6d2-dc1ba74fa42b.png" width="1740.8" title="" crop="0,0,1,1" id="ud1fb10be" class="ne-image">
+<p><font style="background-color:#FBDE28;">TODO：若以后需要做相关的项目，再补充学习这部分的内容</font></p>
+<p><font style="background-color:#FBDE28;"></font></p>
+<h2 id="四、强化学习">四、强化学习</h2>
+<h3 id="1、什么是强化学习">1、什么是强化学习</h3>
+<p>视频中吴恩达教授举了一个如何用代码使得直升机正确的飞行。即使用强化学习。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722260747264-516b664a-0974-4fca-ba32-2390abda031a.png" width="1449.6" title="" crop="0,0,1,1" id="u1954e6f8" class="ne-image">
+<p>可以使用监督学习来训练一个神经网络，以直接学习从状态s（这里叫做x）到动作a（这里叫做y）的映射。具体来说，只要直升机飞行得不错，比如每一秒飞行得好都可以给它+1的奖励，每当飞得不好的时候，你可以给它一个负面的奖励，或者如果它坠毁了，你可能会给它一个非常大的负奖励，比如-1000。</p>
+<p>下面举一个例子，我们将使用受火星漫游者启发的简化示例来开发强化学习, 在这个应用中，漫游者可以处于六个位置中的任何一个，如这里的六个框所示, 漫游者可能会从这里显示的第四个框中开始, 火星探测器的位置被称为强化学习中的状态, 我将这6给状态命名为：状态1、状态2，一直到状态6, 所以漫游者从状态4开始, 现在漫游者被派往火星，试图执行不同的科学任务, 左边的状态1有一个非常有趣的表面，科学家们希望机器人能对其进行采样, 状态6也有一个非常有趣的表面，科学家们非常希望漫游者对其进行采样, 但没有状态1有趣, 所以我们更愿意在状态1而不是状态6执行科学任务, 但是状态1更远, 我们反映状态1可能更有价值的方式是通过奖励函数, 所以状态1的奖励是100，状态6是40，而其他状态, 可以看成0，因为这几个地方没啥有趣的科学任务做, 每一步，漫游者都可以从两个动作中选择一个执行, 可以向左，也可以向右, 那么问题来了，漫游者该怎么做呢？</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722263756966-d5b0546b-c647-4e29-8119-6faac4ef36ac.png" width="997.6" title="" crop="0,0,1,1" id="u14394e2d" class="ne-image">
+<p>它可以选择向左走，一直走到状态1，可以获得100的奖励，也可以一直向右，当然，它也可以走到状态5，然后再向左一直走到状态1。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722263795767-ae33c51a-7cd0-4768-8790-9c1568f72885.png" width="1434.4" title="" crop="0,0,1,1" id="u9a22715a" class="ne-image">
+<p>当你学习特定的强化学习算法时，你会看到这四个东西：状态、行动、奖励和下一个状态。</p>
+<h3 id="2、强化学习中的回报">2、强化学习中的回报</h3>
+<p>更远的路但回报更高，比较近的路回报更低，我们应该如何选择呢？这里要引入一个折扣系数γ。</p>
+<p>如下图所示，假设折扣系数为0.9，则经过加权后，可获得72.9的奖励。若设置为0.5，则每一个距离只能获得原来的一半。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722270525578-c0e5ea7b-1fd8-4352-8241-a1715396c9a6.png" width="1018.4" title="" crop="0,0,1,1" id="ud1d31f35" class="ne-image">
+<p>下图为当折扣系数为0.5时，所能获得的回报。第一行为选择向左走的回报。第二行则是往右走，各回报可以看当前状态的箭头。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722270739478-11287d6b-9314-4511-b0da-d16902908acb.png" width="1624" title="" crop="0,0,1,1" id="ue243de14" class="ne-image">
+<p>那么我们究竟如何取选择合适的策略呢？</p>
+<p>我们需要找到一个函数π，来告诉我们每一步应该采取什么动作才能使得回报最大化，输入一个状态s，得到一个动作a。下图以最后一个行动为例子。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722271092414-2f09786b-e440-466b-b0a5-ed2d66cdbb51.png" width="1623.2" title="" crop="0,0,1,1" id="ubb67ae8e" class="ne-image">
+<p>让我们来看几个例子来复习一下之前所学的内容。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722271505153-19fa9c37-dcf4-4e3f-8376-121e79d72e2e.png" width="1704.8" title="" crop="0,0,1,1" id="u13795707" class="ne-image">
+<p>我们需要通过马尔科夫决策过程来寻找这个π。MDP或马尔可夫决策过程中的术语马尔可夫是指未来仅取决于当前状态，而不取决于在您到达当前状态之前可能发生的任何事情。这会在今后的学习中学到。</p>
+<h3 id="3、状态动作价值函数">3、状态动作价值函数</h3>
+<p>状态动作价值函数通常由Q表示，通常是由状态s开始，采取一次行动a，去获取最高回报的最佳行为。可以看下图的例子。在各个状态下选择行动能获得的回报。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722315196257-fc8e1d75-c2b2-4aa8-8768-14897dd59d1d.png" width="1732" title="" crop="0,0,1,1" id="uac37125b" class="ne-image">
+<h3 id="4、贝尔曼方程">4、贝尔曼方程</h3>
+<p>在强化学习中，有一个叫做贝尔曼方程的关键方程，它将帮助我们计算状态动作价值函数。</p>
+<p>我们用s表示当前状态，a表示当前的动作，s’表示动作a后达到的状态，a’表示在状态s’可能采取的新动作。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722316481173-588ff0f3-a58c-4978-911a-ca00f0254c28.png" width="1176" title="" crop="0,0,1,1" id="u310f19c5" class="ne-image">
+<p>下面是这个公式。我们可以看一下方程的用法。如Q(2,→)会查看状态3的最大回报，为25，放入公式中计算。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722317136687-b6d88975-7665-4d17-9f27-5bcb2ac31987.png" width="1543.2" title="" crop="0,0,1,1" id="uc70d842d" class="ne-image">
+<p>第一部分R(s)是你马上得到的奖励，这有时也被称为即时奖励。第二项是在你从状态s开始，采取动作a之后，你到达新状态s’，Q(s, a)，我们假设是着之后表现最佳的回报，所以在到达s’之后，我们表现最佳，并从状态s’处得到最佳回报，所以这一项就是Q(s’, a’)的最大值。看下面那行公式，可以说方括号是下一状态的最佳回报。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722317549978-71da4fe1-47ea-4cf3-b0ac-26ea339d82c3.png" width="1540.8" title="" crop="0,0,1,1" id="uc9651958" class="ne-image">
+<p>我们看一个具体的例子。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722317828023-54b0e02b-9897-4768-978d-e1c1b6855333.png" width="1667.2" title="" crop="0,0,1,1" id="u24977be2" class="ne-image">
+<h3 id="5、随机环境（optional）">5、随机环境（optional）</h3>
+<p>在之前的例子中，如果你命令你的火星漫游者向左走，也许会有一点岩石滑坡，或者地板真的很滑，所以它滑了一下，走错了方向，在实践中，许多机器人并不总是能够完全按照你的吩咐去做。</p>
+<p>比如，它有90%的概率会按照你的命令行动，但有10%的概率向反方向行动。比如下图中，我们在状态4时，想让它一直向左走到状态1，但是有可能出现一些突发情况比如打滑了，向反方向走了一格。这时我们需要用到期望值来衡量它的回报。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722318751076-0e45fa78-036f-407e-ac0d-2e425af85003.png" width="1372.8" title="" crop="0,0,1,1" id="u603e6923" class="ne-image">
+<p>贝尔曼函数需要修改成下图所示。因为我们的s’不一定是我们所期望的，所以我们需要把这个策略执行1百,1万次，取其最大回报的期望值</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722318944510-0e99c111-37fa-425e-80d6-e268b6875081.png" width="1659.2" title="" crop="0,0,1,1" id="u3a80e3af" class="ne-image">
+<h3 id="6、连续状态空间">6、连续状态空间</h3>
+<p>在我们实际的探测器应用中，我们的状态信息不是一个具体的数字，而是一个0-6的任何一个数，而我们的状态信息也可能不止一个。比如下面这个货车的例子，可能会有x,y,θ,x点，y点，θ点等参数，分别表示x轴位置，y轴位置，θ旋转角度，x轴坐标的变化速度，y轴坐标的变化速度，θ旋转角度的变化速度。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722319455851-d50b9eea-876f-44f0-b354-c9694cdad14c.png" width="1615.2" title="" crop="0,0,1,1" id="ua1ae452b" class="ne-image">
+<h3 id="7、案例：登录月球">7、案例：登录月球</h3>
+<p>现在有一个飞行器，我们需要通过一系列的动作，将其顺利的停在地面上。现在我们有这些动作：“nothing”，代表着什么都不做；或者“left”，代表启动左推进器（记得是向右走）；或者“main”，代表启动底部的引擎，向下走；“right”代表启动右推进器（向左走）。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722319972452-9df452d4-a2e1-47ec-afc2-af0ae158fdab.png" width="1165.6" title="" crop="0,0,1,1" id="uc6261f07" class="ne-image">
+<p>那么这个MDP (马尔可夫决策过程）的状态空间怎么样？这里的状态是位置x和y，以及速度X点Y点，代表它在水平和垂直方向的移动的速度。角度θ和θ点，分别代表着陆器向左倾斜或向右倾斜多少。l 对应于着陆器的左脚是否落地，r 对应于着陆器的右脚是否落地。</p>
+<p>现在我们设置奖励函数。成功着陆奖励100，如果坠毁则-100。脚着陆则+10，为了使其节省燃料，启动一次左右推进器，-0.3，启动主推进器-0.03</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722320107105-c56f0f8b-4131-4fc8-9399-ab86292775ba.png" width="90.80000305175781" title="" crop="0,0,1,1" id="u98590b9d" class="ne-image"><img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722320245865-973abf96-ac8a-49c8-b4a0-34285ff35f41.png" width="648" title="" crop="0,0,1,1" id="uce044486" class="ne-image"></p>
+<p>接下来我们来看一下如何使用强化学习来控制登录器。</p>
+<h3 id="8、学习状态价值函数">8、学习状态价值函数</h3>
+<p>关键是我们要训练一个神经网络来计算或近似状态动作价值函数Q(s, a)，这反过来会让我们选出好的动作。对于这个月球登陆者，我们将把状态和所有动作放在一起。具体来说，状态是我们之前看到的八个数字的列表，所以你有x、y、x点、y点、θ，θ点，l，r，然后是四个独热编码来表示四个动作。然后，你可以使用神经网络计算所有四个动作的Q(s, a)，你可以计算Q(s, nothing), Q(s, left), Q(s, main), Q(s, right)，最后找到其中Q值最高的，你将选择对应的动作a。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722321611691-214d5ff3-55fb-4ab3-bc73-56e36dfc1c6b.png" width="1698.4" title="" crop="0,0,1,1" id="u2dd15f65" class="ne-image">
+<p>如何训练用于输出Q(s, a)的神经网络呢。我们将使用贝尔曼方程来创建一个包含大量x、y样本对的训练集。将使用监督学习，从状态动作对到目标值Q(s, a)的映射。</p>
+<p>看下图，公式的右边这部分我称为y，然后输入是一个状态和一个动作我叫它x。神经网络的工作是输入x，即输入状态动作对，并试图准确预测右边的值。如何获得一个具有x、y的训练集供神经网络学习呢？我们用月球登陆者，采取不同的动作（随机），观察这些动作，得到了一些奖励R(s)，然后得到动作的结果，新状态s’。然后我们得到了这一组动作的一个元组（下图左）。经过了上万次的动作，足以创建一个训练样本。比如，第一个元组中有四个元素，前两个将用于计算x^1，后两个用于计算y^1。x^1只是将s^1和a^1放在一起，s^1是8个数字，代表月球登陆者的状态，a^1是4个数字，是动作的一个热编码。y^1将使用贝尔曼方程的右侧计算。如此以往，可以得到一个10000个训练样本。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722321894606-9d80e0fe-bc0a-4d2d-a450-e430a43494d1.png" width="1454.4" title="" crop="0,0,1,1" id="ubd5fb932" class="ne-image">
+<p>我们来看看如何将上面的算法和神经网络结合起来。首先，我们需要初始化神经网络的参数，跟线性回归一样，给它一个随机值，再慢慢优化它。接下来我们需要重复做以下几点：</p>
+<ul>
+<li>在月球登陆者上采取一些动作，获得一个元组。</li>
+<li>存储最近10000个在MDP中看到的元组。</li>
+<li>训练神经网络，将我们获得的元素变成（x,y）数据集（看下图），我们希望神经网络预测的目标值将是<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722322841978-436e0308-d0c7-4d3f-8d62-d03c84d52e76.png" width="221" title="" crop="0,0,1,1" id="ue2027c9a" class="ne-image"></li>
+<li>我们将训练的神经网络称为Q_new，所以Q_new(s,a)近似的等于y。现在这个神经网络应该可以更好地估计状态动作价值函数Q是什么，所以我们要做的就是将Q设置为我们刚刚学习的新神经网络（Q = Q_new）。当下一次训练模型时，对Q(s’, a’)的估计会更好。</li>
+</ul>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722322485232-ee83004a-23a7-4ab9-bcda-9097e368ba66.png" width="1726.4" title="" crop="0,0,1,1" id="u17a62c3c" class="ne-image">
+<p>你运行算法足够长的时间后，这将成为Q(s, a)真实值的一个很好的估计，这样你就可以用它来为MDP挑选好的动作。刚才看到的算法有时被称为<font style="color:#DF2A3F;">DQN算法（ Deep Q-Network  ）</font>，代表DQ网络，因为你在使用深度学习训练学习Q函数的神经网络。</p>
+<h3 id="9、算法改进">9、算法改进</h3>
+<p>**改进1：**在之前的例子中，我们将四个动作分别的放入输入的（s,a）中，我们必须在神经网络中分别进行4次推理才能计算出这四个值，从而选择给我们最大Q值的动作A。现在我们同时输出所有四个值会更有效，如下图。现在的输入变成8个参数，而输出层则变成四个输出单元，分别对应着四个动作的Q值。这样尅使其变得更加高效。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722323304122-3f9b2600-a79c-4a1c-84ef-d38fe73af695.png" width="1681.6" title="" crop="0,0,1,1" id="u760fc4ea" class="ne-image">
+<p><strong>改进2</strong>：在学习算法中，如何选择相应的动作呢，我们可以使用 ε-贪婪策略。</p>
+<p>在之前的算法中，我们在采取动作这一步通常是使用随机一个动作来行动，但结果通常是一个不好的动作。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722324089433-f2c2512c-451a-4948-9f60-0527e214b019.png" width="1008.8" title="" crop="0,0,1,1" id="u1b0ae21b" class="ne-image">
+<p>下面是一些方案。选项一，总是选择Q值最高的动作，事实证明这可能行得通，但不是最好的选择。这个选项2，假设概率为0.95选择使Q(s, a)最大化的动作，而0.05的概率随机选择一个动作。为什么我们要偶尔随机选择一个动作？由于某种奇怪的原因，Q(s, a)是随机初始化的，所以学习算法认为发动主推进器绝不是一个好主意，也许神经网络参数初始化的结果使得Q(s, main)总是很低，如果是这样，那么神经网络它永远不会尝试发动主推进器。因为它从未尝试发动主推进器，它就永远不会知道发动主推进器有时是个好主意。强化学习文献中，有时你也会听到这是一个利用（剥削）步骤（Exploition）。</p>
+<p>有时在强化学习中使用的技巧之一是让ε一开始很大，所以一开始你经常采取随机动作，然后逐渐减少。比如从1.0到0.01。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722324160211-37ed800c-8f47-4a00-b451-ac0b1dcaf5d3.png" width="1696.8" title="" crop="0,0,1,1" id="u86d9859c" class="ne-image">
+<p><strong>改进3</strong>：mini-batch 和 soft updates（软更新）</p>
+<p>我们从监督学习来认识mini-batch。下面是预测房价的例子。当我们的数据集有1000000000这么多的时候，如果在此基础上运行，则会非常的慢。我们可以使用一个小的batch，如1000，在此基础上，进行参数更新和模型训练。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722324967176-74c93b8d-9873-4589-bad5-0d8b35271451.png" width="1690.4" title="" crop="0,0,1,1" id="u5101363b" class="ne-image">
+<p>这次是这个mini-batch1，下次可能就是mini-batch2。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722325080485-e31dc1ca-c679-472f-afbc-e8b47c56f19e.png" width="532.6000061035156" title="" crop="0,0,1,1" id="u7107d70f" class="ne-image">
+<p>这样做运行的快，但也会有缺点。比如在模型收敛的时候，可能不会按照正确的方向前进，甚至朝着错误的方向前进，远离全局最小值，等等。但平均而言，mini-batch梯度下降倾向于观察全局最小值，不可靠且产生噪声（noise）。当你有一个非常大的训练集时，mini-batch梯度下降算法运行得更快。所以事实上，对于监督学习，当你有一个非常大的训练集，mini-batch梯度下降算法或其他Adam优化算法的mini-batch版本，会比批梯度下降（batch gradient descent）更常用。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722325132943-f166ec8e-b3da-4e5a-8bc0-5e567bb5090c.png" width="534.2000122070312" title="" crop="0,0,1,1" id="u682dbdc4" class="ne-image">
+<p>回到强化学习，在我们获取的10000个元组中，我们可以只取其中的1000个子集来训练网络，这将加快网络的训练速度。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722325277452-f3d7bbee-a60b-454d-a6d6-e15e8e2fedea.png" width="1683.2" title="" crop="0,0,1,1" id="ub6f4eb09" class="ne-image">
+<p>最后，还有另一个可以让算法可靠地收敛的方法是，我在这里写出来了，让 Q = Qnew。但事实证明，这可以使Q发生非常突然的变化，如果你把一个新的神经网络训练成新的，也许它比旧的还要糟糕一点，此时你会用更糟糕的神经网络覆盖了你的Q函数。软更新(soft update)有助于防止Qnew在这一步上不幸变糟。</p>
+<p>我们可以使用下图的参数对Q中的参数w，b进行更新，这控制着Q的更新幅度。结果表明，使用软更新可以使强化学习算法更可靠地收敛，它降低了强化学习算法振荡或不收敛或具有其他不良性质的可能性。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1722325418143-27df079c-a86e-4349-9bf5-3f2ed87b04c2.png" width="1050.4" title="" crop="0,0,1,1" id="u2aab204b" class="ne-image">
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/机器学习/黑马教程/1、K-近邻算法(KNN)/" data-toggle="tooltip" data-placement="top" title="K-近邻算法（KNN）">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/机器学习/吴恩达课程/第二部分：高级学习算法/" data-toggle="tooltip" data-placement="top" title="第二部分：高级学习算法">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=第三部分：无监督学习 推荐系统、强化学习&body=Hi,I found this website and thought you might like it https://nova-chaser.github.io/机器学习/吴恩达课程/第三部分：无监督学习 推荐系统、强化学习/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Thu Jun 18 2026 15:30:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E8%81%9A%E7%B1%BB"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、聚类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%9A%E7%B1%BB"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1、什么是聚类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%EF%BC%88k-means-clustering%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2、K-均值聚类算法（k-means clustering）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E4%BC%98%E5%8C%96%E7%9B%AE%E6%A0%87"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">3、优化目标</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96-K%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">4、初始化 K均值聚类算法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E9%80%89%E6%8B%A9%E9%9B%86%E7%BE%A4%E7%9A%84%E6%95%B0%E9%87%8F"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">5、选择集群的数量</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、异常检测</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%8F%91%E7%8E%B0%E5%BC%82%E5%B8%B8%E4%BA%8B%E4%BB%B6"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、发现异常事件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E9%AB%98%E6%96%AF%EF%BC%88%E6%AD%A3%E6%80%81%EF%BC%89%E5%88%86%E5%B8%83"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2、高斯（正态）分布</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E7%AE%97%E6%B3%95"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">3、异常检测算法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8BVS%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">4、异常检测VS监督学习</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E7%89%B9%E5%BE%81%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">5、特征的选择</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、推荐系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%81%9A%E6%8E%A8%E8%8D%90"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、做推荐</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E5%95%86%E5%93%81%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2、使用商品的特征</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3、协同过滤算法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、强化学习</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">1、什么是强化学习</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%9B%9E%E6%8A%A5"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">2、强化学习中的回报</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E7%8A%B6%E6%80%81%E5%8A%A8%E4%BD%9C%E4%BB%B7%E5%80%BC%E5%87%BD%E6%95%B0"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">3、状态动作价值函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E8%B4%9D%E5%B0%94%E6%9B%BC%E6%96%B9%E7%A8%8B"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">4、贝尔曼方程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E9%9A%8F%E6%9C%BA%E7%8E%AF%E5%A2%83%EF%BC%88optional%EF%BC%89"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">5、随机环境（optional）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6%E3%80%81%E8%BF%9E%E7%BB%AD%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">6、连续状态空间</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7%E3%80%81%E6%A1%88%E4%BE%8B%EF%BC%9A%E7%99%BB%E5%BD%95%E6%9C%88%E7%90%83"><span class="toc-nav-number">4.7.</span> <span class="toc-nav-text">7、案例：登录月球</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#8%E3%80%81%E5%AD%A6%E4%B9%A0%E7%8A%B6%E6%80%81%E4%BB%B7%E5%80%BC%E5%87%BD%E6%95%B0"><span class="toc-nav-number">4.8.</span> <span class="toc-nav-text">8、学习状态价值函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#9%E3%80%81%E7%AE%97%E6%B3%95%E6%94%B9%E8%BF%9B"><span class="toc-nav-number">4.9.</span> <span class="toc-nav-text">9、算法改进</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
+            
+            <a class="tag" href="/tags/#聚类" title="聚类">聚类</a>
+            
+            <a class="tag" href="/tags/#无监督学习" title="无监督学习">无监督学习</a>
+            
+            <a class="tag" href="/tags/#异常检测" title="异常检测">异常检测</a>
+            
+            <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
+            
+            <a class="tag" href="/tags/#强化学习" title="强化学习">强化学习</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+          </li>
+          
+          <li>
+            <a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a>
+          </li>
+          
+          <li>
+            <a href="https://leetcode.cn/" target="_blank">力扣</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          ypb
+          2026
+          <br>
+          Powered by
+          <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+          &
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">LiveMyLife</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://nova-chaser.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

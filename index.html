@@ -183,18 +183,14 @@
       : '';
   }
   let themeMode = 'dark';
-  let savedMode = getCookieValue('sb-color-mode');
-  let activeMode = savedMode || themeMode;
-
-  // 页面加载时设置初始主题 class
-  if (activeMode === 'dark') {
-    document.body.classList.add('body--dark');
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
   }
 
   //setCookieValue
   var toggleBtn = document.querySelector(".toggle");
   toggleBtn.addEventListener("click", function () {
-    document.body.classList.toggle('body--dark');
     var e = document.body.classList.contains("body--dark");
     var cookieString = e
       ? "dark"
@@ -449,31 +445,386 @@
   <!-- top end -->
   
 
-  <a href="/监督机器学习：回归与分类/">
+  <a href="/工程/Git/">
     <h2 class="post-title">
-      监督机器学习：回归与分类
+      Git 学习笔记
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
       
-        从线性回归到逻辑回归，系统梳理监督学习的核心概念——代价函数、梯度下降、特征缩放、正则化与过拟合，并图解 Sigmoid 函数与决策边界。
+        从 Git 基础命令（commit、branch、merge）到进阶操作（rebase、cherry-pick、远程仓库），配合 Learn Git Branching 交互式图解，系统梳理 Git 工作流。
       
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by ypb on
-    2026-06-17
+    2026-06-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Git" title="Git">Git</a>
+    
+    <a href="/tags/#版本控制" title="版本控制">版本控制</a>
+    
+    <a href="/tags/#工程工具" title="工程工具">工程工具</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/Agent 学习/知识点学习笔记/">
+    <h2 class="post-title">
+      Agent 与 MCP 知识点学习笔记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+        深入理解 AI Agent 核心架构——LLM + 工具 + 记忆 + 规划 + 编排，以及 MCP（Model Context Protocol）的 Client-Server 协议设计与三大能力（资源、工具、提示）。
+      
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by ypb on
+    2026-06-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Agent" title="Agent">Agent</a>
+    
+    <a href="/tags/#MCP" title="MCP">MCP</a>
+    
+    <a href="/tags/#LLM" title="LLM">LLM</a>
+    
+    <a href="/tags/#AI" title="AI">AI</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/机器学习/黑马教程/3、逻辑回归与分类评估/">
+    <h2 class="post-title">
+      逻辑回归与分类评估
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+        逻辑回归sklearn实战补充——从癌症良恶性预测到精确率、召回率、ROC-AUC等分类评估指标详解，附完整代码案例。
+      
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by ypb on
+    2026-06-18
   </p>
   <div class="tags">
     
     <a href="/tags/#机器学习" title="机器学习">机器学习</a>
     
-    <a href="/tags/#回归" title="回归">回归</a>
+    <a href="/tags/#逻辑回归" title="逻辑回归">逻辑回归</a>
     
-    <a href="/tags/#分类" title="分类">分类</a>
+    <a href="/tags/#分类评估" title="分类评估">分类评估</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/机器学习/黑马教程/4、决策树算法/">
+    <h2 class="post-title">
+      决策树算法
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+        从信息熵与信息增益的数学推导到决策树分类原理，手写熵计算代码，详解泰坦尼克号生存预测的sklearn实战流程。
+      
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by ypb on
+    2026-06-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#机器学习" title="机器学习">机器学习</a>
+    
+    <a href="/tags/#决策树" title="决策树">决策树</a>
+    
+    <a href="/tags/#信息熵" title="信息熵">信息熵</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/机器学习/黑马教程/5、集成学习与随机森林/">
+    <h2 class="post-title">
+      集成学习与随机森林
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+        深入Bagging与Boosting集成策略，详解随机森林的构建原理与sklearn实战，对比各集成方法在分类问题中的性能表现。
+      
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by ypb on
+    2026-06-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#机器学习" title="机器学习">机器学习</a>
+    
+    <a href="/tags/#集成学习" title="集成学习">集成学习</a>
+    
+    <a href="/tags/#随机森林" title="随机森林">随机森林</a>
+    
+    <a href="/tags/#Bagging" title="Bagging">Bagging</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/机器学习/黑马教程/6、聚类算法(KMeans)/">
+    <h2 class="post-title">
+      聚类算法（KMeans）
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+        掌握KMeans聚类算法原理与sklearn实战，从Calinski-Harabasz评估到PCA降维可视化，附用户聚类与商品推荐案例。
+      
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by ypb on
+    2026-06-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#机器学习" title="机器学习">机器学习</a>
+    
+    <a href="/tags/#聚类" title="聚类">聚类</a>
+    
+    <a href="/tags/#KMeans" title="KMeans">KMeans</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/机器学习/黑马教程/7、朴素贝叶斯算法/">
+    <h2 class="post-title">
+      朴素贝叶斯算法
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+        从贝叶斯公式到朴素贝叶斯分类器，结合TF-IDF与网格搜索，实战新闻文本分类与情感分析，含Pipeline优化完整流程。
+      
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by ypb on
+    2026-06-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#机器学习" title="机器学习">机器学习</a>
+    
+    <a href="/tags/#朴素贝叶斯" title="朴素贝叶斯">朴素贝叶斯</a>
+    
+    <a href="/tags/#文本分类" title="文本分类">文本分类</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/机器学习/黑马教程/8、支持向量机(SVM)/">
+    <h2 class="post-title">
+      支持向量机（SVM）
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+        图解SVM核心思想——最大间隔分类器、核函数与软间隔，结合sklearn实战理解支持向量机在分类问题中的优势。
+      
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by ypb on
+    2026-06-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#机器学习" title="机器学习">机器学习</a>
+    
+    <a href="/tags/#SVM" title="SVM">SVM</a>
+    
+    <a href="/tags/#支持向量机" title="支持向量机">支持向量机</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/机器学习/黑马教程/10、马尔科夫链/">
+    <h2 class="post-title">
+      马尔科夫链
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+        从马尔科夫链的"无记忆性"到隐马尔科夫模型(HMM)，详解状态转移矩阵、维特比算法与观测概率矩阵的核心概念。
+      
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by ypb on
+    2026-06-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#机器学习" title="机器学习">机器学习</a>
+    
+    <a href="/tags/#马尔科夫链" title="马尔科夫链">马尔科夫链</a>
+    
+    <a href="/tags/#HMM" title="HMM">HMM</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/机器学习/黑马教程/9、EM算法/">
+    <h2 class="post-title">
+      EM算法
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+        深入理解EM算法（期望最大化）的E步与M步迭代原理，从极大似然估计到高斯混合模型(GMM)的实战应用。
+      
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by ypb on
+    2026-06-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#机器学习" title="机器学习">机器学习</a>
+    
+    <a href="/tags/#EM算法" title="EM算法">EM算法</a>
+    
+    <a href="/tags/#极大似然估计" title="极大似然估计">极大似然估计</a>
     
   </div>
   
@@ -485,6 +836,10 @@
   <!-- Pager -->
   <ul class="pager">
     
+    
+    <li class="next">
+      <a href="/archives/2/">下一页 &rarr;</a>
+    </li>
     
   </ul>
 
@@ -525,7 +880,7 @@
   <div class="tags">
     
     
-    <a href="/tags/#机器学习" title="机器学习" rel="1">机器学习</a>
+    <a href="/tags/#机器学习" title="机器学习" rel="13">机器学习</a>
     
     
     
@@ -534,6 +889,142 @@
     
     
     <a href="/tags/#分类" title="分类" rel="1">分类</a>
+    
+    
+    
+    <a href="/tags/#Agent" title="Agent" rel="1">Agent</a>
+    
+    
+    
+    <a href="/tags/#MCP" title="MCP" rel="1">MCP</a>
+    
+    
+    
+    <a href="/tags/#LLM" title="LLM" rel="1">LLM</a>
+    
+    
+    
+    <a href="/tags/#AI" title="AI" rel="1">AI</a>
+    
+    
+    
+    <a href="/tags/#Git" title="Git" rel="1">Git</a>
+    
+    
+    
+    <a href="/tags/#版本控制" title="版本控制" rel="1">版本控制</a>
+    
+    
+    
+    <a href="/tags/#工程工具" title="工程工具" rel="1">工程工具</a>
+    
+    
+    
+    <a href="/tags/#马尔科夫链" title="马尔科夫链" rel="1">马尔科夫链</a>
+    
+    
+    
+    <a href="/tags/#HMM" title="HMM" rel="1">HMM</a>
+    
+    
+    
+    <a href="/tags/#线性回归" title="线性回归" rel="1">线性回归</a>
+    
+    
+    
+    <a href="/tags/#梯度下降" title="梯度下降" rel="1">梯度下降</a>
+    
+    
+    
+    <a href="/tags/#KNN" title="KNN" rel="1">KNN</a>
+    
+    
+    
+    <a href="/tags/#K-近邻" title="K-近邻" rel="1">K-近邻</a>
+    
+    
+    
+    <a href="/tags/#逻辑回归" title="逻辑回归" rel="1">逻辑回归</a>
+    
+    
+    
+    <a href="/tags/#分类评估" title="分类评估" rel="1">分类评估</a>
+    
+    
+    
+    <a href="/tags/#决策树" title="决策树" rel="2">决策树</a>
+    
+    
+    
+    <a href="/tags/#信息熵" title="信息熵" rel="1">信息熵</a>
+    
+    
+    
+    <a href="/tags/#集成学习" title="集成学习" rel="1">集成学习</a>
+    
+    
+    
+    <a href="/tags/#随机森林" title="随机森林" rel="1">随机森林</a>
+    
+    
+    
+    <a href="/tags/#Bagging" title="Bagging" rel="1">Bagging</a>
+    
+    
+    
+    <a href="/tags/#聚类" title="聚类" rel="2">聚类</a>
+    
+    
+    
+    <a href="/tags/#KMeans" title="KMeans" rel="1">KMeans</a>
+    
+    
+    
+    <a href="/tags/#SVM" title="SVM" rel="1">SVM</a>
+    
+    
+    
+    <a href="/tags/#支持向量机" title="支持向量机" rel="1">支持向量机</a>
+    
+    
+    
+    <a href="/tags/#朴素贝叶斯" title="朴素贝叶斯" rel="1">朴素贝叶斯</a>
+    
+    
+    
+    <a href="/tags/#文本分类" title="文本分类" rel="1">文本分类</a>
+    
+    
+    
+    <a href="/tags/#EM算法" title="EM算法" rel="1">EM算法</a>
+    
+    
+    
+    <a href="/tags/#极大似然估计" title="极大似然估计" rel="1">极大似然估计</a>
+    
+    
+    
+    <a href="/tags/#无监督学习" title="无监督学习" rel="1">无监督学习</a>
+    
+    
+    
+    <a href="/tags/#异常检测" title="异常检测" rel="1">异常检测</a>
+    
+    
+    
+    <a href="/tags/#推荐系统" title="推荐系统" rel="1">推荐系统</a>
+    
+    
+    
+    <a href="/tags/#强化学习" title="强化学习" rel="1">强化学习</a>
+    
+    
+    
+    <a href="/tags/#神经网络" title="神经网络" rel="1">神经网络</a>
+    
+    
+    
+    <a href="/tags/#深度学习" title="深度学习" rel="1">深度学习</a>
     
     
   </div>
@@ -587,8 +1078,24 @@
 <div class="widget">
   <ul>
     
-    <a href="%E7%9B%91%E7%9D%A3%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%9B%9E%E5%BD%92%E4%B8%8E%E5%88%86%E7%B1%BB/">
-      <li>监督机器学习：回归与分类</li>
+    <a href="%E5%B7%A5%E7%A8%8B/Git/">
+      <li>Git 学习笔记</li>
+    </a>
+    
+    <a href="Agent%20%E5%AD%A6%E4%B9%A0/%E7%9F%A5%E8%AF%86%E7%82%B9%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+      <li>Agent 与 MCP 知识点学习笔记</li>
+    </a>
+    
+    <a href="%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%BB%91%E9%A9%AC%E6%95%99%E7%A8%8B/3%E3%80%81%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E4%B8%8E%E5%88%86%E7%B1%BB%E8%AF%84%E4%BC%B0/">
+      <li>逻辑回归与分类评估</li>
+    </a>
+    
+    <a href="%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%BB%91%E9%A9%AC%E6%95%99%E7%A8%8B/4%E3%80%81%E5%86%B3%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95/">
+      <li>决策树算法</li>
+    </a>
+    
+    <a href="%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%BB%91%E9%A9%AC%E6%95%99%E7%A8%8B/5%E3%80%81%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/">
+      <li>集成学习与随机森林</li>
     </a>
     
   </ul>
@@ -617,7 +1124,7 @@
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2026/06/">June 2026</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2026/06/">June 2026</a><span class="archive-list-count">15</span></li></ul>
 </div>
 
 
@@ -631,6 +1138,14 @@
     
     <a href="/categories/#机器学习">
       <li>机器学习</li>
+    </a>
+    
+    <a href="/categories/#AI">
+      <li>AI</li>
+    </a>
+    
+    <a href="/categories/#工程">
+      <li>工程</li>
     </a>
     
   </ul>

@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="大模型算法/应用开发，个人学习笔记分享博客"/>
+  <meta name="keyword" content="ypb,机器学习,深度学习,大模型,算法,博客"/>
+  <!-- 解除第三方图片防盗链限制 -->
+  <meta name="referrer" content="no-referrer"/>
+  <link rel="shortcut icon" href="/img/avatar/y.png"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://nova-chaser.github.io/机器学习/吴恩达课程/第二部分：高级学习算法/">
+  <title>
+    
+      第二部分：高级学习算法 - Your Potential Beyond
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Your Potential Beyond</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-toggle-item">
+            <a class="toggle" onclick="document.body.classList.toggle('body--dark'); return false;" title="切换主题">
+              <i class="mdui-icon material-icons light-mode"></i>
+              <i class="mdui-icon material-icons dark-mode"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('/img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
+              
+              <a class="tag" href="/tags/#决策树" title="决策树">决策树</a>
+              
+              <a class="tag" href="/tags/#神经网络" title="神经网络">神经网络</a>
+              
+              <a class="tag" href="/tags/#深度学习" title="深度学习">深度学习</a>
+              
+            </div>
+            <h1>第二部分：高级学习算法</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by ypb on
+              2026-06-18
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">37</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">10.6k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="一、神经网络">一、神经网络</h2>
+<h3 id="1、需求预测">1、需求预测</h3>
+<p>举一个需求预测的栗子。在这个例子中，你试图预测某个产品是否会成为最畅销的产品。然后某件t恤是否会畅销。你已经收集了以下信息：t恤种类，t恤价格，以及哪些是最畅销的。如果你选用sigmoid作为逻辑回归的激活函数，然后拟合到这样的数据上。字母a来表示这个逻辑回归算法的输出，a(activation)的意思是激活。这个逻辑回归单元，或者说，这个小逻辑回归算法，可以看作是大脑中单个神经元的简化模型。神经元所做的就是先让我们输入价格x，然后把x带入上面的公式，计算得出a，最后输出这件t恤畅销的概率。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715003793558-dc2518f6-8b6c-4bbf-8901-e6a60194d969.png" width="1607.2" title="" crop="0,0,1,1" id="ud7ff0da2" class="ne-image">
+<p>一件t恤能否成为畅销产品实际上取决于几个因素，第一，这件t恤的价格是多少？第二，潜在买家对这件t恤的知名度是多少? （名牌效应）。第三，买家是否存在感知质量偏见（这个商品or牌子给我一种很好的感觉）。（中间层的三个参数）</p>
+<p>我们要用一个小神经元，一个逻辑回归单元。来输入价格和运输成本，并预测人们是否认为这是负担得起的。其次，我要在这里创建另一个人工神经元，来评估人们对这个商品的知名度。同理，第三个神经单元负责感知质量。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715004215860-091d01e9-b588-48a7-8c04-e53e02622ca3.png" width="968" title="" crop="0,0,1,1" id="ud5028f9a" class="ne-image">
+<p>上图分别是输入层，隐藏层，输出层。把这四个输入特征写成向量x，这个特征向量被输入到中间的这一层，然后计算出三个激活值，这三个激活值反过来又变成了另一个向量，然后输入到最后的输出层，最终输出这件t恤成为畅销t恤的概率。</p>
+<p>下面是多个隐藏层的例子：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715006303420-57b58352-39a4-4ae6-b658-d61f74fae4cc.png" width="1714.4" title="" crop="0,0,1,1" id="u22bca80e" class="ne-image">
+<h3 id="2、图像识别">2、图像识别</h3>
+<p>这个图像是1000 * 1000像素，像素强度值或像素亮度值从0到255，如果将这些像素强度值展开成一个矢量，最终将得到一个包含100万像素强度值的列表或矢量。人脸识别的问题是，能否训练一个神经网络，以一百万像素亮度值的特征向量作为输入，并输出图片中人物的身份。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715006546179-ee6118d1-4db2-4709-8985-5680c608d67e.png" width="1692" title="" crop="0,0,1,1" id="ue908687a" class="ne-image">
+<p>在第一个隐藏层中，你可能会发现一个神经元在寻找像第一个像素里这样的垂直线边缘。第二个神经元在寻找一条像这样的有方向的线或有方向的边。第三个神经元在这个方向上寻找一条线，以此类推。</p>
+<p>第一个隐藏层的神经元用相对较小的窗口来寻找这些边缘，第二个隐藏层是用大一点的窗口（在图像的搜寻范围更大），第三个隐藏层用的窗口还要更大。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715006767549-2a12ab49-191b-48bb-a5cb-84f268622ec9.png" width="1153.6" title="" crop="0,0,1,1" id="uae477162" class="ne-image">
+<h2 id="二、神经网络模型">二、神经网络模型</h2>
+<h3 id="1、神经网络层">1、神经网络层</h3>
+<p>让我们进入到隐藏层，放大看看。事实上，下标w_1，b_1来表示这是第一个隐藏单元。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715090116720-78a2f2fd-cafd-417d-baa8-351d7f31d9e8.png" width="1040" title="" crop="0,0,1,1" id="u9a2fc01f" class="ne-image">
+<p>让我们放大输出层</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715095576030-bf05ed26-e263-47f0-ae1a-fc865fe43889.png" width="1682.4" title="" crop="0,0,1,1" id="u5370df9e" class="ne-image">
+<p>最后有一个可选项，以判断它是否畅销</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715095726333-d18f8d09-5617-4f59-bff1-5f5711a76ffd.png" width="1579.2" title="" crop="0,0,1,1" id="ub58c88d2" class="ne-image">
+<h3 id="2、更复杂的神经网络">2、更复杂的神经网络</h3>
+<p>下面是一个更复杂的神经网络。看图其实很好理解，参数的下标表示是第几个神经单元的参数，上标方括号中的数字代表第几层的参数。g函数为激活函数。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715177925467-c3256a13-ec39-482a-a65d-d6788659aee9.png" width="1716" title="" crop="0,0,1,1" id="u43a93b74" class="ne-image">
+<h3 id="3、前向传播">3、前向传播</h3>
+<p>举一个例子，手写数字识别。1的图像就是由这个8 × 8的矩阵组成的，看图，a1有25个数值，因为这个隐藏层有25个单位。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715179323508-456f99d7-41d7-4226-942b-65f23e0ad578.png" width="1721.6" title="" crop="0,0,1,1" id="u4636916f" class="ne-image">
+<p>下一步是计算a2，有15个神经单元。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715179488360-db50fdf8-3641-4cea-ac09-518da9ad9962.png" width="1714.4" title="" crop="0,0,1,1" id="u50fc9925" class="ne-image">
+<p>以此类推。最后得到a3，只有一个输出。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715180070581-254e176b-0ce0-4e7d-a005-b6522b519fe3.png" width="1713.6" title="" crop="0,0,1,1" id="ubbeacaee" class="ne-image">
+<p>这个过程被称为前项传播</p>
+<h3 id="4、用TensorFlow实践">4、用TensorFlow实践</h3>
+<p>下面有个例子：对于咖啡豆的质量判断，有两个参数，一将烘焙咖啡豆使用的温度，以及持续时间，参数大概是这样。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715257740784-ae1a6018-42d5-47cd-b36b-7ce36e539d40.png" width="1672.8" title="" crop="0,0,1,1" id="u3e5144c4" class="ne-image">
+<p>对于这个模型，在代码层面：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x=np.array([[<span class="number">200.0</span>,<span class="number">17.0</span>]])</span><br><span class="line">layer_1 = Dense(units=<span class="number">3</span>,activation=<span class="string">&#x27;sigmoid&#x27;</span>)</span><br><span class="line">a1 = layer_1(x)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">layer_2 = Dense(units=<span class="number">1</span>,activation=<span class="string">&#x27;sigmoid&#x27;</span>)</span><br><span class="line">a2 = layer_2(a1)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> a2&gt;=<span class="number">0.5</span>:</span><br><span class="line">    yhat = <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    yhat = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715258339818-6f8f3817-b450-4c96-9592-ce693a79030e.png" width="317.6" title="" crop="0,0,1,1" id="u9d1494d8" class="ne-image">
+<p>如何用numpy来表示矩阵</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715258630375-4f8c323c-f759-4180-9004-a10ce7c74f3d.png" width="185.6" title="" crop="0,0,1,1" id="uc0f21627" class="ne-image">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">              [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715258756472-9ed1f626-7735-47f7-8c4d-b57bdd8be79d.png" width="200.8" title="" crop="0,0,1,1" id="u03abca60" class="ne-image">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">0.1</span>,<span class="number">0.2</span>],</span><br><span class="line">              [-<span class="number">3.0</span>,-<span class="number">4.0</span>],</span><br><span class="line">              [-<span class="number">0.5</span>,-<span class="number">0.6</span>],</span><br><span class="line">              [<span class="number">7.0</span>,<span class="number">8.0</span>]])</span><br></pre></td></tr></table></figure>
+<p>不要这么写，这样是一维向量而不是二维矩阵</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715259204957-58fef47a-6f12-4928-abe5-c210d6933f2b.png" width="387.2" title="" crop="0,0,1,1" id="ud79330ab" class="ne-image">
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715259492750-29bff2c4-f1a2-4d86-846b-d79d65116232.png" width="957.6" title="" crop="0,0,1,1" id="u8a3cf54a" class="ne-image">
+<h3 id="5、另一种搭建神经网络的方法">5、另一种搭建神经网络的方法</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">layer_1 = Dense(units=<span class="number">3</span>,activation=<span class="string">&quot;sigmoid&quot;</span>)</span><br><span class="line">layer_2 = Dense(units=<span class="number">1</span>,activation=<span class="string">&quot;sigmoid&quot;</span>)</span><br><span class="line">model = Sequential([layer_1, layer_2])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>还可以这样</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential([</span><br><span class="line">    Dense(units=<span class="number">3</span>,activation=<span class="string">&quot;sigmoid&quot;</span>), </span><br><span class="line">    Dense(units=<span class="number">1</span>,activation=<span class="string">&quot;sigmoid&quot;</span>)])</span><br></pre></td></tr></table></figure>
+<p>有一些数据：<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715260050429-b831337c-9f5c-40b3-a539-73fd98fab6be.png" width="132" title="" crop="0,0,1,1" id="ued3947e2" class="ne-image"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">200</span>, <span class="number">17.0</span>],</span><br><span class="line">              [<span class="number">120.0</span>, <span class="number">5.0</span>],</span><br><span class="line">              [<span class="number">425.0</span>, <span class="number">20.0</span>],</span><br><span class="line">              [<span class="number">212.0</span>, <span class="number">18.0</span>]</span><br><span class="line">             ])</span><br><span class="line">y = ny.array([<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>])<span class="comment">#targets</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">model.<span class="built_in">compile</span>(...)</span><br><span class="line">model.fit(x,y)<span class="comment">#待更新</span></span><br></pre></td></tr></table></figure>
+<p>如果有新的数组，则可以用：<code>model.predict(x_new)</code>来对新的x做预测</p>
+<h2 id="三、实践神经网络">三、实践神经网络</h2>
+<h3 id="1、单层中的前向传播">1、单层中的前向传播</h3>
+<p>仍以咖啡豆的烘焙为例：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715263639309-5f280258-d4f4-49a4-a8db-8e41ddac7111.png" width="417.6" title="" crop="0,0,1,1" id="u858a3b47" class="ne-image">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">w1_1 = np.array([<span class="number">1</span>,<span class="number">2</span>])<span class="comment">#设定w1参数</span></span><br><span class="line">b1_1 = np.array([-<span class="number">1</span>])<span class="comment">#设定b1参数</span></span><br><span class="line">z1_1 = np.dot(w1_1,x)+b<span class="comment">#得到f函数的结果</span></span><br><span class="line">a1_1 = sigmoid(z1_1)用Sigmoid函数激活（处理）</span><br></pre></td></tr></table></figure>
+<p>同理，另外两个神经单元同样处理</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715264393090-a26327c9-1048-4ad7-82a2-eb364209eb8d.png" width="1028" title="" crop="0,0,1,1" id="u626ced75" class="ne-image">
+<p>得到a1后，再经过第二层的处理：（这里w2_1应该写错了，应该是三个参数，才能和a1点积）</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715264483078-9c7a608a-26c6-450b-a15b-7aa99ae4ca9c.png" width="1006.4" title="" crop="0,0,1,1" id="uf1e23284" class="ne-image">
+<h3 id="2、前向传播的一般实现">2、前向传播的一般实现</h3>
+<p>仍以这个例子为例，把三个w叠加成一个矩阵，即为图中所示：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715265746527-a2bd072f-9690-4c76-9123-d3c4dbce1b34.png" width="393.6" title="" crop="0,0,1,1" id="u33fba5a0" class="ne-image">
+<p>前向传播的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">a_in,W,b,g</span>):<span class="comment">#定义一个函数</span></span><br><span class="line">    units = W.shape[<span class="number">1</span>]	<span class="comment">#读取第二维度的长度（3）</span></span><br><span class="line">    a_out = np.zeros(units)	<span class="comment">#将a_out初始化为3个0</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(units):	<span class="comment">#循环来计算a的第1,2,3个参数</span></span><br><span class="line">        w = W[:,j]	<span class="comment">#提取W的第j列</span></span><br><span class="line">        z = np.dot(w,a_in)+b[j]	<span class="comment">#点积，得到答案</span></span><br><span class="line">        a_out[j] = g(z)	<span class="comment">#经过g（Sigmoid函数）处理后，赋给a_out</span></span><br><span class="line">    <span class="keyword">return</span> a_out</span><br></pre></td></tr></table></figure>
+<p>下面定义了四层的神经网络：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">sequential</span>(<span class="params">x</span>):</span><br><span class="line">    a1 = dense(x,W1,b1)</span><br><span class="line">    a2 = dense(a1,W2,b2)</span><br><span class="line">    a3 = dense(a2,W3,b3)</span><br><span class="line">    a4 = dense(a3,W4,b4)</span><br><span class="line">    f_x = a4</span><br><span class="line">    <span class="keyword">return</span> f_x</span><br></pre></td></tr></table></figure>
+<h2 id="四、训练神经网络">四、训练神经网络</h2>
+<h3 id="1、TensorFlow实现">1、TensorFlow实现</h3>
+<p>还是手写数字识别的例子，这一次，我们把代码补全。在第二步中，需要TensorFlow去编译模型，其中指定使用的损失函数，这里我们用的是二元交叉熵损失函数（<strong><font style="color:rgb(25, 27, 31);">SparseCategoricalCrossentropy</font></strong><font style="color:rgb(25, 27, 31);">-稀疏分类交叉熵</font>）。第三步是拟合函数，其中epoch指的是学习算法进行梯度下降的步数。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715351084061-2a5a00d6-3338-4830-b664-3ba170325ca0.png" width="1668.8" title="" crop="0,0,1,1" id="u9460c171" class="ne-image">
+<h3 id="2、训练细节">2、训练细节</h3>
+<p>下面我们来回顾一下建立逻辑回归模型的步骤：</p>
+<p>①指定在给定输入特征x，参数w和b的情况下计算输出</p>
+<p>②指定损失函数或代价函数，注意：损失函数是单个样本的，而代价函数J是在整个训练集上计算的损失函数的平均值</p>
+<p>③用一个具体的梯度下降算法来最小化代价函数J作为参数w和b的函数</p>
+<p>以下对应着相应的步骤</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715352096031-57e8d7af-1309-43d8-88af-1959715b82d4.png" width="1684.8" title="" crop="0,0,1,1" id="u3a605d29" class="ne-image">
+<p>这里的二元交叉熵损失函数，就是之前我们逻辑回归的损失函数是一样的。在统计学中叫交叉熵损失函数。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715353615776-4a827bc5-8d9f-42a4-baf0-6dbbd3d0a164.png" width="516" title="" crop="0,0,1,1" id="u3d6e36e0" class="ne-image">
+<p>如果你正在拟合一个线性回归函数，想要使用平方误差损失函数，则可以使用：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715353693973-5c99bd96-575a-48ef-99cd-0859d10762cb.png" width="560" title="" crop="0,0,1,1" id="ud9ab9fde" class="ne-image">
+<p>在梯度下降时，我们需要计算偏导来更新w，b参数的值。在标准的神经网络训练中，使用的是反向传播算法。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715353897690-d8283f85-eb67-446b-9933-ab252857b58e.png" width="499.2" title="" crop="0,0,1,1" id="u37ae9c29" class="ne-image">
+<h3 id="3、Sigmoid函数的代替方案">3、Sigmoid函数的代替方案</h3>
+<p>如果我们对结果的要求不是从<code>[0,1]</code>,而是任意正数，我们可以选择ReLU（Rectified Linear Unit）。它的公式非常简单，即max(0,f) 。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715436963365-cf177b3e-1f93-4980-8abd-540e75913c0e.png" width="1023.2" title="" crop="0,0,1,1" id="ufd662334" class="ne-image">
+<p>需要提及的是线性激活函数。如果我们使用线性激活函数，人们会说我们没有使用任何激活函数。这里需要理解。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715437304663-044a8be1-a39e-4de6-8b18-3d79ba17ebe5.png" width="370.4" title="" crop="0,0,1,1" id="u2216d714" class="ne-image">
+<h3 id="4、如何选择激活函数">4、如何选择激活函数</h3>
+<p>如果在研究二分类问题时，在输出层使用Sigmoid函数。</p>
+<p>如果是在预测股票价格的变化，y可正可负，这是建议使用线性激活函数。</p>
+<p>如果在预测房价，则可以选择ReLU激活函数。</p>
+<p>在ReLU中，只有一个地方时平的，而Sigmoid中则有两个地方是平的，这会时代价函数J许多地方梯度很小。在使用梯度算法时，会导致函数收敛的很慢。而ReLU则会收敛得更快。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715438034414-325c7a24-cde1-40a9-8f19-b111ae303954.png" width="732.8" title="" crop="0,0,1,1" id="ub17a5e1f" class="ne-image">
+<p>在TensorFlow中则可以这样使用：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715438134421-9b613f39-4ddc-406b-93bd-bfbe34b61d28.png" width="1715.2" title="" crop="0,0,1,1" id="ua4b3248a" class="ne-image">
+<h3 id="5、激活函数的重要性">5、激活函数的重要性</h3>
+<p>如果在神经网络中每一个神经元都使用线性激活函数，则会与普通的线性回归无异。</p>
+<p>让我们简化模型来说明。下图把每一层的神经元设为一个，使用线性激活函数。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715440625065-92dbbf49-2c92-4802-83df-d0aa0fbfb797.png" width="1692" title="" crop="0,0,1,1" id="u8942b9b4" class="ne-image">
+<p>如果在隐藏层中使用线性激活函数，在输出层使用逻辑激活函数，则整体就等于是一个逻辑回归模型。</p>
+<p>所以不建议在隐藏层中使用线性激活函数，建议使用ReLU激活函数。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715440910411-11c96753-58d7-4f8a-875e-2148bcbb584d.png" width="1680.8" title="" crop="0,0,1,1" id="u318b71b4" class="ne-image">
+<h2 id="五、多分类">五、多分类</h2>
+<h3 id="1、多类">1、多类</h3>
+<p>当我们面对分类的场景时，通常不会只有0或1两种情况，有可能需要分析2的概率是多少，3的概率是多少。这种可以预测多种结果的模型，叫多分类</p>
+<h3 id="2、softmax">2、softmax</h3>
+<p>当面对多种结果的概率时，可以使用softmax函数，其所有的结果相加等于1。下公式中，j为结果的数量（下为4）</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715612939183-f2fe8f3a-f124-4cb7-beef-08064b8986d8.png" width="1732" title="" crop="0,0,1,1" id="u062b7594" class="ne-image">
+<p>它的损失函数和代价函数如下图所示，即分别对a_j取负对数。a_j越小，损失越大，这使得算法让a_j尽可能的大。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715615029996-3b547bf5-1acc-4aba-917b-60190cda54fc.png" width="1717.6" title="" crop="0,0,1,1" id="u49bb58fd" class="ne-image">
+<h3 id="3、softmax函数与神经网络">3、softmax函数与神经网络</h3>
+<p>让我们看看softmax函数在神经网络中是什么样子。回到手写数字识别的例子，我们我们想对结果0~9做判断，则在输出层需要十个神经单元，并使用softmax函数。特别的，softmax函数需要使用到z_1~z_10的结果，这和我们之前见过的其他激活函数不同。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715777870223-6f8351b7-ceb8-4178-af40-043aaae6a435.png" width="1616" title="" crop="0,0,1,1" id="u797b627d" class="ne-image">
+<p>让我们看看在他TensorFlow中如何实现。（注：不要在代码中用这种实现）</p>
+<p>在第三个Dense把units改为10，激活函数为softmax。单价函数使用SparseCategoricalCrossentropy（稀疏多分类交叉熵损失函数），稀疏表示它只能取10个值的其中一个</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715778695499-bc6d564f-c5a6-4c6d-8935-0250e17a9abc.png" width="1579.2" title="" crop="0,0,1,1" id="u3155abff" class="ne-image">
+<p>进一步的，如果在二元交叉熵函数中，使用参数from_logits=True，可以将a的计算加在最终的loss函数中，使结果更精确。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715785404055-d31ba2e8-3b24-4628-a2a2-2d6419944de9.png" width="1153.6" title="" crop="0,0,1,1" id="u35d3fb79" class="ne-image">
+<p>所以也是推荐下面这种写法</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715786397132-669a00f4-e33f-413d-be74-6823821ca53c.png" width="1195.2" title="" crop="0,0,1,1" id="YhwHX" class="ne-image">
+<p>这里有个问题就是，会把隐藏层最后一层改为线性激活函数，这样最后输出的则不是概率值了，而是z_1~z_10。所以在最后，需要将结果映射到逻辑函数中，即softmax中。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715786809264-f07f5a70-fcf9-43e5-be22-ad81cdfe43d1.png" width="1157.6" title="" crop="0,0,1,1" id="u6143efa9" class="ne-image">
+<h3 id="4、多标签分类">4、多标签分类</h3>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715787098527-659619fe-07df-423e-b0a5-bfb7104d3815.png" width="1481.6" title="" crop="0,0,1,1" id="u118eedd7" class="ne-image">
+<h2 id="六、神经网络概念补充">六、神经网络概念补充</h2>
+<h3 id="1、进阶优化">1、进阶优化</h3>
+<p>比起梯度下降，有一种叫做Adam的算法。自适应矩估计（Adaptive Moment Estimation, A-D-A-M）。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715870985785-a97884c5-15da-486d-a2e8-7d243bbf006b.png" width="1648.8" title="" crop="0,0,1,1" id="u89294620" class="ne-image">
+<p>Adam算法并不是全局都使用同一个学习率，如果你有参数w1到w10，就像b一样，它实际上有11个学习率参数，α1，α2一直到α10，对应w1到w10，还有参数b的，我将其称作α11。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715871210641-2db3d3be-c176-45d9-8810-7e30e7915978.png" width="944" title="" crop="0,0,1,1" id="u1afcf8ca" class="ne-image">
+<p>使用案例：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1715871415635-8152c37f-a78c-4a60-9e60-000ad87b16f8.png" width="1035.2" title="" crop="0,0,1,1" id="u5904a712" class="ne-image">
+<h3 id="2、卷积层">2、卷积层</h3>
+<p>下图是一个数字9，其中不同的神经元中可以“看到”的部分不同，有的只有一个小方框，有的可能是四个像素组成的方框。</p>
+<p>这样做的目的是，可以加快计算速度，且不容易过拟合。</p>
+<p>有时这也被称为卷积神经网络。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716043438813-6b25dac2-05ac-4420-95ba-8b7bfc03536c.png" width="1133.6" title="" crop="0,0,1,1" id="u7b0c8a28" class="ne-image">
+<p>下面是一个心电图的例子，心电图可以被看做有100个数据。在第一层卷积层中，第一个神经元只输入x_1~x_20的数据，第二个神经元…（看图）。最后得到一个9个元素的向量，但下一卷积层仍然不是所有元素都作为输入，而是只取一部分。这有时比全连接层（每一个神经元都接收所有变量）更好用。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716043945913-73dd3a08-aa92-4eed-b3c8-5f09d4b18d2a.png" width="1734.4" title="" crop="0,0,1,1" id="u1e3d67e0" class="ne-image">
+<h3 id="3、反向传播算法">3、反向传播算法</h3>
+<p>反向传播算法可以计算代价函数相对于参数的导数。这里我们给出一个结论：</p>
+<p>也就是每当w增加一个微小的ε时，导致J(w)增加k倍的ε。（k是J对w的偏导值）</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716088151701-c0bb0cf5-aa74-4185-854f-e5d67fe777f6.png" width="845.6" title="" crop="0,0,1,1" id="u0c78ff57" class="ne-image">
+<p>下面是例子：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716088404866-2cad470b-eec3-4095-95cf-a14541bec541.png" width="1617.6" title="" crop="0,0,1,1" id="u351ecc17" class="ne-image">
+<h3 id="4、计算图">4、计算图</h3>
+<p>计算图（The computation graph）是深度学习中的一个关键思想。下面给出例子。</p>
+<p>下图为只有一个神经元的神经网络</p>
+<p>这个过程是前向传播的过程，一步一步的得到代价函数的值。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716127016403-0fc175d3-0e25-4937-af31-9172e70f9478.png" width="1573.6" title="" crop="0,0,1,1" id="u0c83e224" class="ne-image">
+<p>而求它J对于w，b参数的导数，需要用到反向传播算法，并且使用链式法则对w，b求导，并代入值求出其值。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716127876605-33eee36e-1015-4212-824f-5117e265ef8e.png" width="1702.4" title="" crop="0,0,1,1" id="u6e70dad0" class="ne-image">
+<p>事实证明，如果计算图有n个节点（意味着n个方框）和p个参数，例如本例中有两个参数，则此过程允许我们在大约n + p步中计算出j相对于所有参数的所有导数，而不是n乘以p个步骤。<br>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716132494677-3991e74a-2013-4d2f-87f3-12990a72b679.png" width="1092.8" title="" crop="0,0,1,1" id="u65cec187" class="ne-image"></p>
+<p>让我们看看反向传播函数在较大的网络中是如何进行的</p>
+<p>这里给出两层的神经网络，为了方便，每个只有一个神经元。</p>
+<p>先用前向传播计算出a_1，a_2。</p>
+<p>再用平方误差函数计算代价。</p>
+<p>再用计算图逐步计算（从右到左）反向传播（可自行手算）</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716132888019-5674d862-7068-4c44-b4b5-0a6245c9032d.png" width="1706.4" title="" crop="0,0,1,1" id="u2bea8af0" class="ne-image">
+<p>综上，如果对每个参数都求一次偏导，会导致N×P步，而反向传播算法只需N+P步即可完成对w_1,b_1,w_2,b_2的计算。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716133416146-62d7b9a6-3f64-4b26-9abb-5b850dcef588.png" width="1092" title="" crop="0,0,1,1" id="ub421a0db" class="ne-image">
+<h2 id="七、机器学习实践建议">七、机器学习实践建议</h2>
+<h3 id="1、当遇到预测结果存在较大误差时，应该怎么办呢？">1、当遇到预测结果存在较大误差时，应该怎么办呢？</h3>
+<p>1、获取更多训练示例</p>
+<p>2、尝试更小的特征集</p>
+<p>3、尝试使用额外的特征</p>
+<p>4、尝试添加多项式特征</p>
+<p>5、尝试减少 λ（正则化参数）</p>
+<p>6、试着增加 λ</p>
+<h3 id="2、模型评估">2、模型评估</h3>
+<p>这里还是使用房价预测的例子。假设一共有十组数据，我们将其70%作为训练集，30%作为测试集，如下图所示。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716901687749-e3312746-7ed0-4296-aceb-6c1ca54272f5.png" width="1674.4" title="" crop="0,0,1,1" id="ubaaa0904" class="ne-image">
+<p>第一个式子是使用最小化代价函数J(w,b)来拟合参数，其中最后一项为正则项。</p>
+<p>要知道这个模型做得如何，要计算J_test(w,b)去检验，即测试集中的均方误差，注意，它不包括正则项。</p>
+<p>而第三个式子是衡量学习算法在训练集上的表现指标。同样，这里不包括正则化项。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716902669435-c843a267-be11-49fc-b85b-01cab95475fc.png" width="1498.4" title="" crop="0,0,1,1" id="u98a42f04" class="ne-image">
+<p>如果在训练集上拟合的很好，则可能会像下图一样，而且J_train的结果会很小，但是在训练集上的表现则会很大。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716903230939-9d7d1226-50c9-4860-bcb4-159d1758e7e6.png" width="527.2" title="" crop="0,0,1,1" id="u1278f003" class="ne-image">
+<p>下面让我们看看在分类任务中的表现。这里的J_train和J_test不用逻辑损失去计算测试误差和训练误差，而是去衡量测试集和训练集中被错误分类的部分。具体来说，如果你对手写数字0/1进行分类，通过新的分类损失，那么J_test将是这个测试集中0被归为1，1被归为0的那一部分。同样的，J_train是被错误分类的训练集的一部分。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716903789372-d5cdb1fd-60d1-4ae6-ac1f-1753744ba0b5.png" width="1705.6" title="" crop="0,0,1,1" id="u2b21e1e6" class="ne-image">
+<h3 id="3、模型选择-交叉验证">3、模型选择&amp;交叉验证</h3>
+<p>对于模型的选择，我们可以选择拟合一个一阶多项式，也可以选择拟合二阶，三阶多项式，而其中可能五阶多项式的J_test表现最好，但它可能低于实际的泛化误差，因为除了基本的拟合，其中还有一个参数d（多项式次数）。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716996679197-0d8874c9-bbc5-462e-a50b-944b22ee83e3.png" width="1736" title="" crop="0,0,1,1" id="ua138e3e4" class="ne-image">
+<p>以下是如何修改训练和测试程序以进行模型选择。例如这10个不同的模型，把你的数据分成三个不同的子集，我们称之为训练集，交叉验证集（the cross-validation set），还有测试集。</p>
+<p>这里60%是训练集，20%是交叉验证集，20%是训练集。此处交叉验证集又有人称为验证集（the validation set），开发集（the development set）或 the dev set</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716997019481-b46b3759-d026-4b62-84f2-c3aec3442801.png" width="1656.8" title="" crop="0,0,1,1" id="u3e1716c5" class="ne-image">
+<p>然后可以使用这三个公式计算训练误差、交叉验证误差和测试误差，通常这些项都不包括正则化项</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716997197735-2a87ae15-bdd7-4750-a053-436aee129c91.png" width="1136" title="" crop="0,0,1,1" id="u7959fd06" class="ne-image">
+<p>用这十个模型，拟合参数w_1,b_1，并在交叉验证集中计算J_cv(w_1,b_1)，对所有的模型都计算一遍，然后去观察哪个模型的交叉验证错误最低，假设这里是d=4最低，那么我们将会选择这个模型。此时可以使用测试集求出J_test，此时的泛化误差是比较公平的估计。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716997399463-a9159bcf-6e7f-4bef-9e99-cd6ae380c92c.png" width="1738.4" title="" crop="0,0,1,1" id="u03014fea" class="ne-image">
+<p>再比如手写数字识别的例子。我们需要选择哪个模型比较好，我们就可以使用交叉验证集来评估神经网络的性能。关于分类问题的指标，是样本的正确与错误的百分比。在这个例子中，加入第二个模型的交叉验证最小，我们就可以选择第二个来使用测试集来计算泛化误差。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1716997783341-3fff175b-6f30-417b-badc-d7e38c0eb1be.png" width="1695.2" title="" crop="0,0,1,1" id="u1f08007e" class="ne-image">
+<h3 id="4、诊断偏差方差">4、诊断偏差方差</h3>
+<p>让我们来回忆一下第一堂课的线性回归模型。如果用一条直线来拟合，那么效果就不太好，我们说这个算法有很高的<strong>偏差</strong>，或者说欠拟合。如果是四阶多项式，它也会有高偏差或过拟合。而中间的算法则刚刚好。如果要计算J_train，第一个模型会很高，因为其在训练集的表现就不太好。若是第三个模型，则很低，因为它和数据吻合的很好。但不代表它在测试集中的表现很好。我们会发现在这两个模型中，J_cv的值很高。这表明有很高的<strong>方差</strong>。</p>
+<p>总结一下，我们要做的是计算J_train和J_cv。看看J_train是否高，或者J_cv是否远高于J_train。即使不能画出函数f，这也能让你感受到你的算法是否有高偏差或者高方差。</p>
+<p>再看中间的模型，**<u></u>**J_train 不是太高意味着没有高偏差问题，J_cv 并不比 J_train差太多，这表明它也没有高方差问题。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717073235694-6eccb160-6dc3-4d74-b840-ba20e1605c6d.png" width="1685.6" title="" crop="0,0,1,1" id="ubd6da320" class="ne-image">
+<p>下图展示J_train和J_cv如何拟合数据的多项式次数。横轴是d，纵轴则是J的值。如果d越来越大，我们会发现J_train越来越小，因为其对数据的拟合越来越好。但J_cv则是一开始很高，因为它欠拟合，在交叉验证集中表现不好。当d很大时，它一样很高，因为它同样在验证集上表现不佳。</p>
+<p>看图的右侧，<strong>高偏差</strong>意味着J_train会很高（<strong>欠拟合</strong>）。<strong>高方差</strong>的关键指标，是J_cv远远大于J_train（<strong>过拟合</strong>），通常J_train会很低。若是高偏差且高方差，则J_train很高且J_cv远大于J_train。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717074350831-d15a04db-b15a-4288-8db5-d655c4d1e64d.png" width="1713.6" title="" crop="0,0,1,1" id="u4c1373a6" class="ne-image">
+<p>总结就是，高偏差意味着算法在训练集上表现不好，而高方差意味着算法在交叉验证集上表现比训练集上差的多。</p>
+<h3 id="5、正则化-偏差方差">5、正则化&amp;偏差方差</h3>
+<p>接下来我们来看一下正则化参数对偏差与方差产生什么影响。其中λ为正则化参数，其表明需要平衡参数w与J_train数据拟合度。</p>
+<p>下面举一个λ很大的例子，若设其为10000，则会拟合出一个近似于常数的图，因为λ若很大，算法会很卖力的把w的值压低，最终几个w的值会很接近于0。模型就变成了，f (x) = b，这个模型显然有很高的偏差（欠拟合）。若设置的很小，则几乎没有正则项了，最后拟合的方差会很大。如果选择一个合适的λ，则可以拟合成中间的模型。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717079718300-52ebc8d4-ae07-4fd3-863b-f27c130bea9c.png" width="1671.2" title="" crop="0,0,1,1" id="u0681f30d" class="ne-image">
+<p>那么我们要怎么选择一个合适的λ呢？这个过程类似于之前用交叉验证选择多项式D的次数。用不同的λ去计算参数w，b，在计算交叉验证误差J_cv。最后观察J_cv的最小值是哪一个，则选择对应的λ参数作为正则化参数。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717080705965-76c7e835-92a0-4801-a42e-85e67e57ae0b.png" width="1676" title="" crop="0,0,1,1" id="ue7956a82" class="ne-image">
+<p>下面来看一下λ的变化在图中的表现。是不是有点像方差偏差图的镜像（右上角）。最后选择交叉验证误差最小的。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717081113791-e4faf571-6b1c-4c94-8ee8-f178a90eba1c.png" width="1719.2" title="" crop="0,0,1,1" id="u25ab4f60" class="ne-image">
+<h3 id="6、学习曲线">6、学习曲线</h3>
+<p>学习曲线（Learning curves）是一种帮助你了解学习算法性能如何的方式，曲线随着经验的数量发生变化。</p>
+<p>下图中，横轴为训练集的大小，随着训练集的增大，J_train一开始会增大，且会趋于平坦。而J_cv会下降，仍会趋于平坦。因为我们的算法可能比较简单，不能拟合更多的数据。</p>
+<p>从这里我们可以得出，如果一个学习算法有很高的偏差，获得更多的训练数据本身不会有多大帮助。我知道我们会习惯性地认为数据越多越好，但如果你的算法有很高的偏差，你做的措施只是添加更多的训练数据，错误率并不会降低多少。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717328782722-ebaa09d2-0542-4f1d-8da7-2e126f050c8c.png" width="1534.4" title="" crop="0,0,1,1" id="ufa62408e" class="ne-image">
+<p>让我们看看高方差的图是怎么样的。训练集会随着数据的升高而升高，并低于人类水平的性能（因为拟合的太好了）。而J_cv则是逐渐下降，且一开始与训练集有较大的差。当方差很大时，扩大训练集会有很大帮助，特别是如果我们向右延长这些曲线，J_train 增加，则训练误差会继续增加，但是交叉验证误差会下降，并接近 J_train。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717329745187-8921afe9-258c-43e0-a773-9446a8c5311a.png" width="848.8" title="" crop="0,0,1,1" id="ud9701217" class="ne-image">
+<h3 id="7、决定下一步">7、决定下一步</h3>
+<p>当我们的模型并不能正确的拟合时，我们下一步需要做什么呢？</p>
+<p>1、获得更多的训练参数--------------解决<strong>高方差</strong>问题（样本太少可能会过拟合）</p>
+<p>2、尝试更少的的特征----------------解决<strong>高方差</strong>问题（使用了很多无关紧要的特征如预测房价中的空气质量）</p>
+<p>3、获得更多的特征------------------解决<strong>高偏差</strong>问题（使用的关键特征太少，如预测房价只使用房子大小作为参数）<br>
+4、添加多项式特征（有点像添加额外的特征）—解决<strong>高偏差</strong>问题</p>
+<p>5、减小λ正则化参数-----------------解决<strong>高偏差</strong>问题（更加关注特征参数）</p>
+<p>6、增大λ正则化参数-----------------解决<strong>高方差</strong>问题（过拟合了）</p>
+<h3 id="8、神经网路与方差偏差">8、神经网路与方差偏差</h3>
+<p>在神经网络，可以通过以下方法来优化模型。</p>
+<p>如果在训练集上的表现不好（高偏差），可以增加隐藏层的层数（更大的神经网络）。然后再重复。如果训练集表现良好，则需要观察检查验证集，若有高方差， 则需要添加更多的数据集，然后再回到第一步。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717341423973-c75d2bcc-d205-4255-845e-dd491377b07b.png" width="1626.4" title="" crop="0,0,1,1" id="u180f582b" class="ne-image">
+<h3 id="9、机器学习的迭代发展">9、机器学习的迭代发展</h3>
+<p>首先，需要决定系统的总体架构是什么，意味着需要选择你的机器学习模型，以及决定使用什么数据，</p>
+<p>可能是选择超参数，等等。</p>
+<p>然后，给定这些决策，您将实现并训练一个模型。</p>
+<p>下一步，分析这个模型，并做调整，并再次回到第一步。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717505304807-a345bfe6-e96b-4883-9569-501634856d11.png" width="1049.6" title="" crop="0,0,1,1" id="u2be40b85" class="ne-image">
+<h3 id="10、误差分析">10、误差分析</h3>
+<p>这里举垃圾邮件分析的例子。假设你有 m_cv = 500 个交叉验证样本，然后你的算法500个样本里错误分类了100个。误差分析过程（error analysis process）是指人工检查这100个样本，并试图找出算法出错的地方。</p>
+<p>如果发现有以下的问题，那我们下一步应该怎么做呢？非常不推荐的是花费大量的时间去处理那3个拼写错误的电子邮件，这很不划算。我们应该优先去处理医药，密码这种占比比较大的问题。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717506701885-af304cf0-1cc4-4047-8eaa-0ef1551b4a61.png" width="1078.4" title="" crop="0,0,1,1" id="ueabcb690" class="ne-image">
+<p>假设交叉验证样本有5000个，如果算法错分了假设有1000个，然后你可能没有时间亲自检查，在这种情况下，通常会随机抽取一个子集，通常是一百个或者几百个，因为这是在合理时间内能看的过来的数量。检查大概100个样本可以给你足够的数据来判断最有可能的错误类型。</p>
+<h3 id="11、添加数据">11、添加数据</h3>
+<p>当训练机器学习算法时，我们几乎一直希望我们有更多的数据。所以有时候我们很想要得到更多的数据。但是，试图获取所有类型的更多数据可能会很慢，而且很昂贵。</p>
+<p>1、添加数据的另一种方法是，专注于添加更多的典型错误，分析表明它可能会有所帮助。比如上一个例子，我们可以找到更多的医药相关的垃圾邮件来作为新的数据。</p>
+<p>2、数据增强</p>
+<p>用于图像或音频数据。比如手写数字识别的例子，我们可以通过旋转，放大或缩小，扭曲，压缩等方法创造一些新的数据，这有助于算法学习更多的数据。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717507453847-db884a5d-5284-467f-8aff-0d20a4ffb92a.png" width="1352.8" title="" crop="0,0,1,1" id="ud75a4d4c" class="ne-image">
+<p>再比如音频识别的例子。可以参考下图对数据进行数据增强。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717507528886-81c67c9d-bf98-4094-bf89-4995d792d82f.png" width="1600" title="" crop="0,0,1,1" id="u236f558f" class="ne-image">
+<p>注意，我们不能对数据做一些没有意义的增强。如在手写识别案列中，对图像添加随机噪声，但这在平时并不常见，所以并没有什么帮助。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717507678120-6ecbaa0c-8593-4631-b386-966c831b632d.png" width="483.2" title="" crop="0,0,1,1" id="u4c504b8b" class="ne-image">
+<h3 id="12、数据合成">12、数据合成</h3>
+<p>从空白开始创造全新的例子。以ORC为例。要识别图中的文字。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717507981644-a832c45e-9c10-4af0-8f2f-3cc5cdea20ce.png" width="1568.8" title="" crop="0,0,1,1" id="uf78912b4" class="ne-image">
+<p>我们可以通过现成的图像与不同的字体合成新的图像，以作为新的数据。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717508079868-72ffab46-6bb8-4aa2-bb13-1c23b9ab0690.png" width="824.8" title="" crop="0,0,1,1" id="u2c865fbf" class="ne-image">
+<h3 id="13、迁移学习">13、迁移学习</h3>
+<p>对于一个没有那么多数据的算法应用，迁移学习（transfer learning）是一种很棒的技术，它可以让你用来自不同任务的数据帮助你解决当前任务。</p>
+<p>假设你想要识别从0到9的手写数字，但是没有那么多这些手写数字的带标签数据。你可以这样做。假设你找到一个非常大的数据集，有一百万张图片的猫，狗，汽车，人，等等，一千个类。然后，你可以在这个包含100万张图片、1000种不同类别的大型数据集上训练一个神经网络，算法以图像X作为输入，并学会识别这1000个不同的类别。</p>
+<p>然后用这个数据集把w_1,b_1等参数用优化算法来降低代价函数。然后把训练好的模型的输出层改为10个输出，并重新训练输出层的w_5,b_5。这两个过程分别成为监督预训练和微调。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717514287427-5e3dbe91-4896-4f26-ae80-fa912e004a59.png" width="857.6" title="" crop="0,0,1,1" id="u37c1165d" class="ne-image">
+<p>为什么可以这么做呢？如果你正在训练一个用于从图像中检测不同物体的神经网络，那么神经网络的第一层会学习检测图像中的边缘。我们认为这些是图像中的低级别特征，它们用来检测图像边缘。然后神经网络的下一层学习将边缘分组，以检测物体的角落。每一个像素方块都是一个神经元学会检测的可视化，必须学会去检测简单的形状，像物体的边角，像物体的形状。再下一层的神经网络可能已经学会了检测一些更复杂的，物体的普遍形状，比如基本曲线或者更小的形状。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717514566136-49ec2b80-4696-4212-b0f6-bce00e1fb5ed.png" width="1660" title="" crop="0,0,1,1" id="uea64f214" class="ne-image">
+<p>但预训练有个限制条件是，对于预训练和微调这两步，图像类型x必须是相同的。如果你的目标是建立一个语音识别系统来处理音频，那么预训练使用处理图像的神经网络可能在处理音频上效果不太好。</p>
+<h3 id="14、机器学习项目的全流程">14、机器学习项目的全流程</h3>
+<p>用语音识别作为一个例子来说明机器学习项目的整个周期。</p>
+<p>1、确定范围：是确定项目的范围（做什么）。</p>
+<p>2、数据收集：然后需要确定哪些数据来训练模型，然后去收集对应的数据集与标签。</p>
+<p>3、训练模型：可以开始训练语音识别系统，进行误差分析并不断改进你的模型，或偏差/方差告诉你应该如何优化。如果需要收集新的数据，需要回到第二步，然后再往下进行。这样的过程可能需要多次。</p>
+<p>4、部署模型：当模型足够好了，就可以在生产环境中部署了。并且需要关注模型的性能，在必要时需要对其进行维护。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717516758438-aee74686-702d-4f82-85a5-5f48523ca5b3.png" width="1621.6" title="" crop="0,0,1,1" id="u41574470" class="ne-image">
+<p>在你训练出一个高效的机器学习模型之后，比如一个语音识别模型，部署模型的一种常见方法是采用你的机器学习模型并在服务器上实现它，我把它叫做推断服务器，这种服务器的工作是调用你的机器学习模型，你训练好的模型,为了做出预测。</p>
+<p>下图为实现依赖应用程序的经典模式。MLOps为机器学习作业，这涉及到如何系统地构建、部署和维护机器学习系统的实践。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717517059825-9727197f-9f07-4df4-a67e-bbffa973174d.png" width="1663.2" title="" crop="0,0,1,1" id="udfe4d77b" class="ne-image">
+<h2 id="八、数据倾斜（选修）">八、数据倾斜（选修）</h2>
+<h3 id="1、误差指标">1、误差指标</h3>
+<p>如果你正在开发一个机器学习应用，当正负样本的比例非常倾斜，当正负样本的比例非常倾斜，远远不是五五开时，事实证明，通常的误差分析，如准确度，并不那么有效。假设你在训练一种二元分类器来检测病人中的一种罕见疾病，假设你发现你已经在测试集中达到只有1%的误差，所以你有99%的正确率。但你并不知道这个数据是好是坏，也许另一个模型是99.5%。这里引出两个概念，精确度，召回率。</p>
+<p>下图中，横轴为真实案例，竖轴为预测结果。1,1代表真实值与预测值都为1的样本数量，称为真阳性。依次为假阳性，假阴性，真阴性。而精确度的计算公式为：真阳性除以被归类为阳性的样本。召回率的计算公式为：真阳性除以真实值为阳性（1）的案例。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717601940191-7fd0b5a2-ab65-4e1a-86d5-64f944ed7cfe.png" width="1730.4" title="" crop="0,0,1,1" id="ufd5a5032" class="ne-image">
+<p>当你有一个罕见的类时，关注精确度和召回率，确保这两个数字都比较高，希望这能让你确信你的学习算法是有用的。</p>
+<h3 id="2、权衡精确度与召回率">2、权衡精确度与召回率</h3>
+<p>精度：<font style="color:#df2a3f;">预测为正的样本中有多少是真的预测正确了（找得对）</font>。召回：<font style="color:#DF2A3F;">在实际为正的样本中被预测为正样本的概率</font><font style="color:#DF2A3F;">（找得全）</font>。我们可以通过调整分类的阈值来控制精度与召回率。那么我们应该怎么去使得精度与召回率取得一个平衡呢（表现最好）？可以使用F1评分。公式如下：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717687039020-551cb5f3-48d8-421d-96cc-2380e62078b2.png" width="1690.4" title="" crop="0,0,1,1" id="u232d4d2f" class="ne-image">
+<p>从中我们可知，算法1是三个中最好的。</p>
+<h2 id="九、决策树">九、决策树</h2>
+<h3 id="1、决策树模型">1、决策树模型</h3>
+<p>下面举一个判别是否是猫的例子。如下图所示，x有三个参数。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717915136202-5c7cb4d3-4a87-475e-9052-e4e24b99097c.png" width="1411.2" title="" crop="0,0,1,1" id="u3fdcbf04" class="ne-image">
+<p>下图是根据上述例子生成的决策树模型。从根结点开始，判断参数并选择左或右子节点，一路向下走。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717915293351-52ca8a76-bfa5-44d9-a4ee-5d3fed628935.png" width="1707.2" title="" crop="0,0,1,1" id="u1d025175" class="ne-image">
+<h3 id="2、学习过程">2、学习过程</h3>
+<p>如何构建一个决策树呢？第一步是确定根结点使用什么特征。如下图我们选择耳朵的特征作为根节点，并把这些例子按耳朵分类。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717915508803-d52c1a67-21ba-48ee-9535-29f4f66417bb.png" width="674.4" title="" crop="0,0,1,1" id="uc0e8f251" class="ne-image">
+<p>下一步是决定左分支放什么节点。比如我们这里选择是否是圆脸来确定是左是右。然后分好子节点，在左边的四个中，都是猫，则直接把这个节点设定为预测结果，猫。而右侧0个是猫，则亦设为结果，不是猫。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717915634109-a06ab151-2088-4931-a554-ba7b7547ebd2.png" width="1109.6" title="" crop="0,0,1,1" id="ub9275b83" class="ne-image">
+<p>然后在根结点的右子节点重复这个过程。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717915846315-72b78f16-7118-48f2-8eab-201bc24b84bb.png" width="1090.4" title="" crop="0,0,1,1" id="ue1b91dfd" class="ne-image">
+<p>下面我们将讨论做关键决策的细节：</p>
+<p>1、如何选择每个节点上使用划分的特征？</p>
+<p>我们需要尽量提高其纯度。即尽可能使子集全都是猫或狗。</p>
+<p>2、何时停止划分？</p>
+<p>①目前使用的是分类100%是猫或狗。</p>
+<p>②可以决定树超过最大深度时停止。</p>
+<p>③如果优先级分数的提高，低于某个阈值</p>
+<h3 id="3、测量纯度">3、测量纯度</h3>
+<p>我们来看看熵的定义，这是对一组数据不纯度的衡量。</p>
+<p>假设p1为猫在集合中的比例。第三个是五五开，占比二分之一，它的熵最高，为1。</p>
+<p>全是猫或全不是猫的熵最低，为0。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717919984014-9970ede0-9649-4cbc-9048-ae088fb8e5a2.png" width="1717.6" title="" crop="0,0,1,1" id="u00d060e0" class="ne-image">
+<p>而熵的公式如下图所示。</p>
+<p>p0为不是猫的概率。注意，我们默认0log(0) = 0</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717920357019-616fa5d8-49b2-46a2-9412-df171daa8054.png" width="1617.6" title="" crop="0,0,1,1" id="u4846d20d" class="ne-image">
+<h3 id="4、选择拆分信息增益">4、选择拆分信息增益</h3>
+<p>在构建决策树时，我们决定使用什么特征来划分一个节点取决于什么样的特征选择最能减少熵。在决策树学习中，熵的减少称为信息增益。</p>
+<p>下图中，我们可以看到分别选择三个特征作为节点时，左右分支的p1值。并计算其熵。然后再计算其加权平均值。再用根节点的熵（根结点中p1=0.5，熵为1）减去加权值，得到熵下降的值。这个值被称为信息增益，它所衡量的是你的树在分裂过程中熵的减少。如果熵的减少量太小或者小于阈值，就不考虑分裂了</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717921631900-2d274beb-9412-4826-8b11-10659fe82214.png" width="1648" title="" crop="0,0,1,1" id="u0eeb17a5" class="ne-image">
+<p>w_left为左分支的样本比例，w_right为右分支的样本比例。</p>
+<p>p1_left为左分支中带有正标签的比例，p2_left为右分支中带有正标签的比例</p>
+<p>p1_root为根节点为正例子的比例。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717932235678-c1269c89-3dd3-4dee-b4ca-22c8d759b255.png" width="1545.6" title="" crop="0,0,1,1" id="u1e9a43a2" class="ne-image">
+<h3 id="5、整合">5、整合</h3>
+<p>下午为决策树学习的过程。</p>
+<ul>
+<li>从根节点的所有示例开始</li>
+<li>计算所有可能特征的信息增益，并选择信息增益最高的特征</li>
+<li>根据选择的特征对数据集进行拆分，并创建树的左右分支</li>
+<li>继续重复分割过程，直到满足停止条件:
+<ul>
+<li>当一个节点100%是一个种类时</li>
+<li>当分割节点时达到树的最大深度</li>
+<li>额外分割的信息增益小于阈值</li>
+<li>当一个节点中的样例数量低于阈值时</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717932778799-f0c07cd7-4062-4a6a-954a-08c823759ea0.png" width="1566.4" title="" crop="0,0,1,1" id="u6a2838d2" class="ne-image">
+<p>整个流程这里就不赘述了</p>
+<h3 id="6、one-hot：分类特征">6、one-hot：分类特征</h3>
+<p>如果你的特征可以取两个以上的离散值，我们应该如何处理呢？我们将会使用 one-hot 编码（独热编码）。</p>
+<p>在下例中，耳朵的值可能有3个，我们可以使用3个二进制特征来替换。在这些特征中，只有一个会被置1。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717933850533-3717027b-e0bd-477a-a280-6f5febdcb7fb.png" width="1558.4" title="" crop="0,0,1,1" id="uf694575c" class="ne-image">
+<h3 id="7、连续值的特征">7、连续值的特征</h3>
+<p>如果值是连续的，我们应该如何去分类呢？这里加入动物的体重。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717934843171-8a673d7e-7e8a-4e4a-90ae-0cadc412c46b.png" width="1564.8" title="" crop="0,0,1,1" id="u32b772c9" class="ne-image">
+<p>体重在根节点的图如下图所示，我们分别以8,9,13的体重来区分猫和狗。分别计算其信息增益，看得出体重为9的分割线的信息增益最高。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717934878204-fa42e262-50fa-40f9-bc77-73605bd5614a.png" width="1586.4" title="" crop="0,0,1,1" id="u8306a77e" class="ne-image">
+<h3 id="8、回归树">8、回归树</h3>
+<p>把决策树推广为回归算法，这样就可以预测一个数字。会用到我们之前的三个特征，即这些特征X，为了预测动物的体重y</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717935513378-ebeddd34-6dd8-4f2b-8001-28d9e1df7433.png" width="1610.4" title="" crop="0,0,1,1" id="ud3d8dcdc" class="ne-image">
+<p>我们按照上面将其分好类，并它的叶子节点为其动物体重的平均值，作为预测的结果。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717936245204-ec7a7e4b-1157-4efa-9d21-ed9d3b741aea.png" width="906.4" title="" crop="0,0,1,1" id="u67300bff" class="ne-image">
+<p>那么，它是如何去选择节点的特征的呢？</p>
+<p>与上几节的方法相似。但这里计算的不是熵，而是所有体重的方差。并加权后，用根节点的方差减去子节点的方差。选择值最大的即可。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717936446490-4c7ca605-6ee7-4f12-9a41-7e2f285edda6.png" width="1601.6" title="" crop="0,0,1,1" id="u9f5b9534" class="ne-image">
+<h3 id="9、集成树：使用多个决策树">9、集成树：使用多个决策树</h3>
+<p>使用单一决策树有这样一个弱点：它可能会对数据中的微小变化高度敏感，使它不太敏感或更健壮的一种方法是：构建很多决策树而不是单个，这样的方法我们称之为集成树（tree ensembles）</p>
+<p>还是之前那个数据集，放在根节点的最佳特征是耳朵形状，然后产生这两个数据子集，然后在这两个数据子集上构建更多的子树，但如果你拿出10个样本中的一个，把它换成另一只猫，我们仅改变了单个训练样本，具有最高信息增益的节点特征就变成了胡须，而不是耳朵形状。因此，你在左右子树中得到的数据子集变得完全不同，当你继续递归运行决策树学习算法时，你会得到左右侧完全不同的子树，因此，仅仅是更改一个训练样本就会导致算法在根处产生不同的分支，进而产生完全不同的树，这使得这个算法不是那么健壮</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717937390522-5db73317-1422-441d-baf7-27cc4fe5b9d5.png" width="1614.4" title="" crop="0,0,1,1" id="u572f6d27" class="ne-image">
+<p>集成树，就是是多棵树的集合。三棵树都是合理的，最终的预测结果将取所有树最多票数的那一个。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717937493491-74322cdf-9dfc-48dd-a1ea-8ec26451de86.png" width="1722.4" title="" crop="0,0,1,1" id="u6688faac" class="ne-image">
+<h3 id="10、放回抽样">10、放回抽样</h3>
+<p>为了构建一个集成树，我们需要一种叫做有放回抽样（sampling with replacement）的技术。</p>
+<p>这里用四个不同颜色的硬币作为例子，把它们放在袋子里，然后抽出一个，记录后放回袋子，再继续抽。以此类推。可以得到如下结果。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717938247907-7cddba0c-7920-4a2f-9a5e-62306eda11d2.png" width="1244" title="" crop="0,0,1,1" id="u0f71ae7b" class="ne-image">
+<p>回到我们的猫狗分类例子，加入把这些例子都放入一个盒子里，每次抽一个再放回去，可能得到如下结果，这可作为一个新的训练集。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717938484495-2b07028a-3ba5-43d9-82a6-df582b9c49b7.png" width="1706.4" title="" crop="0,0,1,1" id="u12ad117d" class="ne-image">
+<h3 id="11、随机森林算法">11、随机森林算法</h3>
+<p>下面我们将叙述如何生成集成树模型。</p>
+<p>给定一个大小为m的训练集，那么对于b=1~B。如果你有10个训练例子，你就把这10个训练例子放进该假想的包，进行10次有放回采样生成一个新的训练集，同样包含10个例子，然后你可以在这个数据集上训练一个决策树。用有放回采样生成的数据集。可以总共做大概B次，这个B推荐取64~228。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717939265788-ac525db7-4b5f-45ec-a60f-47215f5a8672.png" width="1634.4" title="" crop="0,0,1,1" id="u052a5b10" class="ne-image">
+<p>通常的做法是在每个节点上选择一个特性来进行划分，如果有<strong>n个特性</strong>可用。在我们的例子中我们有三个可用的特征,而不是从所有n个特征中选择特征，我们将选择<strong>k个小于n个</strong>特征的随机子集。允许算法只从这k个特征的子集中进行选择。换句话说，你可以选择k个特征作为允许的特征然后从k个特征中选出<strong>最大的信息增益</strong>作为选择的特征来进行划分。当n很大时，比如n是若干个或数10个，甚至数百个。k值的典型选择是取根号n。这种技术趋向于更多地用于具有大量特征的较大问题。</p>
+<h3 id="12、XGboost">12、XGboost</h3>
+<p>到目前为止，最常用的方法或实现决策树集成，或者说是决策树，是一个叫做XGBoost的算法。这是对袋装决策树算法的一个修改,这也是我们之前写过的算法。给定大小相同的训练集，你重复B次，使用有放回采样来创建一个大小为m的新训练集，然后在新的数据集上训练决策树。每次进入这个循环，不止第一次，还有第二次，第三次等等。而不是选择每一次训练的例子。在概率相等的情况下，我们要选择概率更高的例子。</p>
+<p>我们来看看决策树，到目前为止我们已经训练过了，看看我们还没做好的地方。然后在构建下一个决策树时，我们会把更多的注意力放在我们做得不好的例子上。回到最初的训练集。注意，这是原始训练集，不是通过有放回采样产生的。所以这第四列是他们的预测，在每个例子旁边打个勾，取决于树的分类是正确的还是错误的。所以在第二次循环中我们要做的是用有<strong>放回采样</strong>的方式生成另一个含有10个示例的训练集。但每次我们从这10个例子中选出一个，就会有更高的机会从这三个例子中选出一个仍然是错误分类的例子。这就通过一个过程集中了第二棵决策树的注意力。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/21443679/1717951111617-657d1151-d0c8-405d-984a-ed1661589921.png" width="988.8" title="" crop="0,0,1,1" id="u30d65527" class="ne-image">
+<p>XGBoost是一个开源增强树的实现，非常快速和高效。XGBoost对默认拆分条件和也有很好的选择以及何时停止拆分的准则。XGBoost的一个创新之处在于它还内置了正则化防止过拟合</p>
+<h3 id="13、什么时候用决策树">13、什么时候用决策树</h3>
+<ul>
+<li>决策树和集成树通常可以很好地处理表格数据（结构化数据），这意味着如果你的数据集是一个巨大的电子表格，那么你值得考虑使用决策树。</li>
+</ul>
+<p>例如在房价预测中，我们的数据集有这些特征：房子大小、卧室数量、楼层数量、房龄。然后这些类型的数据存储在表格中，可以是分类或者连续值特征。其中，分类任务我们试图预测出离散类别，回归任务预测出一个数字</p>
+<ul>
+<li>不建议在非结构化的数据上使用决策树和集成树，比如图像、视频、音频和文本。</li>
+<li>决策树和集成树的一个巨大优势是它们可以很快的训练好。</li>
+</ul>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/机器学习/吴恩达课程/第三部分：无监督学习 推荐系统、强化学习/" data-toggle="tooltip" data-placement="top" title="第三部分：无监督学习 推荐系统、强化学习">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/机器学习/吴恩达课程/第一部分：监督机器学习 回归与分类/" data-toggle="tooltip" data-placement="top" title="第一部分：监督机器学习 回归与分类">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=第二部分：高级学习算法&body=Hi,I found this website and thought you might like it https://nova-chaser.github.io/机器学习/吴恩达课程/第二部分：高级学习算法/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Thu Jun 18 2026 10:00:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、神经网络</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E9%9C%80%E6%B1%82%E9%A2%84%E6%B5%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1、需求预测</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2、图像识别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、神经网络模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、神经网络层</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E6%9B%B4%E5%A4%8D%E6%9D%82%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2、更复杂的神经网络</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E5%89%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">3、前向传播</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E7%94%A8TensorFlow%E5%AE%9E%E8%B7%B5"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">4、用TensorFlow实践</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E5%8F%A6%E4%B8%80%E7%A7%8D%E6%90%AD%E5%BB%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">5、另一种搭建神经网络的方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E8%B7%B5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、实践神经网络</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%8D%95%E5%B1%82%E4%B8%AD%E7%9A%84%E5%89%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、单层中的前向传播</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E5%89%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%9A%84%E4%B8%80%E8%88%AC%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2、前向传播的一般实现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E8%AE%AD%E7%BB%83%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、训练神经网络</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81TensorFlow%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">1、TensorFlow实现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E8%AE%AD%E7%BB%83%E7%BB%86%E8%8A%82"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">2、训练细节</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81Sigmoid%E5%87%BD%E6%95%B0%E7%9A%84%E4%BB%A3%E6%9B%BF%E6%96%B9%E6%A1%88"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">3、Sigmoid函数的代替方案</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">4、如何选择激活函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">5、激活函数的重要性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E5%A4%9A%E5%88%86%E7%B1%BB"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五、多分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%A4%9A%E7%B1%BB"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">1、多类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81softmax"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">2、softmax</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81softmax%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">3、softmax函数与神经网络</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E5%A4%9A%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">4、多标签分类</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A6%82%E5%BF%B5%E8%A1%A5%E5%85%85"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六、神经网络概念补充</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E8%BF%9B%E9%98%B6%E4%BC%98%E5%8C%96"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">1、进阶优化</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E5%8D%B7%E7%A7%AF%E5%B1%82"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">2、卷积层</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">3、反向传播算法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E8%AE%A1%E7%AE%97%E5%9B%BE"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">4、计算图</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%83%E3%80%81%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5%E5%BB%BA%E8%AE%AE"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">七、机器学习实践建议</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%BD%93%E9%81%87%E5%88%B0%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C%E5%AD%98%E5%9C%A8%E8%BE%83%E5%A4%A7%E8%AF%AF%E5%B7%AE%E6%97%B6%EF%BC%8C%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E%E5%91%A2%EF%BC%9F"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">1、当遇到预测结果存在较大误差时，应该怎么办呢？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">2、模型评估</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9-%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">3、模型选择&amp;交叉验证</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E8%AF%8A%E6%96%AD%E5%81%8F%E5%B7%AE%E6%96%B9%E5%B7%AE"><span class="toc-nav-number">7.4.</span> <span class="toc-nav-text">4、诊断偏差方差</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E6%AD%A3%E5%88%99%E5%8C%96-%E5%81%8F%E5%B7%AE%E6%96%B9%E5%B7%AE"><span class="toc-nav-number">7.5.</span> <span class="toc-nav-text">5、正则化&amp;偏差方差</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6%E3%80%81%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF"><span class="toc-nav-number">7.6.</span> <span class="toc-nav-text">6、学习曲线</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7%E3%80%81%E5%86%B3%E5%AE%9A%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-nav-number">7.7.</span> <span class="toc-nav-text">7、决定下一步</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#8%E3%80%81%E7%A5%9E%E7%BB%8F%E7%BD%91%E8%B7%AF%E4%B8%8E%E6%96%B9%E5%B7%AE%E5%81%8F%E5%B7%AE"><span class="toc-nav-number">7.8.</span> <span class="toc-nav-text">8、神经网路与方差偏差</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#9%E3%80%81%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%8F%91%E5%B1%95"><span class="toc-nav-number">7.9.</span> <span class="toc-nav-text">9、机器学习的迭代发展</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#10%E3%80%81%E8%AF%AF%E5%B7%AE%E5%88%86%E6%9E%90"><span class="toc-nav-number">7.10.</span> <span class="toc-nav-text">10、误差分析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#11%E3%80%81%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">7.11.</span> <span class="toc-nav-text">11、添加数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#12%E3%80%81%E6%95%B0%E6%8D%AE%E5%90%88%E6%88%90"><span class="toc-nav-number">7.12.</span> <span class="toc-nav-text">12、数据合成</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#13%E3%80%81%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0"><span class="toc-nav-number">7.13.</span> <span class="toc-nav-text">13、迁移学习</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#14%E3%80%81%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%85%A8%E6%B5%81%E7%A8%8B"><span class="toc-nav-number">7.14.</span> <span class="toc-nav-text">14、机器学习项目的全流程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%AB%E3%80%81%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%EF%BC%88%E9%80%89%E4%BF%AE%EF%BC%89"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">八、数据倾斜（选修）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E8%AF%AF%E5%B7%AE%E6%8C%87%E6%A0%87"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text">1、误差指标</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E6%9D%83%E8%A1%A1%E7%B2%BE%E7%A1%AE%E5%BA%A6%E4%B8%8E%E5%8F%AC%E5%9B%9E%E7%8E%87"><span class="toc-nav-number">8.2.</span> <span class="toc-nav-text">2、权衡精确度与召回率</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B9%9D%E3%80%81%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">九、决策树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%86%B3%E7%AD%96%E6%A0%91%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">9.1.</span> <span class="toc-nav-text">1、决策树模型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B"><span class="toc-nav-number">9.2.</span> <span class="toc-nav-text">2、学习过程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E6%B5%8B%E9%87%8F%E7%BA%AF%E5%BA%A6"><span class="toc-nav-number">9.3.</span> <span class="toc-nav-text">3、测量纯度</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E9%80%89%E6%8B%A9%E6%8B%86%E5%88%86%E4%BF%A1%E6%81%AF%E5%A2%9E%E7%9B%8A"><span class="toc-nav-number">9.4.</span> <span class="toc-nav-text">4、选择拆分信息增益</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E6%95%B4%E5%90%88"><span class="toc-nav-number">9.5.</span> <span class="toc-nav-text">5、整合</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6%E3%80%81one-hot%EF%BC%9A%E5%88%86%E7%B1%BB%E7%89%B9%E5%BE%81"><span class="toc-nav-number">9.6.</span> <span class="toc-nav-text">6、one-hot：分类特征</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7%E3%80%81%E8%BF%9E%E7%BB%AD%E5%80%BC%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-nav-number">9.7.</span> <span class="toc-nav-text">7、连续值的特征</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#8%E3%80%81%E5%9B%9E%E5%BD%92%E6%A0%91"><span class="toc-nav-number">9.8.</span> <span class="toc-nav-text">8、回归树</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#9%E3%80%81%E9%9B%86%E6%88%90%E6%A0%91%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AA%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-nav-number">9.9.</span> <span class="toc-nav-text">9、集成树：使用多个决策树</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#10%E3%80%81%E6%94%BE%E5%9B%9E%E6%8A%BD%E6%A0%B7"><span class="toc-nav-number">9.10.</span> <span class="toc-nav-text">10、放回抽样</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#11%E3%80%81%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E7%AE%97%E6%B3%95"><span class="toc-nav-number">9.11.</span> <span class="toc-nav-text">11、随机森林算法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#12%E3%80%81XGboost"><span class="toc-nav-number">9.12.</span> <span class="toc-nav-text">12、XGboost</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#13%E3%80%81%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E7%94%A8%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-nav-number">9.13.</span> <span class="toc-nav-text">13、什么时候用决策树</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
+            
+            <a class="tag" href="/tags/#决策树" title="决策树">决策树</a>
+            
+            <a class="tag" href="/tags/#神经网络" title="神经网络">神经网络</a>
+            
+            <a class="tag" href="/tags/#深度学习" title="深度学习">深度学习</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+          </li>
+          
+          <li>
+            <a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a>
+          </li>
+          
+          <li>
+            <a href="https://leetcode.cn/" target="_blank">力扣</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          ypb
+          2026
+          <br>
+          Powered by
+          <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+          &
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">LiveMyLife</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://nova-chaser.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
