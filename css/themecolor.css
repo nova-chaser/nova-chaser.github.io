@@ -581,6 +581,16 @@ blockquote {
   color: var(--color-default);
 }
 
+/* 暗色模式下行内代码背景 */
+.body--dark .post-container code {
+  background: rgba(128, 128, 128, 0.25);
+}
+
+/* 暗色模式下移除语雀导出的 font 标签浅色背景，避免白底白字 */
+.body--dark .post-container font {
+  background-color: transparent !important;
+}
+
 .toc-title {
   color: var(--color-default);
 }
